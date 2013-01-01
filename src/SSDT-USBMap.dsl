@@ -127,11 +127,11 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                             {
                                 If (_OSI ("Darwin"))
                                 {
-                                    Return (GUPC (0xFF, 0xFF))
+                                    Return (GUPC (Zero, Zero))
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.EH01.HUBN.PR01.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
 
@@ -139,14 +139,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                             {
                                 Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                                 {
-                                    If (_OSI ("Darwin"))
-                                    {
-                                        Return (GUPC (Zero, Zero))
-                                    }
-                                    Else
-                                    {
-                                        Return (\_SB.PCI0.EH01.HUBN.PR01.PR11.XUPC ())
-                                    }
+                                    Return (XUPC)
                                 }
                             }
 
@@ -154,14 +147,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                             {
                                 Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                                 {
-                                    If (_OSI ("Darwin"))
-                                    {
-                                        Return (GUPC (0xFF, Zero))
-                                    }
-                                    Else
-                                    {
-                                        Return (\_SB.PCI0.EH01.HUBN.PR01.PR12.XUPC ())
-                                    }
+                                    Return (XUPC)
                                 }
                             }
 
@@ -169,14 +155,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                             {
                                 Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                                 {
-                                    If (_OSI ("Darwin"))
-                                    {
-                                        Return (GUPC (0xFF, Zero))
-                                    }
-                                    Else
-                                    {
-                                        Return (\_SB.PCI0.EH01.HUBN.PR01.PR13.XUPC ())
-                                    }
+                                    Return (XUPC)
                                 }
                             }
 
@@ -184,14 +163,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                             {
                                 Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                                 {
-                                    If (_OSI ("Darwin"))
-                                    {
-                                        Return (GUPC (Zero, Zero))
-                                    }
-                                    Else
-                                    {
-                                        Return (\_SB.PCI0.EH01.HUBN.PR01.PR14.XUPC ())
-                                    }
+                                    Return (XUPC)
                                 }
                             }
 
@@ -199,14 +171,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                             {
                                 Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                                 {
-                                    If (_OSI ("Darwin"))
-                                    {
-                                        Return (GUPC (0xFF, 0xFF))
-                                    }
-                                    Else
-                                    {
-                                        Return (\_SB.PCI0.EH01.HUBN.PR01.PR15.XUPC ())
-                                    }
+                                    Return (XUPC)
                                 }
                             }
 
@@ -214,14 +179,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                             {
                                 Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                                 {
-                                    If (_OSI ("Darwin"))
-                                    {
-                                        Return (GUPC (Zero, Zero))
-                                    }
-                                    Else
-                                    {
-                                        Return (\_SB.PCI0.EH01.HUBN.PR01.PR16.XUPC ())
-                                    }
+                                    Return (XUPC)
                                 }
                             }
 
@@ -229,14 +187,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                             {
                                 Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                                 {
-                                    If (_OSI ("Darwin"))
-                                    {
-                                        Return (GUPC (Zero, Zero))
-                                    }
-                                    Else
-                                    {
-                                        Return (\_SB.PCI0.EH01.HUBN.PR01.PR17.XUPC ())
-                                    }
+                                    Return (XUPC)
                                 }
                             }
 
@@ -244,28 +195,14 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                             {
                                 Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                                 {
-                                    If (_OSI ("Darwin"))
-                                    {
-                                        Return (GUPC (0xFF, 0xFF))
-                                    }
-                                    Else
-                                    {
-                                        Return (\_SB.PCI0.EH01.HUBN.PR01.PR18.XUPC ())
-                                    }
+                                    Return (XUPC)
                                 }
 
                                 Scope (WCAM)
                                 {
                                     Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                                     {
-                                        If (_OSI ("Darwin"))
-                                        {
-                                            Return (GUPC (0xFF, Zero))
-                                        }
-                                        Else
-                                        {
-                                            Return (\_SB.PCI0.EH01.HUBN.PR01.PR18.WCAM.XUPC ())
-                                        }
+                                        Return (XUPC)
                                     }
                                 }
                             }
@@ -287,7 +224,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.HS01.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -302,7 +239,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.HS02.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -317,7 +254,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.HS03.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -332,7 +269,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.HS04.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -347,7 +284,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.HS05.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -362,7 +299,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.HS06.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -377,7 +314,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.HS07.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -392,7 +329,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.HS08.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -407,7 +344,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.HS09.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -422,7 +359,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.HS10.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -437,7 +374,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.HS11.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -452,7 +389,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.HS12.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -467,7 +404,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.HS13.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -482,7 +419,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.HS14.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -497,7 +434,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.HS15.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -512,7 +449,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.SSP1.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -527,7 +464,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.SSP2.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -542,7 +479,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.SSP3.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -557,7 +494,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.SSP4.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -572,7 +509,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.SSP5.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
@@ -587,12 +524,13 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                                 }
                                 Else
                                 {
-                                    Return (\_SB.PCI0.XHC.RHUB.SSP6.XUPC ())
+                                    Return (XUPC)
                                 }
                             }
                         }
                     }
                 }
+                
             }
         }
     }
