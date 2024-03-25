@@ -6,9 +6,9 @@
 
 
 This OpenCore configuration is optimized for this specific hardware.
-   * Tested to work from **High Sierra** up to **Monterey**
+   * Tested to work from **High Sierra** up to **Sonoma**
    * Kexts for WiFi and Bluetooth are not included
-   * Not configured for Ventura and newer
+   * Additional configuration is needed for Ventura and newer
 
 ### What's not working?
 - [ ] AirDrop & other Airport related features
@@ -33,7 +33,7 @@ This OpenCore configuration is optimized for this specific hardware.
    <sup>iPhone USB Tethering does not work in Recovery</sup>
 2. USB Drive <br >
 <sup>`>=4GB` for Onlline installer</sup>
-3.  Replace mPCIe WiFI Card with an Intel one<br >
+3.  Replace mPCIe WiFi Card with an Intel one<br >
 <sup>`Optional` There's no working kext for AR9565 on Monterey and newer, max speed is ≤ 200 kilobits under Big Sur and earlier.</sup>
 
 # Preparation
@@ -88,7 +88,23 @@ Now enter the serial into the [Apple Check Coverage page](www.checkcoverage.appl
 4. **Purchase Date not Validated** <br >
 <sup>Can also be used, but not recommended as there may be a chance of a conflict with an actual Mac</sup>
 
-If installing Monterey, use `MacbookPro11,4` SMBIOS. You could re-generate and use `MacbookPro11,1` after installation, and add `-no_compat_check` under boot-args. <br >
+If installing Monterey, use `MacbookPro11,4` SMBIOS. You could keep it that way, OR you could re-generate and use `MacbookPro11,1` AFTER installation as it is the closest SMBIOS to our CPU, and don't forget to add `-no_compat_check` under boot-args. <br >
+
+## macOS Ventura and Sonoma
+Please only use Propertree to configure these settings.
+
+#### Before Installation
+* Temporarily generate `iMacPro1,1` SMBIOS in config.plist
+* Set `csr-active-config` to `FF0F000`
+* Set `SecureBootModel` to `Disabled`
+* Add `amfi=0x80` in boot-args
+* Download the LATEST Opencore Legacy Patcher, and place it where you can easily access it under macOS.
+* INSTALL macOS
+#### After
+* Run OCLP, accept permissions. Then click the reboot when prompted by OCLP app.
+* Remove `amfi=0x80`, add `-no_compat_check` and `ipc_control_port_options=0`
+* Download [AMFIPass.kext](https://github.com/dortania/OpenCore-Legacy-Patcher/tree/bbc89022704343e55231f59a064acef1e57100bf/payloads/Kexts/Acidanthera), and add to OC/Kexts, then OC Snapshot.
+* Generate SMBIOS, use `MacbookPro11,1`.
 
 # Post-Install
 Enter the following in terminal, this may resolve laptop randomly not powering down properly on sleep.
@@ -107,20 +123,6 @@ sudo pmset -a lidwake 0
 * Hide boot picker: Misc -> Boot -> ShowPicker. Set it to **`Disabled`**.
   - Only do if you are not multi-booting.
 
-## macOS Ventura and Sonoma
-Use Propertree to configure these settings.
-#### Before Installation
-* Temporarily generate `iMacPro1,1` SMBIOS in config.plist
-* Set `csr-active-config` to `FF0F000`
-* Set `SecureBootModel` to `Disabled`
-* Add `amfi=0x80` in boot-args
-* Download the LATEST Opencore Legacy Patcher
-* INSTALL macOS
-#### After
-* Run OCLP, accept permissions. Then click the reboot when prompted by OCLP app.
-* Remove `amfi=0x80`, add `-no_compat_check` and `ipc_control_port _options=0`
-* Download [AMFIPass.kext](https://github.com/dortania/OpenCore-Legacy-Patcher/tree/bbc89022704343e55231f59a064acef1e57100bf/payloads/Kexts/Acidanthera), and add to OC/Kexts, then OC Snapshot.
-* Generate SMBIOS, use `MacbookPro11,1`.
 
 # This is not a guide, rather than an explanation of what I have added in my config.plist. Please refer to the Dortania Opencore Install Guide
 More things are detailed in there that I did not add here.
@@ -506,7 +508,7 @@ In our custom SSDT with custom instructions for`_Q11` method, it will check if t
         <br />
     <br />
         Sets the Ethernet as <code>built-in</code>. <br /><br />
-    In combination with Kernel Patch, <code>device-id</code> and <code>compatible</code> is to spoof into a natively supported Broadcom ethernet for Catalina and earlier. AppleBCM577XXEthernet.kext is used for Big Sur and newer.
+    In combination with Kernel Patch, <code>device-id</code> and <code>compatible</code> is to spoof into a natively supported Broadcom ethernet for Catalina and earlier. AppleBCM57XXEthernet.kext is used for Big Sur and newer.
         </p>
       </td>
       <td>
