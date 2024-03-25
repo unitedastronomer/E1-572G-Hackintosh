@@ -14,7 +14,7 @@ This OpenCore configuration is optimized for this specific hardware.
 - [ ] AirDrop & other Airport related features
 - [ ] Multi-touch gestures (4 fingers)
 - [ ] Accessing DRM content (use chromium based browsers instead)
-- [ ] WiFi & Bluetooth (macOS 11+)
+- [ ] WiFi & Bluetooth (macOS 12+)
 - [ ] Graphics Acceleration (macOS 13+) 
 - [ ] Automatic Lid Wake when at sleep
 
