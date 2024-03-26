@@ -22,10 +22,11 @@ This OpenCore configuration is optimized for this specific hardware.
 
 |**Category**|**Component**|
 |------------|-------------|
-|**CPU**	 |Intel® Core™ i5-4200U Processor	 	              |
-|**iGPU**	 |Intel HD Graphics 4400                              |
-|**Wi-Fi/BT**|Qualcomm Atheros AR9565                             |
-|**Ethernet**|Broadcom NetXtreme BCM57786                         |
+|**CPU**	 |Intel® Core™ i5-4200U Processor	|
+|**iGPU**	 |Intel HD Graphics 4400          |
+|**dGPU**	 |          |
+|**Wi-Fi/BT**|Qualcomm Atheros AR9565       |
+|**Ethernet**|Broadcom NetXtreme BCM57786   |
 |**Audio** 	 |Realtek ALC282				 	      |
 
 # Requirements
@@ -173,34 +174,10 @@ More things are detailed in there that I did not add here.
 <table>
 
 * Other required settings are non-existent in BIOS, however some quirks in config.plist are enabled as a workaround.
-  * As CFG lock remains locked, theres trade-off of being unable to dynamically adjust CPU frequencies based on usage scenarios.
-  * Power Management functionality still works as it is managed by ACPI, and temperature throttling mechanisms.
 
 ## ACPI 
 
-<details>
-<summary></summary>
-    
-The **DSDT** (_Differentiated System Description Table_), and **SSDT**s (_Secondary System Description Tables_) are integral parts of your system firmware, containing sets of instructions aimed to:
-1. 🔋 Outline hardware devices for recognition (USB ports,  battery, etc.)
-2. 💤 Power management (sleep, hibernation, etc.)
-3. ⌨️ System events (button presses, power status changes etc.)
-   
-DSDT holds most of these instructions, while SSDTs holds sumpplentary ones used to further define DSDT.  
-#### Patch
- The Patch section in the config.plist is utilized to rename specific elements of the DSDT and subsequently redefine them through an SSDT.
-
-
-So, what's the purpose of the patch section alongside the SSDT? 🤔 <br >
-    
-Some methods within the DSDT will not work for macOS, like the brightness keys. When we press `Fn` + `Left`, it triggers the `_Q11` method within the DSDT. However, macOS will not react to this, as it expects a key input of `F14`.
-
-To address this, we patch or rename `_Q11` to `XQ11`. Renaming it alone would render it nonfunctional, so we reintroduce `_Q11` back in a new SSDT and redefine the instructions within the method. Now, if `_Q11` is called, it will now direct to our custom SSDT. 
-
-In our custom SSDT with custom instructions for`_Q11` method, it will check if the OS is macOS - if true, it will return a key input of `F14`, if not return `XQ11`. The `XQ11` method now becomes a child method of the newly defined `_Q11`. This strategy allows for OS-specific customization without sacrificing compatibility across different operating systems. This strategy is way cleaner than manually editing DSDT and other system SSDTs.
-
-</details>
-
+#### The **E1-572G.aml** in the OC/ACPI is a combination of all of these SSDTs.
 <table>
     <tr>
         <td><b>SSDT&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></td>
@@ -360,7 +337,6 @@ In our custom SSDT with custom instructions for`_Q11` method, it will check if t
     </tr>
 </table>
 
-#### The **E1-572G.aml** in the EFI is a combination of all SSDTs mentioned above.
 <br >
 
 ## Device Properties
@@ -693,14 +669,6 @@ Under **Add** and **Delete** > `4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102`:
 
 - `rtc-blacklist` resolves wake, where it restarts instead of resuming from sleep.
         -  In combination with RTCMemoryFixup.kext
-
-
-## Miscellaneous
-
-* Even though MacbookPro11,1 is the closest SMBIOS for us, it is only limited up to Big Sur. MacbookPro11,4 is the only Haswell SMBIOS supported on Monterey. Temporarily using a supported SMBIOS is required to install Monterey and newer, just regenerate a new one after installtion with an SMBIOS one closest to our CPU (e.g. MacbookPro11,1) with a `-no_compat_check` boot-arg. 
-* WiFi and BT kexts are macOS version sensitive! Utilize MinKernel and MaxKernel if multi-booting
-  
-
 
 
 
