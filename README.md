@@ -1,5 +1,5 @@
 # Acer Aspire E1-572G — Opencore Configuration
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.8-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.9-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![macOS](https://img.shields.io/badge/macOS-Monterey-brightgreen.svg)]()
 
 <img align="right" src="Images/laptop_monterey.png" alt="laptop_monterey.png" width="250">
