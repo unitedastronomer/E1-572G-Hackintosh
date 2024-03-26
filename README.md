@@ -339,7 +339,7 @@ In our custom SSDT with custom instructions for`_Q11` method, it will check if t
         <b>SSDT-SBUS-MCHC</b>
         </td>
     <td>
-        Apparently fixes AppleSMBus support, I only added MCHC as SBUS is already present in the DSDT.
+        Apparently fixes AppleSMBus support.
     </td>
     </tr>
     <tr>
