@@ -7,8 +7,9 @@
 
 This OpenCore configuration is optimized for this specific hardware.
    * Tested to work from **High Sierra** up to **Sonoma**
+     * However, additional configuration is needed for Ventura and newer
    * Kexts for WiFi and Bluetooth are not included
-   * Additional configuration is needed for Ventura and newer
+     * Replace it with an Intel - this will save you from headache!
 
 ### What's not working?
 - [ ] AirDrop & other Airport related features
@@ -17,6 +18,7 @@ This OpenCore configuration is optimized for this specific hardware.
 - [ ] WiFi & Bluetooth (macOS 12+)
 - [ ] Graphics Acceleration (macOS 13+) 
 - [ ] Automatic Lid Wake when at sleep
+- [ ] Fan reading (and so under Windows), so don't bother adding `SMCSuperIO.kext`
 
 ## Hardware
 
@@ -24,7 +26,7 @@ This OpenCore configuration is optimized for this specific hardware.
 |------------|-------------|
 |**CPU**	 |Intel® Core™ i5-4200U Processor	|
 |**iGPU**	 |Intel HD Graphics 4400          |
-|**dGPU**	 |          |
+|**dGPU**	 | (Unsupported)                  |
 |**Wi-Fi/BT**|Qualcomm Atheros AR9565       |
 |**Ethernet**|Broadcom NetXtreme BCM57786   |
 |**Audio** 	 |Realtek ALC282				 	      |
@@ -72,14 +74,21 @@ Configure the BIOS with these settings:
 In the config.plist, section `PlatformInfo > Generic` is currently left empty, generate your own SMBIOS data. 
 
 1. Download [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS)
-3. Open **GenSMBIOS.bat** \(on Windows\)
-4. Type `1`, and press enter to install/update MacSerial
-5. Type `2`, and press enter to select config.plist
-6. Drag and drop **config.plist** file and press enter
-7. Type `Y`, **if** "The following keys will be removed..." is prompted
-9. Enter `3` and enter to select Generate SMBIOS
-10. Type `MacbookPro11,1`, and press enter, the SMBIOS will be automatically apply into your chosen config.plist. <br >
-12. While the command prompt still open, type `6` to see Current SMBIOS.
+2. Open **GenSMBIOS.bat** (on Windows)
+3. Type `1`, and press enter to install/update MacSerial
+4. Type `2`, and press enter to select config.plist
+5. Drag and drop **config.plist** file and press enter
+6. Type `Y`, **if** "The following keys will be removed..." is prompted
+7. Enter `3` and enter to select Generate SMBIOS
+8. Type `MacbookPro11,1`, and press enter, the SMBIOS will be automatically apply into your chosen config.plist. <br >
+
+|**macOS**   |**SMBIOS**      |
+|------------|----------------|
+| <= Big Sur |`MacbookPro11,1`|
+|	Monterey   |`MacbookPro11,4`|
+|	Ventura and Sonoma |`iMacPro1,1`|
+
+9. While the command prompt still open, type `6` to see Current SMBIOS.
 
 Now enter the serial into the [Apple Check Coverage page](www.checkcoverage.apple.com), you will get 1 of 3 responses:
 1. **ⓘ Please enter a valid serial number.** <br >
@@ -89,14 +98,16 @@ Now enter the serial into the [Apple Check Coverage page](www.checkcoverage.appl
 4. **Purchase Date not Validated** <br >
 <sup>Can also be used, but not recommended as there may be a chance of a conflict with an actual Mac</sup>
 
-If installing Monterey, use `MacbookPro11,4` SMBIOS. You could keep it that way, OR you could re-generate and use `MacbookPro11,1` AFTER installation as it is the closest SMBIOS to our CPU, and don't forget to add `-no_compat_check` under boot-args. <br >
+> [!NOTE]  
+> * For **Monterey**, you have the option to either keep the current SMBIOS or regenerate it and switch to `MacbookPro11,1` after installation, as it closely matches our CPU. Make sure to include `-no_compat_check` under boot-args. 
+> * For **Ventura** and **Sonoma**, we will temporarily utilize a supported SMBIOS for installation purposes. After installation, regenerate and switch to `MacbookPro11,1`, and remember to include `-no_compat_check` under boot-args. <br >
 
 ## macOS Ventura and Sonoma
 Please only use Propertree to configure these settings.
 
 #### Before Installation
 * Temporarily generate `iMacPro1,1` SMBIOS in config.plist
-* Set `csr-active-config` to `FF0F000`
+* Set `csr-active-config` to `FF0F0000`
 * Set `SecureBootModel` to `Disabled`
 * Add `amfi=0x80` in boot-args
 * Download the LATEST Opencore Legacy Patcher, and place it where you can easily access it under macOS.
@@ -108,15 +119,25 @@ Please only use Propertree to configure these settings.
 * Generate SMBIOS, use `MacbookPro11,1`.
 
 # Post-Install
-Enter the following in terminal, this may resolve laptop randomly not powering down properly on sleep.
+Enter the following in terminal, this may resolve sleep randomly break.
 ```
 sudo pmset -a lidwake 0
+sudo pmset -a autopoweroff 0
+sudo pmset -a powernap 0
+sudo pmset -a standby 0
+sudo pmset -a proximitywake 0
+sudo pmset -a tcpkeepalive 0
 ```
+### Disable Powernap and Wake for Network Access in Settings! Settings -> Battery.
+
 ### Troubleshoot
 * Unable to [set the boot option back to macOS](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html#installation) after booting on windows?
 * Stuck on a loop under verbose mode: NVRAM Reset; remove the battery, and press power button for 30 seconds.
 * Broadcom Ethernet not detected in any OS: NVRAM Reset; remove the battery, and press power button for 30 seconds.
 
+Intel mPCIe WiFI + BT Card specific:
+* Bluetooth becomes unusable when WiFi is active and connected on the 2.4 GHz band (e.g., stuttering sound when playing from a BT speaker). A workaround is to connect to the 5 GHz band of the WiFi, or set up a hotspot on your phone and configure it to use the 5 GHz band. [More info](https://openintelwireless.github.io/itlwm/FAQ.html#can-i-use-bluetooth-with-wi-fi)
+* The AR9565 card only uses one antenna. Intel mPCIe cards typically come with two antenna connectors, so consider purchasing the appropriate antenna for the second connector to enhance coverage. Also note that only having one antenna in use still works without having to add another one. 
 
 ### Cosmetic
 
@@ -125,8 +146,8 @@ sudo pmset -a lidwake 0
   - Only do if you are not multi-booting.
 
 
-# This is not a guide, rather than an explanation of what I have added in my config.plist. Please refer to the Dortania Opencore Install Guide
-More things are detailed in there that I did not add here.
+# Don't consider this as a guide, but rather just a pointer. I am not responsible if you have somehow bricked your device!
+Please refer to the Dortania Opencore Install Guide, more things are detailed in there that I did not add here.
 
 ## BIOS
 
