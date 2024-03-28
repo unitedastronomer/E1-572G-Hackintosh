@@ -1032,7 +1032,7 @@
 			<key>ConsoleAttributes</key>
 			<integer>0</integer>
 			<key>HibernateMode</key>
-			<string>Auto</string>
+			<string>RTC</string>
 			<key>HibernateSkipsPicker</key>
 			<true/>
 			<key>HideAuxiliary</key>
@@ -1194,7 +1194,7 @@
 			<key>E09B9297-7928-4440-9AAB-D1F8536FBF0A</key>
 			<dict>
 				<key>hbfx-ahbm</key>
-				<integer>3840</integer>
+				<integer>3841</integer>
 			</dict>
 		</dict>
 		<key>Delete</key>
