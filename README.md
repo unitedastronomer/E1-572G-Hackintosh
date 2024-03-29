@@ -2,34 +2,73 @@
 [![OpenCore](https://img.shields.io/badge/OpenCore-0.9.9-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![macOS](https://img.shields.io/badge/macOS-Monterey-brightgreen.svg)]()
 
-<img align="right" src="Images/laptop_monterey.png" alt="laptop_monterey.png" width="250">
+This OpenCore configuration is optimized for this specific hardware. 
+   * Tested to work from **High Sierra** (10.13) up to **Sonoma** (14)
+     * However, additional configuration is needed for Ventura (13) and newer
 
+## 💻 System Specification
 
-This OpenCore configuration is optimized for this specific hardware.
-   * Tested to work from **High Sierra** up to **Sonoma**
-     * However, additional configuration is needed for Ventura and newer
-   * Kexts for WiFi and Bluetooth are not included
-     * Replace it with an Intel - this will save you from headache!
+<table>
+  <tr>
+    <td rowspan="2">
+          <table>
+        <tr>
+          <th>Category</th>
+          <th>Component</th>
+        </tr>
+        <tr>
+          <td><strong>CPU</strong></td>
+          <td>Intel® Core™ i5-4200U Processor</td>
+        </tr>
+        <tr>
+          <td><strong>iGPU</strong></td>
+          <td>(Unsupported) 0</td>
+        </tr>
+        <tr>
+          <td><strong>dGPU</strong></td>
+          <td>Intel HD Graphics 4400</td>
+        </tr>
+        <tr>
+          <td><strong>Wi-Fi & BT</strong></td>
+          <td>Qualcomm Atheros AR9565</td>
+        </tr>
+        <tr>
+          <td><strong>Audio</strong></td>
+          <td>Broadcom NetXtreme BCM57786</td>
+        </tr>
+        <tr>
+          <td><strong>Ethernet</strong></td>
+          <td>Realtek ALC282</td>
+        </tr>
+      </table>
+    </td>
+    <td>
+      <table>
+        <tr>
+          <strong>Screenshot</strong>
+        </tr>
+      </table>
+    </td>
+  </tr>
+  <tr>
+    <td>
+      <img align="center" src="Images/laptop_monterey.png" alt="laptop_monterey.png" width="250">
+    </td>
+  </tr>
+</table>
 
-### What's not working?
+### What's not working? 
 - [ ] AirDrop & other Airport related features
 - [ ] Multi-touch gestures (4 fingers)
-- [ ] Accessing DRM content (use chromium based browsers instead)
+- [ ] Cannot access DRM content (Use chromium based browsers instead)
 - [ ] WiFi & Bluetooth (macOS 12+)
 - [ ] Graphics Acceleration (macOS 13+) 
 - [ ] Automatic Lid Wake when at sleep
 - [ ] Fan reading (and so under Windows), so don't bother adding `SMCSuperIO.kext`
 
-## Hardware
+   * Kexts for WiFi and Bluetooth are not included
+     * Replace it with an Intel - this will save you from headache!
 
-|**Category**|**Component**|
-|------------|-------------|
-|**CPU**	 |Intel® Core™ i5-4200U Processor	|
-|**iGPU**	 |Intel HD Graphics 4400          |
-|**dGPU**	 | (Unsupported)                  |
-|**Wi-Fi/BT**|Qualcomm Atheros AR9565       |
-|**Ethernet**|Broadcom NetXtreme BCM57786   |
-|**Audio** 	 |Realtek ALC282				 	      |
 
 # Requirements
 1. **Ethernet** or Android Phone for USB Tethering<br >
@@ -37,7 +76,7 @@ This OpenCore configuration is optimized for this specific hardware.
 2. USB Drive <br >
 <sup>`>=4GB` for Onlline installer</sup>
 3.  Replace mPCIe WiFi Card with an Intel one<br >
-<sup>`Optional` There's no working kext for AR9565 on Monterey and newer, max speed is ≤ 200 kilobits under Big Sur and earlier.</sup>
+<sup>`Optional` Notorious for having a really slow internet speed. >. Replace it with an Intel - this will save you from headache! There's no working kext for AR9565 on Monterey and newer, max speed is ≤ 200 kilobits under Big Sur and earlier.</sup>
 
 # Preparation
 
@@ -691,7 +730,16 @@ Under **Add** and **Delete** > `4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102`:
 - `rtc-blacklist` resolves wake, where it restarts instead of resuming from sleep.
         -  In combination with RTCMemoryFixup.kext
 
+### What's not working?
 
+[- [ ] AirDrop & other Airport related features
+- [ ] Multi-touch gestures (4 fingers)
+- [ ] Cannot access DRM content (Use chromium based browsers instead)
+- [ ] WiFi & Bluetooth (macOS 12+) Notorious for having a really slow internet speed. >Available kexts are only upto Big Sur. Replace it with an Intel - this will save you from headache!</sup>
+- [ ] Graphics Acceleration (macOS 13+) 
+- [ ] Automatic Lid Wake when at sleep
+- [ ] Fan reading (and so under Windows), so don't bother adding `SMCSuperIO.kext`]
+- [ ] (https://github.com/unitedastronomer/E1-572G-Hackintosh/edit/Redo-README-for-simplicity/README.md#whats-not-working-1)
 
 ## Credits
 - [doesprintfwork](https://github.com/doesprintfwork/All-in-one-Vanilla-AMD-Hackintosh-Guide/blob/f1a73610d02397f3291686c127a8918fea40f3ec/prerequisites/amd-clover-config.plist/smbios.md) GenSMBIOS guide
