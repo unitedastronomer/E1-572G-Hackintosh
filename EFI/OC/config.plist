@@ -1032,7 +1032,7 @@
 			<key>ConsoleAttributes</key>
 			<integer>0</integer>
 			<key>HibernateMode</key>
-			<string>RTC</string>
+			<string>None</string>
 			<key>HibernateSkipsPicker</key>
 			<true/>
 			<key>HideAuxiliary</key>
@@ -1191,11 +1191,6 @@
 				<key>run-efi-updater</key>
 				<string>No</string>
 			</dict>
-			<key>E09B9297-7928-4440-9AAB-D1F8536FBF0A</key>
-			<dict>
-				<key>hbfx-ahbm</key>
-				<integer>3841</integer>
-			</dict>
 		</dict>
 		<key>Delete</key>
 		<dict>
@@ -1212,10 +1207,6 @@
 			<array>
 				<string>boot-args</string>
 				<string>csr-active-config</string>
-			</array>
-			<key>E09B9297-7928-4440-9AAB-D1F8536FBF0A</key>
-			<array>
-				<string>hbfx-ahbm</string>
 			</array>
 		</dict>
 		<key>LegacyOverwrite</key>
