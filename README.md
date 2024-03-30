@@ -22,7 +22,7 @@ This OpenCore configuration is optimized for this specific hardware.
         </tr>
         <tr>
           <td><strong>iGPU</strong></td>
-          <td>(Unsupported) 0</td>
+          <td>(Unsupported)</td>
         </tr>
         <tr>
           <td><strong>dGPU</strong></td>
@@ -57,17 +57,17 @@ This OpenCore configuration is optimized for this specific hardware.
   </tr>
 </table>
 
-### What's not working? 
-- [ ] AirDrop & other Airport related features
-- [ ] Multi-touch gestures (4 fingers)
-- [ ] Cannot access DRM content (Use chromium based browsers instead)
-- [ ] WiFi & Bluetooth (macOS 12+)
-- [ ] Graphics Acceleration (macOS 13+) 
-- [ ] Automatic Lid Wake when at sleep
-- [ ] Fan reading (and so under Windows), so don't bother adding `SMCSuperIO.kext`
 
-   * Kexts for WiFi and Bluetooth are not included
-     * Replace it with an Intel - this will save you from headache!
+### What's not working? 
+
+1. AirDrop & other Airport related features
+2. Multi-touch gestures (4 fingers)
+3. Multi-touch gestures (4 fingers)
+4. Cannot access DRM content (Use chromium based browsers instead)
+5. WiFi & Bluetooth (macOS 12+)
+6. Graphics Acceleration (macOS 13+)
+7. Automatic Lid Wake when at sleep
+8. Fan reading (and so under Windows), so don't bother adding `SMCSuperIO.kext`
 
 
 # Requirements
