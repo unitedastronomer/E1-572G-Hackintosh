@@ -22,11 +22,11 @@ This OpenCore configuration is optimized for this specific hardware.
         </tr>
         <tr>
           <td><strong>iGPU</strong></td>
-          <td>(Unsupported)</td>
+          <td>Intel HD Graphics 4400</td>
         </tr>
         <tr>
           <td><strong>dGPU</strong></td>
-          <td>Intel HD Graphics 4400</td>
+          <td>(Unsupported)</td>
         </tr>
         <tr>
           <td><strong>Wi-Fi & BT</strong></td>
@@ -60,23 +60,22 @@ This OpenCore configuration is optimized for this specific hardware.
 
 ### What's not working? 
 
-1. AirDrop & other Airport related features
+1. AirDrop, and other Airport related features
 2. Multi-touch gestures (4 fingers)
-3. Multi-touch gestures (4 fingers)
-4. Cannot access DRM content (Use chromium based browsers instead)
-5. WiFi & Bluetooth (macOS 12+)
-6. Graphics Acceleration (macOS 13+)
-7. Automatic Lid Wake when at sleep
-8. Fan reading (and so under Windows), so don't bother adding `SMCSuperIO.kext`
+3. Cannot access DRM content (Use chromium based browsers instead)
+4. WiFi & Bluetooth - on Monterey (12) and newer
+5. Graphics Acceleration - on Ventura (13) and newer
+6. Automatic Lid Wake when at sleep
+7. Fan reading (and so under Windows), so don't bother adding `SMCSuperIO.kext`
 
 
 # Requirements
 1. **Ethernet** or Android Phone for USB Tethering<br >
    <sup>iPhone USB Tethering does not work in Recovery</sup>
 2. USB Drive <br >
-<sup>`>=4GB` for Onlline installer</sup>
+<sup> Atleast **4GB** for Onlline installer</sup>
 3.  Replace mPCIe WiFi Card with an Intel one<br >
-<sup>`Optional` Notorious for having a really slow internet speed. >. Replace it with an Intel - this will save you from headache! There's no working kext for AR9565 on Monterey and newer, max speed is ≤ 200 kilobits under Big Sur and earlier.</sup>
+<sup>`Optional` Notorious for having a really slow internet speed under macOS. There's no working kext for AR9565 on Monterey and newer.</sup>
 
 # Preparation
 
@@ -93,10 +92,6 @@ Configure the BIOS with these settings:
           <tr>
             <td>Boot Mode</td>
             <td>UEFI</td>
-          </tr>
-          <tr>
-            <td>SATA Mode</td>
-            <td>AHCI</td>
           </tr>
           <tr>
             <td>Secure Boot<e/td>
@@ -123,7 +118,7 @@ In the config.plist, section `PlatformInfo > Generic` is currently left empty, g
 
 |**macOS**   |**SMBIOS**      |
 |------------|----------------|
-| <= Big Sur |`MacbookPro11,1`|
+| Big Sur and earlier |`MacbookPro11,1`|
 |	Monterey   |`MacbookPro11,4`|
 |	Ventura and Sonoma |`iMacPro1,1`|
 
