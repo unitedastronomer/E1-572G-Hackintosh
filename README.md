@@ -5,6 +5,7 @@
 This OpenCore configuration is optimized for this specific hardware. 
    * Tested to work from **High Sierra** (10.13) up to **Sonoma** (14)
      * However, additional configuration is needed for Ventura (13) and newer
+   * Kexts for WiFi and Bluetooth are not included
 
 ## 💻 System Specification
 
@@ -26,11 +27,11 @@ This OpenCore configuration is optimized for this specific hardware.
         </tr>
         <tr>
           <td><strong>dGPU</strong></td>
-          <td>(Unsupported)</td>
+          <td><sup>Unsupported</sup></td>
         </tr>
         <tr>
           <td><strong>Wi-Fi & BT</strong></td>
-          <td>Qualcomm Atheros AR9565</td>
+          <td>Qualcomm Atheros AR9565 <br ><sup>Limited only up to Big Sur</sup></td>
         </tr>
         <tr>
           <td><strong>Audio</strong></td>
@@ -63,19 +64,19 @@ This OpenCore configuration is optimized for this specific hardware.
 1. AirDrop, and other Airport related features
 2. Multi-touch gestures (4 fingers)
 3. Cannot access DRM content (Use chromium based browsers instead)
-4. WiFi & Bluetooth - on Monterey (12) and newer
-5. Graphics Acceleration - on Ventura (13) and newer
+4. WiFi & Bluetooth (on Monterey (12) and newer)
+5. Graphics Acceleration (on Ventura (13) and newer)
 6. Automatic Lid Wake when at sleep
 7. Fan reading (and so under Windows), so don't bother adding `SMCSuperIO.kext`
 
 
 # Requirements
-1. **Ethernet** or Android Phone for USB Tethering<br >
+* **Ethernet** or Android Phone for USB Tethering<br >
    <sup>iPhone USB Tethering does not work in Recovery</sup>
-2. USB Drive <br >
+* USB Drive <br >
 <sup> Atleast **4GB** for Onlline installer</sup>
-3.  Replace mPCIe WiFi Card with an Intel one<br >
-<sup>`Optional` Notorious for having a really slow internet speed under macOS. There's no working kext for AR9565 on Monterey and newer.</sup>
+*  Replace mPCIe WiFi Card with an Intel one<br >
+<sup>**Optional**, as there's no working kext for AR9565 on Monterey and newer, and it has slow internet speed under macOS. </sup>
 
 # Preparation
 
