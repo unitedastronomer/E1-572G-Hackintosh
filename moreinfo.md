@@ -471,9 +471,17 @@ This EFI <b>does not</b> contain any kext for the WiFi and BT.<br ><br >
     </tr>
 <tr>
       <td>
-        <b>HibernationFixup</b>
+        <b>AMFIPass</b>
       </td>
-      <td>Adjusted to autohibernate when battery is set to 15%. In combination with the hbfx-ahbm nvram entry.
+      <td>
+      </td>
+    </tr>
+        </tr>
+<tr>
+      <td>
+        <b>RestrictEvents</b>
+      </td>
+      <td>
       </td>
     </tr>
     <tr>
@@ -514,8 +522,7 @@ This EFI <b>does not</b> contain any kext for the WiFi and BT.<br ><br >
 <table>
 
 ### Kernel ->  Patch
-Broadcom BCM57786 Patch <br />
-(Cosmetic) IOReg model
+(will follow up to add info)
 
 ## NVRAM
 
@@ -526,12 +533,12 @@ Under **Add** > `7C436110-AB2A-4BBB-A880-FE41995C9F82`:
 | Key* | Value | Type |
 | :--- | :--- | :--- |
 | SystemAudioVolume | 46 | Data |
-| csr-active-config | 00000000  | Data |
+| csr-active-config |   | Data |
 
 
    - `SystemAudioVolume` sets the boot chime volume to 70%.
         -  `46` is the Hexadecimal equivalent of 70.
-   - `csr-active-config`'s entry `00000000` enabled SIP. FF0F0000 to disable, required for root patching.
+   - `csr-active-config`'s is SIP setting.
 
 <br />
 
