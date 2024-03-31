@@ -59,30 +59,29 @@ This OpenCore configuration is optimized for this specific hardware.
 </table>
 
 
-### What's not working? 
+### ⚠️ What's not working? 
 
 1. AirDrop, and other Airport related features
 2. Multi-touch gestures (4 fingers)
-3. Cannot access DRM content (Use chromium based browsers instead)
-4. WiFi & Bluetooth (on Monterey (12) and newer)
-5. Graphics Acceleration (on Ventura (13) and newer)
-6. Automatic Lid Wake when at sleep
+3. Accessing DRM content (Use chromium based browsers instead)
+4. WiFi & Bluetooth (Monterey (12) and newer)
+5. Graphics Acceleration (Ventura (13) and newer)
+6. Automatic Lid Wake (when at sleep)
 7. Fan reading (and so under Windows), so don't bother adding `SMCSuperIO.kext`
 
 
-# Requirements
-* **Ethernet** or Android Phone for USB Tethering<br >
+# 📝 Requirements
+* 📱 **Ethernet** or Android Phone for USB Tethering<br >
    <sup>iPhone USB Tethering does not work in Recovery</sup>
-* USB Drive <br >
+* 📀 USB Drive <br >
 <sup> Atleast **4GB** for Onlline installer</sup>
-*  Replace mPCIe WiFi Card with an Intel one<br >
+* 🛜 Replace mPCIe WiFi Card with an Intel one<br >
 <sup>**Optional**, as there's no working kext for AR9565 on Monterey and newer, and it has slow internet speed under macOS. </sup>
 
 # Preparation
 
-### BIOS
-
-Update to the [latest version](https://www.acer.com/us-en/support/product-support/Aspire_E1-572G), this resolves the issue of the laptop failing to fully power down after doing a shutdown under macOS. <br >
+### ⚙️ Update BIOS to the [latest version](https://www.acer.com/us-en/support/product-support/Aspire_E1-572G)
+* This resolves the issue of the laptop failing to fully power down after doing a shutdown under macOS.
 
 Configure the BIOS with these settings:
 <table>
