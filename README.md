@@ -82,12 +82,6 @@ In the config.plist, section `PlatformInfo > Generic` is currently left empty, g
 7. Enter `3` and enter to select Generate SMBIOS
 8. Type `MacbookPro11,1`, and press enter, the SMBIOS will be automatically apply into your chosen config.plist. <br >
 
-|**macOS**   |**SMBIOS**      |
-|------------|----------------|
-| <= Big Sur |`MacbookPro11,1`|
-|	Monterey   |`MacbookPro11,4`|
-|	Ventura and Sonoma |`iMacPro1,1`|
-
 9. While the command prompt still open, type `6` to see Current SMBIOS.
 
 Now enter the serial into the [Apple Check Coverage page](www.checkcoverage.apple.com), you will get 1 of 3 responses:
@@ -98,25 +92,17 @@ Now enter the serial into the [Apple Check Coverage page](www.checkcoverage.appl
 4. **Purchase Date not Validated** <br >
 <sup>Can also be used, but not recommended as there may be a chance of a conflict with an actual Mac</sup>
 
-> [!NOTE]  
-> * For **Monterey**, you have the option to either keep the current SMBIOS or regenerate it and switch to `MacbookPro11,1` after installation, as it closely matches our CPU. Make sure to include `-no_compat_check` under boot-args. 
-> * For **Ventura** and **Sonoma**, we will temporarily utilize a supported SMBIOS for installation purposes. After installation, regenerate and switch to `MacbookPro11,1`, and remember to include `-no_compat_check` under boot-args. <br >
 
 ## macOS Ventura and Sonoma
 Please only use Propertree to configure these settings.
 
 #### Before Installation
-* Temporarily generate `iMacPro1,1` SMBIOS in config.plist
-* Set `csr-active-config` to `FF0F0000`
-* Set `SecureBootModel` to `Disabled`
 * Add `amfi=0x80` in boot-args
 * Download the LATEST Opencore Legacy Patcher, and place it where you can easily access it under macOS.
 * INSTALL macOS
 #### After
 * Run OCLP, accept permissions. Then click the reboot when prompted by OCLP app.
-* Remove `amfi=0x80`, add `-no_compat_check` and `ipc_control_port_options=0`
-* Download [AMFIPass.kext](https://github.com/dortania/OpenCore-Legacy-Patcher/tree/bbc89022704343e55231f59a064acef1e57100bf/payloads/Kexts/Acidanthera), and add to OC/Kexts, then OC Snapshot.
-* Generate SMBIOS, use `MacbookPro11,1`.
+* Remove `amfi=0x80`
 
 # Post-Install
 Enter the following in terminal, this may resolve sleep randomly break.
