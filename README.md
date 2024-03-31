@@ -123,6 +123,7 @@ In the config.plist, section `PlatformInfo > Generic` is currently left empty, g
 6. Type `Y`, **if** "The following keys will be removed..." is prompted
 7. Enter `3` and enter to select Generate SMBIOS
 8. Type `MacbookPro11,1`, and press enter, the SMBIOS will be automatically apply into your chosen config.plist. <br >
+
 9. While the command prompt still open, type `6` to see Current SMBIOS.
 
 Now enter the serial into the [Apple Check Coverage page](www.checkcoverage.apple.com), you will get 1 of 3 responses:
