@@ -3,7 +3,10 @@ Please refer to the Dortania Opencore Install Guide as your main guide. Consider
 
 #### Reminder:
 * In an EFI partition, there is an EFI folder with **BOOT** and **Microsoft** folder, be mindful when copy and pasting. Copy the OC folder within your laptop's EFI folder in your EFI partition, and replace the existing **BOOT** folder with the one from OpenCore.
-* It is reccomended to edit config.plist with Propertree. 
+* It is recommended to edit config.plist with Propertree, you could also use Opencore Configurator.
+  * Use Opencore Configurator at your own risk, it may corrupt your plist.
+    * If that happens, open the config.plist with a text editor, check the last line `</plist>`, if it is missing a `>`, add it back. It rarely happens but it can happen.
+  * I don't use OCAT, the ocvalidate it uses is outdated. It should still work, just ignore the ocvalidate errors. It's apparently safer than OC Configurator.
 * Don't stop midway of installing, either via `install macOS` app or USB installation! **JUST WAIT!**
    * However if it is looping the same error code over and over: remove the battery, and press power button for atleast 30 seconds.
 
@@ -31,13 +34,11 @@ Configure the BIOS with these settings:
 In the config.plist, section <code>PlatformInfo > Generic</code> is currently left empty, generate your own SMBIOS data. 
    * Use a **MacbookPro11,1** SMBIOS, no matter what version you are installing.
       * Using other SMBIOS will break USBMap.
+        * Meaning some USB ports will not be functional.
 
 
  <br > 
 
-
-### macOS Monterey and earlier specific
-* Delete `amfi=0x80` in boot-arg before or after installation. This boot-arg is only necessary if root patching.
 * If upgrading from Catalina or earlier to Ventura and earlier, you will need to temporarily use a supported SMBIOS for that version.
 
 ### macOS Ventura and Sonoma specific

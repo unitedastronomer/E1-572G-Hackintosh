@@ -395,7 +395,7 @@
 			<key>PciRoot(0x0)/Pci(0x1C,0x0)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>#compatible</key>
-				<string>pci14e4,16b3</string>
+				<string>pci14e4,16b4</string>
 				<key>#device-id</key>
 				<data>tBYAAA==</data>
 				<key>built-in</key>
