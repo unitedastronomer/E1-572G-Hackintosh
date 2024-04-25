@@ -14,6 +14,7 @@ Please refer to the Dortania Opencore Install Guide as your main guide. Consider
 *  Replace AR9565 with an Intel or Broadcom mPCIe WiFi+BT Card<br >
    - No working kext for AR9565 on Monterey+
       - Infuriatingly slow on any macOS it can run.
+      - I have not added any kexts for WiFi and BT.
 *  Update BIOS to the [latest version](https://www.acer.com/us-en/support/product-support/Aspire_E1-572G)
    - This resolves the issue of the laptop failing to fully power down when shutting down.
 
@@ -539,6 +540,7 @@ This EFI <b>does not</b> contain any kext for the WiFi and BT.<br ><br >
         <b>AMFIPass</b>
       </td>
       <td>
+Partially re-enables AMFI on root patched systems. This can be handy if running into issues with an application you use related to AMFI.
       </td>
     </tr>
         </tr>
@@ -596,8 +598,9 @@ Additional kext I recently added:
 
 ### Kernel ->  Patch
 * Broadcom BCM57786 Patch
-* BCM57786 IOReg model (Cosmetic) (com.apple.iokit.AppleBCM5701Ethernet)
-* BCM57786 IOReg model (Cosmetic) (com.apple.iokit.AppleBCM57XXEthernet)
+  * This is just a FakePCIID alternative, this is disabled by default.
+* BCM57786 SysReport model (Cosmetic) (com.apple.iokit.AppleBCM5701Ethernet)
+* BCM57786 SysReport model (Cosmetic) (com.apple.iokit.AppleBCM57XXEthernet)
 * Force FileVault on Broken Seal
 * Disable Library Validation Enforcement
 * Disable _csr_check() in _vnode_check_signature
@@ -615,7 +618,7 @@ Under -> `7C436110-AB2A-4BBB-A880-FE41995C9F82`:
 | :--- | :--- | :--- |
 | SystemAudioVolume | 46 | Data |
 | csr-active-config |   | Data |
-| boot-arg| -v debug=0x100 keepsyms=1 ipc_control_port _options=0 | String |
+| boot-arg| -v amfi=0x80 ipc_control_port _options=0 | String |
 
 
    - `SystemAudioVolume` sets the boot chime volume to 70%.
@@ -624,7 +627,6 @@ Under -> `7C436110-AB2A-4BBB-A880-FE41995C9F82`:
 
 - `-v` shows verbose on boot
 - `amfi=0x80` disables Apple Mobile File Integrity, needed to allow patching.
-- `keepsyms=1` prevent reboot on kernel panic
 - `ipc_control_port_options=0` a workaround on root patched systems on Sonoma where some apps don't start or crash immediately
 
 <br />

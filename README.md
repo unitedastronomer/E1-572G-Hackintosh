@@ -6,7 +6,7 @@
 🛠️ This OpenCore configuration is optimized for this specific hardware. 
    * Tested to work from **High Sierra** (10.13) up to **Sonoma** (14)
    * Additional configuration is needed for **Ventura** (13) and **Sonoma** (14)
-   * [Additional info](ADDITIONAL_INFO.md)
+   * [Read this before using!](ADDITIONAL_INFO.md)
 
 <h1>💻 System Specification</h1>
 
