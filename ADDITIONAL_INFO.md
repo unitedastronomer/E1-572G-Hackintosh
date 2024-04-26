@@ -3,10 +3,6 @@ Please refer to the Dortania Opencore Install Guide as your main guide. Consider
 
 #### Reminder:
 * In an EFI partition, there is an EFI folder with **BOOT** and **Microsoft** folder, be mindful when copy and pasting. Copy the OC folder within your laptop's EFI folder in your EFI partition, and replace the existing **BOOT** folder with the one from OpenCore.
-* It is recommended to edit config.plist with Propertree, you could also use Opencore Configurator.
-  * Use Opencore Configurator at your own risk, it may corrupt your plist.
-    * If that happens, open the config.plist with a text editor, check the last line `</plist>`, if it is missing a `>`, add it back. It rarely happens but it can happen.
-  * I don't use OCAT, the ocvalidate it uses is outdated. It should still work, just ignore the ocvalidate errors. It's apparently safer than OC Configurator.
 * Don't stop midway of installing, either via `install macOS` app or USB installation! **JUST WAIT!**
    * However if it is looping the same error code over and over: remove the battery, and press power button for atleast 30 seconds.
 
@@ -39,7 +35,7 @@ In the config.plist, section <code>PlatformInfo > Generic</code> is currently le
 
  <br > 
 
-* If upgrading from Catalina or earlier to Ventura and earlier, you will need to temporarily use a supported SMBIOS for that version.
+* If upgrading from Catalina or earlier to Ventura and newer, you will need to temporarily use a supported SMBIOS for that version.
 
 ### macOS Ventura and Sonoma specific
 * Graphics Acceleration had been dropped in Ventura, so you'll need to re-add it with the help of Opencore Legacy Patcher.
@@ -65,6 +61,17 @@ Altenatively, you can actually make a USB installer that will automatically patc
 * Stuck on a loop under verbose mode: NVRAM Reset; remove the battery, and press power button for 30 seconds.
 * Broadcom Ethernet/ SSD Caddy/ or any PCI device not detected: NVRAM Reset; remove the battery, and press power button for 30 seconds.
 * [Fixing Window features after installing macOS](https://github.com/5T33Z0/OC-Little-Translated/blob/main/I_Windows/Windows_fixes.md)
+* [Use Windows partition under macOS via VMWare](https://github.com/mackonsti/s145-14iwl/blob/master/Fusion.md)
+* [Install Windows on a partition without USB](https://github.com/5T33Z0/OC-Little-Translated/blob/main/I_Windows/Install_Windows_NoBootcamp.md)
+  * Just wait when booting for the first time, it will take a while!
+  * Set macOS as Startup Disk so that the selector on boot menu will automatically highlight macOS, instead of what comes first in the picker.
+* It is recommended to edit config.plist with Propertree, you could also use Opencore Configurator.
+  * Use Opencore Configurator at your own risk, it may corrupt your plist.
+    * If that happens, open the config.plist with a text editor, check the last line `</plist>`, if it is missing a `>`, add it back. It rarely happens but it can happen.
+  * I don't use OCAT, the ocvalidate it uses is outdated. It should still work, just ignore the ocvalidate errors. It's apparently safer than OC Configurator.
+
+* There is a weird issue where once you boot from Windows, and then to macOS. The USB 2.0 and internal ports transfers from XHC to EHC/EH01,  this does not really break anything but I disabled the EHC/EH01 controller anyway.
+
 
 <details>
 <summary>For those who will replace into Intel mPCIe WiFi and BT card:</summary><br >
@@ -72,6 +79,7 @@ Altenatively, you can actually make a USB installer that will automatically patc
 * Bluetooth can be unstable when WiFi is active and connected on the 2.4 GHz band (e.g., stuttering sound when playing audio from a BT speaker). This is a [known issue](https://openintelwireless.github.io/itlwm/FAQ.html#can-i-use-bluetooth-with-wi-fi) with Intel bluetooth. 
 * The AR9565 card only uses one antenna. Intel mPCIe cards typically come with two antenna connectors, so consider purchasing the appropriate antenna for the second connector to enhance coverage. Also note that only having one antenna in use still works without having to add another one. 
 </details>
+
 
 ### Cosmetic
 
@@ -303,7 +311,7 @@ This is incomplete.
     <tr>
       <td>
         <p><b>Display Controller</b>:<br />
-                     <li>The VGA port is actually a DisplayPort internally, you may need to adjust the device properties - such as the connector type, and the BUS ID. Not guaranteed to work as it maybe hardwired to the dGPU.</li>
+                     <li>The VGA port is actually a DisplayPort internally, you may need to adjust the device properties - such as the connector type, and the BUS ID. Not guaranteed to work as it maybe hardwired to the dGPU.<br /></li>
      <code>framebuffer-con2-type</code> sets the correct connector type for HDMI, and resolves HDMI audio.<br /><br />
      <code>enable-backlight-smoother</code> enabling smoother brightness transition when adjusting the brightness.<br /><br />
      <code>backlight-smoother-lowerbound</code> prevents the display from fully going black when brightness is set to the lowest.<br /><br />
