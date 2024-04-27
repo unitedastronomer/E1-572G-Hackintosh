@@ -79,6 +79,4 @@
 
 </details>
    
-### 📜 **License** <br>
 
-This repo is licensed under the [MIT License](https://github.com/valnoxy/t480-oc/blob/main/LICENSE), this OpenCore configuration is made of multiple external applications from different people and organizations. [See each program for their licensing](assets/REFERENCE.md).

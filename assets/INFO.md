@@ -5,7 +5,6 @@ Please refer to the Dortania Opencore Install Guide as your main guide. Consider
 * In the EFI partition of your SSD, there is an EFI folder. Inside, you'll find the **BOOT** and/or **Microsoft** folders. Be mindful when copying and pasting.
 * Don't stop midway of the installation process; **patience is key!**
   * However, if you'll encounter a looping error code (e.g., `failed lookup: name = com.apple.logd` in a non-stop loop), try removing the battery, and then pressing the power button for at least 30 seconds.
-* This OpenCore configuration does not include kexts for WiFi and Bluetooth.
 
 
 # 📝 Requirements
@@ -450,7 +449,6 @@ This is incomplete.
 * Skip Board ID check
 
 ## Kernel Extensions
-This EFI <b>does not</b> contain any kext for the WiFi and BT.<br ><br >
 
 ### Kernel -> Add 
 
@@ -653,3 +651,20 @@ Under -> `4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102`:
         -  In combination with RTCMemoryFixup.kext
 
 This is incomplete.
+
+## Credits
+
+Guides:
+- [Dortania](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html): OpenCore Install Guide
+- [5T33Z0](https://github.com/5T33Z0): [Remapping Brightness Keys](https://github.com/5T33Z0/OC-Little-Translated/blob/main/05_Laptop-specific_Patches/Fixing_Keyboard_Mappings_and_Brightness_Keys/Customizing_ThinkPad_Keyboard_Shortcuts.md), [Slimming AppleALC](https://github.com/5T33Z0/AppleALC-Guides/tree/main/Slimming_AppleALC)
+
+Tools:
+- [CorpNewt](https://github.com/corpnewt/SSDTTime): SSDTTime, GenSMBIOS, Propertree, and USBMap
+- [Acidanthera](https://github.com/acidanthera/MaciASL): MaciASL
+- [Benbaker76](https://github.com/benbaker76/Hackintool): Hackintool
+<br>
+
+
+# 📜 **License** <br>
+
+This repo is licensed under the [MIT License](https://github.com/valnoxy/t480-oc/blob/main/LICENSE), this OpenCore configuration is made of multiple external applications from different people and organizations. [See each program for their licensing](REFERENCE.md).
