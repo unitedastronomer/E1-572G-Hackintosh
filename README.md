@@ -1,6 +1,6 @@
 # Acer Aspire E1-572G — OpenCore Configuration
 
-  <img align="right" src="Images/laptop_monterey.png" alt="laptop_monterey.png" width="250">
+  <img align="right" src="assets/laptop_monterey.png" alt="laptop_monterey.png" width="250">
   
 [![OpenCore](https://img.shields.io/badge/OpenCore-0.9.9-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/unitedastronomer/E1-572G-Hackintosh/blob/main/LICENSE.md)
@@ -20,7 +20,7 @@
 
    * Tested to work from **High Sierra** (10.13) up to **Sonoma** (14)
    * Additional configuration is needed for **Ventura** (13) and **Sonoma** (14)
-   * [Read this](ADDITIONAL_INFO.md) for more details.
+   * [Read this](assets/INFO.md) for more details.
 
 <h1>💻 System Specification</h1>
 
@@ -81,4 +81,4 @@
    
 ### 📜 **License** <br>
 
-This repo is licensed under the [MIT License](https://github.com/valnoxy/t480-oc/blob/main/LICENSE), this OpenCore configuration is made of multiple external applications from different people and organizations. [See each program for their licensing](CREDITS.md).
+This repo is licensed under the [MIT License](https://github.com/valnoxy/t480-oc/blob/main/LICENSE), this OpenCore configuration is made of multiple external applications from different people and organizations. [See each program for their licensing](assets/REFERENCE.md).
