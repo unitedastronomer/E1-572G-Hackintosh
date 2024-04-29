@@ -3,9 +3,9 @@
 <img align="right" src="assets/laptop_monterey.png" alt="laptop_monterey.png" width="250">  
 
 [![OpenCore](https://img.shields.io/badge/OpenCore-0.9.9-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
-[![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/acidanthera/OpenCorePkg)<br>
+[![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/unitedastronomer/E1-572G-Hackintosh/blob/main/LICENSE.md)<br>
  
-### 🛠️ This OpenCore configuration is optimized for this specific hardware. 
+### 🛠️ This OpenCore configuration is optimized for <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; this specific hardware. 
    * [Read this](assets/INFO.md) for more details.
 
 ### 💻 System Specification
