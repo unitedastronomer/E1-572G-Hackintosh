@@ -7,6 +7,30 @@ Please refer to the Dortania Opencore Install Guide as your main guide. Consider
   * However, if you'll encounter a looping error code (e.g., `failed lookup: name = com.apple.logd` in a non-stop loop), try removing the battery, and then pressing the power button for at least 30 seconds.
 
 
+### ⚠️ What's not working?
+
+
+🛜 WiFi & Bluetooth on Monterey and newer<br >
+<sup>There's no working kext for AR9565 on Monterey and newer</sup>
+
+🚀 Graphics Acceleration on Ventura and newer<br >
+<sup>Root patching via OCLP is required</sup>
+
+💻 Automatic Lid Wake<br >
+<sup>Waking up from sleep requires keyboard tap<sup>
+
+📲 AirDrop<br >
+<sup>; and other Airport related features</sup>
+
+🔑 Accessing DRM content<br >
+<sup>Use chromium based browsers instead</sup>
+
+💨 Fan reading<br >
+<sup>(and so under Windows)</sup>
+
+
+
+
 # 📝 Requirements
 *  **Ethernet**, or an Android Phone for USB Tethering. iPhone USB Tethering does not work in Recovery
 *  **Update BIOS to the** [**latest version**](https://www.acer.com/us-en/support/product-support/Aspire_E1-572G). This resolves the issue of the laptop failing to fully power down when shutting down.
