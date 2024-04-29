@@ -5,7 +5,7 @@
 [![OpenCore](https://img.shields.io/badge/OpenCore-0.9.9-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/acidanthera/OpenCorePkg)<br>
  
-### 🛠️ This OpenCore configuration is customized for this specific hardware. 
+### 🛠️ This OpenCore configuration is optimized for this specific hardware. 
    * [Read this](assets/INFO.md) for more details.
 
 ### 💻 System Specification
