@@ -1,6 +1,9 @@
 # ⚠️ Proceed at your own risk!
 Please refer to the Dortania Opencore Install Guide as your main guide. Consider this as supplemental.
 
+   * Tested to work from **High Sierra** (10.13) up to **Sonoma** (14)
+   * Additional step is needed for **Ventura** (13) and **Sonoma** (14)
+
 #### Reminder:
 * In the EFI partition of your SSD, there is an EFI folder. Inside, you'll find the **BOOT** and/or **Microsoft** folders. Be mindful when copying and pasting.
 * Don't stop midway of the installation process; **patience is key!**
