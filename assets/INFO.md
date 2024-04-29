@@ -694,4 +694,4 @@ Tools:
 
 # 📜 **License** <br>
 
-This repo is licensed under the [MIT License](), this OpenCore configuration is made of multiple external applications from different people and organizations. [See each program for their licensing](REFERENCE.md).
+This repo is licensed under the [MIT License](https://github.com/unitedastronomer/E1-572G-Hackintosh/blob/main/LICENSE.md), this OpenCore configuration is made of multiple external applications from different people and organizations. [See each program for their licensing](REFERENCE.md).
