@@ -11,22 +11,22 @@ Please refer to the Dortania Opencore Install Guide as your main guide. Consider
 
 
 * WiFi & Bluetooth<br >
- * AR9565 is only limited up to Big Sur as there's no working kext for it since Monterey
+  * AR9565 is only limited up to Big Sur as there's no working kext for it since Monterey
 
 * Graphics Acceleration<br >
- * Root patching using OCLP is required on Ventura and newer
+  * Root patching using OCLP is required on Ventura and newer
 
 * Automatic Lid Wake<br >
- * Waking up from sleep requires keyboard intervention
+v * Waking up from sleep requires keyboard intervention
 
 * AirDrop<br >
- *; and other Airport related features
+v *; and other Airport related features
 
 * Accessing DRM content<br >
- * Use chromium based browsers instead
+ b* Use chromium based browsers instead
 
 * Fan reading<br >
- *;and so under Windows
+  * ;and so under Windows
 
 
 # 📝 Preparation
@@ -39,7 +39,7 @@ Please refer to the Dortania Opencore Install Guide as your main guide. Consider
 
 *  **Update BIOS to the** [**latest version**](https://www.acer.com/us-en/support/product-support/Aspire_E1-572G). This resolves the issue of the laptop failing to fully power down when shutting down.
 
-Configure the BIOS with these settings: **Secure Boot** > **Disabled**
+* Configure the BIOS with these settings: **Secure Boot** -> **Disabled**
 
 ### config.plist
 
@@ -626,7 +626,7 @@ Partially re-enables AMFI on root patched systems. This can be handy if running 
 
 Additional kext I recently added:
 * `HibernationFixup` - Configured to automatically hibernate when battery reaches critical battery level.
-* `RSRHelper` - taken from an EFI made with OCLP for real macs, "Fixes Rapid Security Response Support on root patched installs"." Basically prevents RSR updates.
+* `RSRHelper` - taken from an EFI made with OCLP for real macs, "Fixes Rapid Security Response Support on root patched installs"."
 
 
 
