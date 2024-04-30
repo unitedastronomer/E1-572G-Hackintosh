@@ -5,46 +5,43 @@ Please refer to the Dortania Opencore Install Guide as your main guide. Consider
 #### Reminder:
 
 * Don't stop midway of the installation process; **patience is key!**
-  * If you can't get past a looping error code (from e.g., `failed lookup: name = com.apple.logd`): remove the battery, and press power button for at least 30 seconds.
+ * If you can't get past a looping error code (from e.g., `failed lookup: name = com.apple.logd`): remove the battery, and press power button for at least 30 seconds.
 
 ### ⚠️ What's not working?
 
 
 * WiFi & Bluetooth<br >
-<sup>AR9565 is only limited up to Big Sur as there's no working kext for it since Monterey</sup>
+ * AR9565 is only limited up to Big Sur as there's no working kext for it since Monterey
 
 * Graphics Acceleration<br >
-<sup>Root patching using OCLP is required on Ventura and newer</sup>
+ * Root patching using OCLP is required on Ventura and newer
 
 * Automatic Lid Wake<br >
-<sup>Waking up from sleep requires keyboard intervention<sup>
+ * Waking up from sleep requires keyboard intervention
 
 * AirDrop<br >
-<sup>; and other Airport related features</sup>
+ *; and other Airport related features
 
 * Accessing DRM content<br >
-<sup>Use chromium based browsers instead</sup>
+ * Use chromium based browsers instead
 
 * Fan reading<br >
-<sup>;and so under Windows</sup>
+ *;and so under Windows
 
 
+# 📝 Preparation
 
-
-# 📝 Requirements
 *  **Ethernet**, or an Android Phone for USB Tethering. iPhone USB Tethering does not work in Recovery
-*  **Update BIOS to the** [**latest version**](https://www.acer.com/us-en/support/product-support/Aspire_E1-572G). This resolves the issue of the laptop failing to fully power down when shutting down.
 *  Replace WiFi card with an Intel or [supported](https://dortania.github.io/Wireless-Buyers-Guide/types-of-wireless-card/mpcie.html) Broadcom **mPCIe** (WiFi + BT card) <br >
 > No working kext for AR9565 since Monterey, and infuriatingly slow on any macOS version it can run.
 
-# Preparation
-
 ### BIOS 
+
+*  **Update BIOS to the** [**latest version**](https://www.acer.com/us-en/support/product-support/Aspire_E1-572G). This resolves the issue of the laptop failing to fully power down when shutting down.
 
 Configure the BIOS with these settings: **Secure Boot** > **Disabled**
 
-
-<h3>config.plist</h3>
+### config.plist
 
 In the config.plist, section <code>PlatformInfo > Generic</code> is currently left empty, generate your own SMBIOS data. 
    * Use a **MacbookPro11,1** SMBIOS.
@@ -61,12 +58,13 @@ Graphics Acceleration had been dropped in Ventura, so you'll need to bring it ba
 #### After Installation
 * Run OCLP, accept permissions. Then click the reboot when prompted by OCLP app.
 
-Altenatively, you can actually make a USB installer that will automatically patch the graphics on the fly without the need to install OCLP post-installation of macOS. [Proceed to step 3 of this guide](https://github.com/AppleOSX/PatchSonomaWiFiOnTheFly?tab=readme-ov-file)
-
 * Do not use Migration Assistant within the Setup Assistant (setup screen right after macOS installation)
 * Do not use Migration Assistant if root patches are applied, revert patches first then apply it back after using Migration Assistant.
 
 #
+
+Altenatively, you can actually make a USB installer that will automatically patch the graphics on the fly without the need to install OCLP post-installation of macOS. [Proceed to step 3 of this guide](https://github.com/AppleOSX/PatchSonomaWiFiOnTheFly?tab=readme-ov-file)
+
 
 # Post-Install
 
@@ -332,7 +330,7 @@ This is incomplete.
     <tr>
       <td>
         <p><b>Display Controller</b>:<br />
-                     <li>The VGA port is actually a DisplayPort internally, you may need to adjust the device properties - such as the connector type, and the BUS ID. Not guaranteed to work as it maybe hardwired to the dGPU.<br /><br /></li>
+                     The VGA port is actually a DisplayPort internally, you may need to adjust the device properties - such as the connector type, and the BUS ID. Not guaranteed to work as it maybe hardwired to the dGPU.<br /><br />
      <code>framebuffer-con2-type</code> sets the correct connector type for HDMI, and resolves HDMI audio.<br /><br />
      <code>enable-backlight-smoother</code> enabling smoother brightness transition when adjusting the brightness.<br /><br />
      <code>backlight-smoother-lowerbound</code> prevents the display from fully going black when brightness is set to the lowest.<br /><br />
