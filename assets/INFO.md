@@ -20,7 +20,7 @@ Please refer to the Dortania Opencore Install Guide as your main guide. Consider
   * Waking up from sleep requires keyboard intervention
 
 * AirDrop<br >
- * ;and other Airport related features
+  * ;and other Airport related features
 
 * Accessing DRM content<br >
   * Use chromium based browsers instead
