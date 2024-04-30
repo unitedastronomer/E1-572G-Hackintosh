@@ -15,7 +15,7 @@
 | **CPU**        | Intel® Core™ i5-4200U Processor         |
 | **iGPU**       | Intel HD Graphics 4400 <br><sup>Support dropped since Ventura, requires root patching via OCLP to restore Graphics Acceleration</sup>                  |
 | **dGPU**       | AMD Radeon HD 8670M <br><sup>_Disabled_, not supported on macOS</sup>        |
-| **Wi-Fi & BT** | Qualcomm QCA9565 / AR9565 Wireless <br><sup>Limited only up to Big Sur, no working kext since for Monterey</sup>      |
+| **Wi-Fi & BT** | Qualcomm QCA9565 / AR9565 Wireless <br><sup>Limited only up to Big Sur, no working kext since Monterey</sup>      |
 | **Ethernet**   | Broadcom NetXtreme BCM57786 Gigabit Ethernet PCIe                            |
 | **Audio Codec**| Realtek ALC282<br><sup>Layout ID: 28</sup>                                   |
 | **Trackpad**   | Synaptics TM2682 <br><sup>PS/2</sup>                                          |
