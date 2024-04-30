@@ -17,16 +17,16 @@ Please refer to the Dortania Opencore Install Guide as your main guide. Consider
   * Root patching using OCLP is required on Ventura and newer
 
 * Automatic Lid Wake<br >
-v * Waking up from sleep requires keyboard intervention
+  * Waking up from sleep requires keyboard intervention
 
 * AirDrop<br >
-v *; and other Airport related features
+ * ;and other Airport related features
 
 * Accessing DRM content<br >
- b* Use chromium based browsers instead
+  * Use chromium based browsers instead
 
 * Fan reading<br >
-  * ;and so under Windows
+   * ;and so under Windows
 
 
 # 📝 Preparation
