@@ -18,6 +18,6 @@
 | **Wi-Fi & BT** | Qualcomm QCA9565 / AR9565 Wireless <br><sup>Limited only up to Big Sur, no working kext since for Monterey</sup>      |
 | **Ethernet**   | Broadcom NetXtreme BCM57786 Gigabit Ethernet PCIe                            |
 | **Audio Codec**| Realtek ALC282<br><sup>Layout ID: 28</sup>                                   |
-| **Trackpad**   | Synaptics TM2682 <br><sup>PS2</sup>                                          |
+| **Trackpad**   | Synaptics TM2682 <br><sup>PS/2</sup>                                          |
 
 
