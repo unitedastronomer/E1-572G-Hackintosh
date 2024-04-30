@@ -1,35 +1,32 @@
 # ⚠️ Proceed at your own risk!
 Please refer to the Dortania Opencore Install Guide as your main guide. Consider this as supplemental.
 
-   * Tested to work from **High Sierra** (10.13) up to **Sonoma** (14)
-   * Additional step is needed for **Ventura** (13) and **Sonoma** (14)
 
 #### Reminder:
-* In the EFI partition of your SSD, there is an EFI folder. Inside, you'll find the **BOOT** and/or **Microsoft** folders. Be mindful when copying and pasting.
-* Don't stop midway of the installation process; **patience is key!**
-  * However, if you'll encounter a looping error code (e.g., `failed lookup: name = com.apple.logd` in a non-stop loop), try removing the battery, and then pressing the power button for at least 30 seconds.
 
+* Don't stop midway of the installation process; **patience is key!**
+  * If you can't get past a looping error code (from e.g., `failed lookup: name = com.apple.logd`): remove the battery, and press power button for at least 30 seconds.
 
 ### ⚠️ What's not working?
 
 
-🛜 WiFi & Bluetooth on Monterey and newer<br >
-<sup>There's no working kext for AR9565 on Monterey and newer</sup>
+* WiFi & Bluetooth<br >
+<sup>AR9565 is only limited up to Big Sur as there's no working kext for it since Monterey</sup>
 
-🚀 Graphics Acceleration on Ventura and newer<br >
-<sup>Root patching via OCLP is required</sup>
+* Graphics Acceleration<br >
+<sup>Root patching using OCLP is required on Ventura and newer</sup>
 
-💻 Automatic Lid Wake<br >
-<sup>Waking up from sleep requires keyboard tap<sup>
+* Automatic Lid Wake<br >
+<sup>Waking up from sleep requires keyboard intervention<sup>
 
-📲 AirDrop<br >
+* AirDrop<br >
 <sup>; and other Airport related features</sup>
 
-🔑 Accessing DRM content<br >
+* Accessing DRM content<br >
 <sup>Use chromium based browsers instead</sup>
 
-💨 Fan reading<br >
-<sup>(and so under Windows)</sup>
+* Fan reading<br >
+<sup>;and so under Windows</sup>
 
 
 
@@ -38,7 +35,7 @@ Please refer to the Dortania Opencore Install Guide as your main guide. Consider
 *  **Ethernet**, or an Android Phone for USB Tethering. iPhone USB Tethering does not work in Recovery
 *  **Update BIOS to the** [**latest version**](https://www.acer.com/us-en/support/product-support/Aspire_E1-572G). This resolves the issue of the laptop failing to fully power down when shutting down.
 *  Replace WiFi card with an Intel or [supported](https://dortania.github.io/Wireless-Buyers-Guide/types-of-wireless-card/mpcie.html) Broadcom **mPCIe** (WiFi + BT card) <br >
-> No working kext for AR9565 on Monterey and newer, and infuriatingly slow on any macOS version it can run.
+> No working kext for AR9565 since Monterey, and infuriatingly slow on any macOS version it can run.
 
 # Preparation
 
@@ -50,14 +47,13 @@ Configure the BIOS with these settings: **Secure Boot** > **Disabled**
 <h3>config.plist</h3>
 
 In the config.plist, section <code>PlatformInfo > Generic</code> is currently left empty, generate your own SMBIOS data. 
-   * Use a **MacbookPro11,1** SMBIOS, no matter what version you are installing.
+   * Use a **MacbookPro11,1** SMBIOS.
       * Using other SMBIOS will break USBMap, meaning some USB ports will not be functional.
-* If upgrading from Catalina or earlier to Ventura and newer, you will need to temporarily use a supported SMBIOS.
 
 #
 
 ### macOS Ventura and Sonoma
-Graphics Acceleration had been dropped in Ventura, so you'll need to re-add it with the help of Opencore Legacy Patcher.
+Graphics Acceleration had been dropped in Ventura, so you'll need to bring it back with the help of Opencore Legacy Patcher.
 
 #### Before Installation
 * Download the **LATEST** Opencore Legacy Patcher, and place it where you can easily access it under macOS.
@@ -76,22 +72,28 @@ Altenatively, you can actually make a USB installer that will automatically patc
 
 ### Troubleshoot
 * Unable to [set the boot option back to macOS](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html#installation) after booting on windows?
-* Stuck on an error loop under verbose mode: NVRAM Reset; remove the battery, and press power button for 30 seconds.
-* Broadcom Ethernet/ SSD Caddy/ or any PCI device not detected: NVRAM Reset; remove the battery, and press power button for 30 seconds.
+* Any PCI device not detected (e.g., Broadcom Ethernet): Remove the battery, and press power button for at least 30 seconds.
 * [Fixing Window features after installing macOS](https://github.com/5T33Z0/OC-Little-Translated/blob/main/I_Windows/Windows_fixes.md)
 * [Use Windows partition under macOS via VMWare](https://github.com/mackonsti/s145-14iwl/blob/master/Fusion.md)
 * [Install Windows on a partition without USB](https://github.com/5T33Z0/OC-Little-Translated/blob/main/I_Windows/Install_Windows_NoBootcamp.md)
   * Just wait when booting for the first time, it will take a while!
   * Set macOS as Startup Disk so that the selector on boot menu will automatically highlight macOS, instead of what comes first in the picker.
-* It is recommended to edit config.plist with Propertree, you could also use Opencore Configurator.
-  * Use Opencore Configurator at your own risk, it may corrupt your plist.
-    * If that happens, open the config.plist with a text editor, check the last line `</plist>`, if it is missing a `>`, add it back. It rarely happens but it can happen.
-  * I don't use OCAT, the ocvalidate it uses is outdated. It should still work, just ignore the ocvalidate errors. It's apparently safer than OC Configurator.
+* It is recommended to edit config.plist with Propertree.
+  * If you choose to use Opencore Configurator, it's known to corrupt plist.
+    * If that happens, open the config.plist with a text editor, check the last line `</plist>`, if it is missing the last character: `>`, add it back. It rarely happens but it can happen.
+    * When you use it, do not immediately restart the laptop after saving a .plist, wait for at least some seconds.
+  * If you choose to use OCAT, the ocvalidate it uses is outdated. It should still work, but the ocvalidate will throw errors, just ignore it.
 
-* This configuration has disabled AMFI, and SIP partially disabled, these are necessary for root patching.
-    * Delete `amfi=0x80` to enable AMFI, and set `csr-active-config` to `00000000` fully enable SIP. Only set if installing Monterey and earlier.
+* This configuration has disabled AMFI, and SIP partially disabled, these are necessary for root patching on Ventura and newer.
+    * If you choose to install Monterey or earlier, you could re-enable them by:
+    * Delete `amfi=0x80` in boot-args, re-enables AMFI.
+    * Set `csr-active-config` to `00000000` fully enable SIP. 
+    * Disable these Kernel -> Patches
+      * Force FileVault on Broken Seal
+      * Disable Library Validation Enforcement
+      * Disable _csr_check() in _vnode_check_signature
 
-* There is a weird issue where once you boot from Windows, and then to macOS. The USB 2.0 and internal ports transfers from XHC to EHC/EH01,  this does not really break anything but I disabled the EHC/EH01 controller anyway.
+* There is a weird issue where once you boot from Windows, and then to macOS. The USB 2.0 and internal ports transfers from XHC to EHC aftersleep. I am not sure if this break anything, but I disabled the EHC controller anyway.
 
 <details>
 <summary>For those who will replace into Intel mPCIe WiFi and BT card:</summary><br >
