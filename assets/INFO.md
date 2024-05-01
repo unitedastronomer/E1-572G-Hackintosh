@@ -1,39 +1,22 @@
 # ⚠️ Proceed at your own risk!
 Please refer to the Dortania Opencore Install Guide as your main guide. Consider this as supplemental.
 
-
-#### Reminder:
-
-* Don't stop midway of the installation process; **patience is key!**
- * If you can't get past a looping error code (from e.g., `failed lookup: name = com.apple.logd`): remove the battery, and press power button for at least 30 seconds.
-
 ### ⚠️ What's not working?
 
-
-* WiFi & Bluetooth<br >
-  * AR9565 is only limited up to Big Sur as there's no working kext for it since Monterey
-
-* Graphics Acceleration<br >
-  * Root patching using OCLP is required on Ventura and newer
-
-* Automatic Lid Wake<br >
-  * Waking up from sleep requires keyboard intervention
-
-* AirDrop<br >
-  * ;and other Airport related features
-
-* Accessing DRM content<br >
-  * Use chromium based browsers instead
-
-* Fan reading<br >
-   * ;and so under Windows
+|&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Note |
+|---------------------------|------|
+| WiFi & Bluetooth (macOS 12+)<br><sup>Qualcomm QCA9565 / AR9565 Wireless</sup> | There's no working kext for it since Monterey, so if you need WiFi, it's best to stay on Big Sur. It's recommended to switch to an Intel card, as the speed with this one is infuriatingly slow on any macOS version it can run.|
+| Graphics Acceleration (macOS 13+)| Support for Haswell iGPU has been dropped since Ventura. Root patching using OCLP is required, this requires relaxing some security feature to restore it. If you feel uncomfortable about this, better stay in Monterey.                           |
+| AirDrop<br><sup>;and other Airport related features</sup> |  Requires [supported](https://dortania.github.io/Wireless-Buyers-Guide/types-of-wireless-card/mpcie.html) Broadcom **mPCIe** WiFi card. However, these mPCIe cards have a limitation where features like AirDrop only work correctly up to the Big Sur. To work around this, you can use a BCM94360NG card with an mPCIe to M.2 A+E key adapter. Just keep in mind that you might need to modify it to properly fit inside your device.
+| Automatic Lid Wake | Waking up from sleep requires keyboard intervention. I got it to work one time though, but I was not able to replicarte it again. |
+| Accessing DRM content (Safari 14+ and macOS 11+) | Use Firefox, or any chromium based browsers instead. |
+| Fan reading | and so under Windows. |
 
 
-# 📝 Preparation
+# Preparation
 
 *  **Ethernet**, or an Android Phone for USB Tethering. iPhone USB Tethering does not work in Recovery
-*  Replace WiFi card with an Intel or [supported](https://dortania.github.io/Wireless-Buyers-Guide/types-of-wireless-card/mpcie.html) Broadcom **mPCIe** (WiFi + BT card) <br >
-> No working kext for AR9565 since Monterey, and infuriatingly slow on any macOS version it can run.
+* `Optional` Replace WiFi card with an Intel or [supported](https://dortania.github.io/Wireless-Buyers-Guide/types-of-wireless-card/mpcie.html) Broadcom **mPCIe** (WiFi + BT card) <br >
 
 ### BIOS 
 
@@ -47,26 +30,45 @@ In the config.plist, section <code>PlatformInfo > Generic</code> is currently le
    * Use a **MacbookPro11,1** SMBIOS.
       * Using other SMBIOS will break USBMap, meaning some USB ports will not be functional.
 
-#
+* This OC configuration has disabled AMFI, and SIP partially disabled, these are necessary for root patching. If you choose to install Monterey or earlier, you can leave this config as-is or re-enable them by:
+    * Delete `amfi=0x80` in boot-args, re-enables AMFI.
+    * Set `csr-active-config` to `00000000` fully enable SIP. 
+    * Disable these Kernel -> Patches
+      * Force FileVault on Broken Seal
+      * Disable Library Validation Enforcement
+      * Disable _csr_check() in _vnode_check_signature
+
+# Installation 
+
+#### Note:
+
+* Don't stop midway of the installation process; **patience is key!**
+If you can't get past a looping error code (from e.g., `failed lookup: name = com.apple.logd`): remove the battery, and press power button for at least 30 seconds.
+
+
 
 ### macOS Ventura and Sonoma
 Graphics Acceleration had been dropped in Ventura, so you'll need to bring it back with the help of Opencore Legacy Patcher.
 
-#### Before Installation
-* Download the **LATEST** Opencore Legacy Patcher, and place it where you can easily access it under macOS.
-* Proceed with macOS installation.
-#### After Installation
-* Run OCLP, accept permissions. Then click the reboot when prompted by OCLP app.
+1. Before Installation
+ * Download the **LATEST** Opencore Legacy Patcher, and place it where you can easily access it under macOS.
+ * Proceed with macOS installation.
+2. After Installation
+ * Run OCLP, accept permissions. Then click the reboot when prompted by OCLP app.
 
-* Do not use Migration Assistant within the Setup Assistant (setup screen right after macOS installation)
-* Do not use Migration Assistant if root patches are applied, revert patches first then apply it back after using Migration Assistant.
+#
+ * Do not use Migration Assistant within the Setup Assistant (setup screen right after macOS installation)
+ * Do not use Migration Assistant if root patches are applied, revert patches first then apply it back after using Migration Assistant.
 
 #
 
 Altenatively, you can actually make a USB installer that will automatically patch the graphics on the fly without the need to install OCLP post-installation of macOS. [Proceed to step 3 of this guide](https://github.com/AppleOSX/PatchSonomaWiFiOnTheFly?tab=readme-ov-file)
 
 
+
 # Post-Install
+
+
 
 ### Troubleshoot
 * Unable to [set the boot option back to macOS](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html#installation) after booting on windows?
@@ -82,14 +84,7 @@ Altenatively, you can actually make a USB installer that will automatically patc
     * When you use it, do not immediately restart the laptop after saving a .plist, wait for at least some seconds.
   * If you choose to use OCAT, the ocvalidate it uses is outdated. It should still work, but the ocvalidate will throw errors, just ignore it.
 
-* This configuration has disabled AMFI, and SIP partially disabled, these are necessary for root patching on Ventura and newer.
-    * If you choose to install Monterey or earlier, you could re-enable them by:
-    * Delete `amfi=0x80` in boot-args, re-enables AMFI.
-    * Set `csr-active-config` to `00000000` fully enable SIP. 
-    * Disable these Kernel -> Patches
-      * Force FileVault on Broken Seal
-      * Disable Library Validation Enforcement
-      * Disable _csr_check() in _vnode_check_signature
+
 
 * There is a weird issue where once you boot from Windows, and then to macOS. The USB 2.0 and internal ports transfers from XHC to EHC aftersleep. I am not sure if this break anything, but I disabled the EHC controller anyway.
 
