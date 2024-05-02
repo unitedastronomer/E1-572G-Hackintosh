@@ -6,12 +6,12 @@ Please refer to the Dortania Opencore Install Guide as your main guide. Consider
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Note |
 |---------------------------|------|
 | WiFi & Bluetooth (macOS 12+)<br><sup>Qualcomm QCA9565 / AR9565 Wireless</sup> | There's no working kext for it since Monterey, so if you need WiFi, it's best to stay on Big Sur. It's recommended to switch to an Intel card, as the speed with this one is infuriatingly slow on any macOS version it can run.|
-| Graphics Acceleration (macOS 13+)| Support for Haswell iGPU has been dropped since Ventura. Root patching using OCLP is required, this requires relaxing some security feature to restore it. If you feel uncomfortable about this, better stay in Monterey.                           |
+| Graphics Acceleration (macOS 13+)| Support for Haswell iGPU had been dropped in Ventura. Root patching using OCLP is required, this requires relaxing some security feature to restore it. If you feel uncomfortable about this, better stay in Monterey.                           |
 | AirDrop<br><sup>;and other Airport related features</sup> |  Requires [supported](https://dortania.github.io/Wireless-Buyers-Guide/types-of-wireless-card/mpcie.html) Broadcom **mPCIe** WiFi card. However, these mPCIe cards have a limitation where features like AirDrop only work correctly up to the Big Sur. To work around this, you can use a BCM94360NG card with an mPCIe to M.2 A+E key adapter. Just keep in mind that you might need to modify it to properly fit inside your device.
-| Automatic Lid Wake | Waking up from sleep requires keyboard intervention. I got it to work one time though, but I was not able to replicarte it again. |
+| Automatic Lid Wake | Waking up from sleep requires keyboard intervention. I got it to work one time, but I was not able to replicate it again. |
 | Accessing DRM content (Safari 14+ and macOS 11+) | Use Firefox, or any chromium based browsers instead. |
 | Fan reading | and so under Windows. |
-
+| Hibernation | :) |
 
 # Preparation
 
@@ -48,7 +48,7 @@ If you can't get past a looping error code (from e.g., `failed lookup: name = co
 
 
 
-### macOS Ventura and Sonoma
+### macOS Ventura+
 Graphics Acceleration had been dropped in Ventura, so you'll need to bring it back with the help of Opencore Legacy Patcher.
 
 1. Before Installation
