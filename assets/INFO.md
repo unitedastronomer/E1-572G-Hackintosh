@@ -37,6 +37,7 @@ In the config.plist, section <code>PlatformInfo > Generic</code> is currently le
       * Force FileVault on Broken Seal
       * Disable Library Validation Enforcement
       * Disable _csr_check() in _vnode_check_signature
+    * Set `SecureBootModel` to `Default`
 
 # Installation 
 
