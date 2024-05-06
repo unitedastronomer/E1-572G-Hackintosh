@@ -6,7 +6,7 @@
  
 ### 🛠️ This OpenCore configuration is optimized for this specific hardware. 
    * [Read this](assets/INFO.md) for more details.
-   * [Start a discussion](https://github.com/unitedastronomer/E1-572G-Hackintosh/discussions) if you have some question.
+   * [Start a discussion](https://github.com/unitedastronomer/E1-572G-Hackintosh/discussions) if you have some questions.
 
 
 ### 💻 System Specification
