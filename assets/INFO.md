@@ -27,10 +27,9 @@ Please refer to the Dortania Opencore Install Guide as your main guide. Consider
 ### config.plist
 
 In the config.plist, section <code>PlatformInfo > Generic</code> is currently left empty, generate your own SMBIOS data. 
-   * Use a **MacbookPro11,1** SMBIOS.
-      * Using other SMBIOS will break USBMap, meaning some USB ports will not be functional.
+   * Use a **MacbookPro11,1** SMBIOS
 
-* This OC configuration has disabled AMFI, and SIP partially disabled, these are necessary for root patching. Leave config.plist AS IS if installing Ventura and Sonoma. If you choose to install Monterey or earlier, you can leave this config as-is or re-enable them by:
+* This OC configuration has disabled AMFI, and SIP partially disabled, these are necessary for root patching. **Leave config.plist AS IS if installing Ventura and Sonoma**. If you choose to install Monterey or earlier, you can leave this config as-is or re-enable them by:
     * Delete `amfi=0x80` in boot-args, re-enables AMFI.
     * Set `csr-active-config` to `00000000` fully enable SIP. 
     * Disable these Kernel -> Patches
