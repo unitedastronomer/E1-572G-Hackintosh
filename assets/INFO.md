@@ -11,7 +11,7 @@ Please refer the Dortania Opencore Install Guide as your main guide. Consider th
 | Automatic Lid Wake | Waking up from sleep requires keyboard intervention. |
 | Accessing DRM content (Safari 14+ and macOS 11+) | Use Firefox, or any chromium based browsers instead. |
 | Fan reading | |
-| Hibernation | |
+| Hibernation | [;)](https://github.com/acidanthera/bugtracker/issues/386#issuecomment-503042790)|
 
 # Preparation
 
@@ -610,7 +610,7 @@ Partially re-enables AMFI on root patched systems. This can be handy if running 
 <table>
 
 Additional kext I recently added:
-* `HibernationFixup` - Configured to automatically hibernate when battery reaches critical battery level.
+* `HibernationFixup` - Configured to automatically "hibernate" (it does not hibernate, but forces the device to sleep) when battery reaches critical battery level.
 * `RSRHelper` - taken from an EFI made with OCLP for real macs, "Fixes Rapid Security Response Support on root patched installs"."
 
 
