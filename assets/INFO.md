@@ -5,8 +5,6 @@ Please refer the Dortania Opencore Install Guide as your main guide. Consider th
 
 |&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;| Note |
 |---------------------------|------|
-| WiFi & Bluetooth (macOS 12+), Qualcomm QCA9565 / AR9565 Wireless | There's no working kext for it since Monterey, so if you need WiFi, it's best to stay on Big Sur. It's recommended to switch to an Intel card, as the speed with this one is infuriatingly slow on any macOS version it can run.|
-| Graphics Acceleration (macOS 13+)| Support for Haswell iGPU had been dropped in Ventura. Root patching using OCLP is required, this requires relaxing some security feature to restore it. If you feel uncomfortable about this, better stay in Monterey.                           |
 | AirDrop, and other Airport related features.|  Requires [supported](https://dortania.github.io/Wireless-Buyers-Guide/types-of-wireless-card/mpcie.html) Broadcom **mPCIe** WiFi card. However, these mPCIe cards have a limitation where features like AirDrop only work correctly up to the Big Sur. To work around this, you can use a BCM94360NG card with an mPCIe to M.2 A+E key adapter. Just keep in mind that using a regular adapter won't fit, you will need to use mPCIe to M.2 A+E key adapter, and then another M.2 A+E Key adapter with a flex cable that you can bend and place the WiFi card around where there is space.
 | Automatic Lid Wake | Waking up from sleep requires keyboard intervention. |
 | Accessing DRM content (Safari 14+ and macOS 11+) | Use Firefox, or any chromium based browsers instead. |
@@ -45,8 +43,17 @@ This OC configuration was set up to allow booting macOS versions as early as Hig
 * Don't stop midway of the installation process; **patience is key!**
 If you can't get past a looping error code, (from e.g., `failed lookup: name = com.apple.logd`): remove the battery, and press power button for at least 30 seconds.
 
+
+### macOS Monterey+
+Support for Atheros WiFi had already been dropped long time ago, re-injecting the older kext was the option to restore support. If you stll have the AR9565:
+1.  * Download the **LATEST** Opencore Legacy Patcher, and place it where you can easily access it under macOS.
+
+2. After Installation
+ * Run OCLP, accept permissions. Then click the reboot when prompted by OCLP app. This will apply root patch for restoring WiFi functionality.
+
+
 ### macOS Ventura+
-Graphics Acceleration had been dropped in Ventura, so you'll need to bring it back with the help of Opencore Legacy Patcher.
+Graphics Acceleration had been dropped in Ventura, so you'll need to bring it back with the help of Opencore Legacy Patcher. If you stll have the AR9565, This will also apply for restoring WiFi functionality 
 
 1. Before Installation
  * Download the **LATEST** Opencore Legacy Patcher, and place it where you can easily access it under macOS.
@@ -103,7 +110,7 @@ Altenatively, you can actually make a USB installer that will automatically patc
 
 
 # config.plist details
-This is incomplete.
+This is incomplete. I have already modified this OC configuration so much, I will not be updating this part verymuch often now.
 
 
 ## BIOS
