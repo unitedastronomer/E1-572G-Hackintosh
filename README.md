@@ -1,4 +1,4 @@
-# Acer Aspire E1-572G — OpenCore Configuration
+# Acer Aspire E1-572G OpenCore Configuration
 
 
 [![OpenCore](https://img.shields.io/badge/OpenCore-0.9.9-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
@@ -7,6 +7,7 @@
 ### 🛠️ This OpenCore configuration is optimized for this specific hardware. 
    * [Start a discussion](https://github.com/unitedastronomer/E1-572G-Hackintosh/discussions) if you have some questions.
 
+I have already tried to make this config to work at it's best potential, I may not be able to update anymore.
 
 ### 💻 System Specification
 
