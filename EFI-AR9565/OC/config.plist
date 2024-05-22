@@ -31,32 +31,23 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				J19TVEE=
-				</data>
+				<data>J19TVEE=</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>OemTableId</key>
-				<data>
-				AAAAAA==
-				</data>
+				<data>AAAAAA==</data>
 				<key>Replace</key>
-				<data>
-				J1hTVEE=
-				</data>
+				<data>J1hTVEE=</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>
-				</data>
+				<data></data>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -70,32 +61,23 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				RgVfQ1JT
-				</data>
+				<data>RgVfQ1JT</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>OemTableId</key>
-				<data>
-				AAAAAA==
-				</data>
+				<data>AAAAAA==</data>
 				<key>Replace</key>
-				<data>
-				RgVYQ1JT
-				</data>
+				<data>RgVYQ1JT</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>
-				</data>
+				<data></data>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -109,32 +91,23 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				IgQAeQA=
-				</data>
+				<data>IgQAeQA=</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>OemTableId</key>
-				<data>
-				AAAAAA==
-				</data>
+				<data>AAAAAA==</data>
 				<key>Replace</key>
-				<data>
-				IgAAeQA=
-				</data>
+				<data>IgAAeQA=</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>
-				</data>
+				<data></data>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -148,32 +121,23 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				IgABeQA=
-				</data>
+				<data>IgABeQA=</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>OemTableId</key>
-				<data>
-				AAAAAA==
-				</data>
+				<data>AAAAAA==</data>
 				<key>Replace</key>
-				<data>
-				IgAAeQA=
-				</data>
+				<data>IgAAeQA=</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>
-				</data>
+				<data></data>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -187,32 +151,23 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				IgEAeQA=
-				</data>
+				<data>IgEAeQA=</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>OemTableId</key>
-				<data>
-				AAAAAA==
-				</data>
+				<data>AAAAAA==</data>
 				<key>Replace</key>
-				<data>
-				IgAAeQA=
-				</data>
+				<data>IgAAeQA=</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>
-				</data>
+				<data></data>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -226,32 +181,23 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				R1BSVwI=
-				</data>
+				<data>R1BSVwI=</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>OemTableId</key>
-				<data>
-				AAAAAA==
-				</data>
+				<data>AAAAAA==</data>
 				<key>Replace</key>
-				<data>
-				WFBSVwI=
-				</data>
+				<data>WFBSVwI=</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>
-				</data>
+				<data></data>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -265,32 +211,23 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				X1ExMQ==
-				</data>
+				<data>X1ExMQ==</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>OemTableId</key>
-				<data>
-				AAAAAA==
-				</data>
+				<data>AAAAAA==</data>
 				<key>Replace</key>
-				<data>
-				WFExMQ==
-				</data>
+				<data>WFExMQ==</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>
-				</data>
+				<data></data>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -304,32 +241,23 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				X1ExMg==
-				</data>
+				<data>X1ExMg==</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>OemTableId</key>
-				<data>
-				AAAAAA==
-				</data>
+				<data>AAAAAA==</data>
 				<key>Replace</key>
-				<data>
-				WFExMg==
-				</data>
+				<data>WFExMg==</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>
-				</data>
+				<data></data>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -343,32 +271,23 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				RUhDMQ==
-				</data>
+				<data>RUhDMQ==</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>OemTableId</key>
-				<data>
-				AAAAAA==
-				</data>
+				<data>AAAAAA==</data>
 				<key>Replace</key>
-				<data>
-				RUgwMQ==
-				</data>
+				<data>RUgwMQ==</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>
-				</data>
+				<data></data>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -382,32 +301,23 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				X1BUUw==
-				</data>
+				<data>X1BUUw==</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>OemTableId</key>
-				<data>
-				AAAAAA==
-				</data>
+				<data>AAAAAA==</data>
 				<key>Replace</key>
-				<data>
-				WlBUUw==
-				</data>
+				<data>WlBUUw==</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>
-				</data>
+				<data></data>
 			</dict>
 			<dict>
 				<key>Base</key>
@@ -421,32 +331,23 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				X09TSQ==
-				</data>
+				<data>X09TSQ==</data>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>OemTableId</key>
-				<data>
-				AAAAAA==
-				</data>
+				<data>AAAAAA==</data>
 				<key>Replace</key>
-				<data>
-				WE9TSQ==
-				</data>
+				<data>WE9TSQ==</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data>
-				</data>
+				<data></data>
 			</dict>
 		</array>
 		<key>Quirks</key>
@@ -481,25 +382,17 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				AFAAbABhAHQAZgBvAHIAbQBTAHUAcABwAG8AcgB0AC4A
-				cABsAGkAcwB0
-				</data>
+				<data>AFAAbABhAHQAZgBvAHIAbQBTAHUAcABwAG8AcgB0AC4AcABsAGkAcwB0</data>
 				<key>Identifier</key>
 				<string>Apple</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Replace</key>
-				<data>
-				AC4ALgAuAC4ALgAuAC4ALgAuAC4ALgAuAC4ALgAuAC4A
-				LgAuAC4ALgAu
-				</data>
+				<data>AC4ALgAuAC4ALgAuAC4ALgAuAC4ALgAuAC4ALgAuAC4ALgAuAC4ALgAu</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
@@ -561,68 +454,46 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x0)/Pci(0x0,0x0)</key>
 			<dict>
-				<key>#compatible</key>
+				<key>compatible</key>
 				<string>pci14e4,16b4</string>
-				<key>#device-id</key>
-				<data>
-				tBYAAA==
-				</data>
+				<key>device-id</key>
+				<data>tBYAAA==</data>
 				<key>built-in</key>
-				<data>
-				AQ==
-				</data>
+				<data>AQ==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)</key>
 			<dict>
 				<key>IOName</key>
 				<string>pci168c,30</string>
+				<key>compatible</key>
+				<string>pci168c,30</string>
+				<key>device-id</key>
+				<data>MAAAAA==</data>
 				<key>built-in</key>
-				<data>
-				AQ==
-				</data>
+				<data>AQ==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
 				<key>AAPL,ig-platform-id</key>
-				<data>
-				BQAmCg==
-				</data>
+				<data>BQAmCg==</data>
 				<key>backlight-smoother-lowerbound</key>
-				<data>
-				BQAAAA==
-				</data>
+				<data>BQAAAA==</data>
 				<key>device-id</key>
-				<data>
-				EgQAAA==
-				</data>
+				<data>EgQAAA==</data>
 				<key>enable-backlight-smoother</key>
-				<data>
-				AQAAAA==
-				</data>
+				<data>AQAAAA==</data>
 				<key>framebuffer-con2-enable</key>
-				<data>
-				AQAAAA==
-				</data>
+				<data>AQAAAA==</data>
 				<key>framebuffer-con2-type</key>
-				<data>
-				AAgAAA==
-				</data>
+				<data>AAgAAA==</data>
 				<key>framebuffer-cursormem</key>
-				<data>
-				AACQAA==
-				</data>
+				<data>AACQAA==</data>
 				<key>framebuffer-fbmem</key>
-				<data>
-				AACQAA==
-				</data>
+				<data>AACQAA==</data>
 				<key>framebuffer-patch-enable</key>
-				<data>
-				AQAAAA==
-				</data>
+				<data>AQAAAA==</data>
 				<key>framebuffer-stolenmem</key>
-				<data>
-				AAAwAQ==
-				</data>
+				<data>AAAwAQ==</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -978,42 +849,6 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>BundlePath</key>
-				<string>FakePCIID.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/FakePCIID</string>
-				<key>MaxKernel</key>
-				<string>19.99.9</string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>FakePCIID_BCM57XX_as_BCM57765.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string></string>
-				<key>MaxKernel</key>
-				<string>19.99.9</string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
 				<string>RestrictEvents.kext</string>
 				<key>Comment</key>
 				<string></string>
@@ -1043,24 +878,6 @@
 				<string></string>
 				<key>MinKernel</key>
 				<string>20.0.0</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>BundlePath</key>
-				<string>RSRHelper.kext</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/RSRHelper</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>22.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -1160,11 +977,9 @@
 		<key>Emulate</key>
 		<dict>
 			<key>Cpuid1Data</key>
-			<data>
-			</data>
+			<data></data>
 			<key>Cpuid1Mask</key>
-			<data>
-			</data>
+			<data></data>
 			<key>DummyPowerManagement</key>
 			<false/>
 			<key>MaxKernel</key>
@@ -1182,34 +997,27 @@
 				<key>Base</key>
 				<string>__ZN11BCM5701Enet14getAdapterInfoEv</string>
 				<key>Comment</key>
-				<string>Broadcom BCM57786 Patch, needs device-id and compatible injection. (FakePCIID alternative)</string>
+				<string>Broadcom BCM57786 Patch</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
-				<data>
-				6AAA//9miYMABQAA
-				</data>
+				<data>6AAA//9miYMABQAA</data>
 				<key>Identifier</key>
 				<string>com.apple.iokit.AppleBCM5701Ethernet</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				/wAA////////////
-				</data>
+				<data>/wAA////////////</data>
 				<key>MaxKernel</key>
 				<string>19.99.9</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>Replace</key>
-				<data>
-				uLQWAABmiYMABQAA
-				</data>
+				<data>uLQWAABmiYMABQAA</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
@@ -1221,31 +1029,25 @@
 				<key>Comment</key>
 				<string>Broadcom BCM57786 Patch - macOS 11+</string>
 				<key>Count</key>
-				<integer>0</integer>
+				<integer>1</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
-				<data>
-				6Mqe//9miYMABQAA
-				</data>
+				<data>6Mqe//9miYMABQAA</data>
 				<key>Identifier</key>
 				<string>com.apple.iokit.CatalinaBCM5701Ethernet</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
 				<string>20.0.0</string>
 				<key>Replace</key>
-				<data>
-				uLQWAABmiYMABQAA
-				</data>
+				<data>uLQWAABmiYMABQAA</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
@@ -1261,27 +1063,21 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				NTc3NjU=
-				</data>
+				<data>NTc3NjU=</data>
 				<key>Identifier</key>
 				<string>com.apple.iokit.AppleBCM5701Ethernet</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>MaxKernel</key>
 				<string>19.99.9</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>Replace</key>
-				<data>
-				NTc3ODY=
-				</data>
+				<data>NTc3ODY=</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
@@ -1297,27 +1093,21 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				NTc3NjU=
-				</data>
+				<data>NTc3NjU=</data>
 				<key>Identifier</key>
 				<string>com.apple.iokit.AppleBCM57XXEthernet</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
 				<string>20.0.0</string>
 				<key>Replace</key>
-				<data>
-				NTc3ODY=
-				</data>
+				<data>NTc3ODY=</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
@@ -1333,26 +1123,21 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Identifier</key>
 				<string>com.apple.driver.AppleRTC</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
 				<string>19.0.0</string>
 				<key>Replace</key>
-				<data>
-				ww==
-				</data>
+				<data>ww==</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
@@ -1362,33 +1147,27 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>Enables SATA Hot Plugging (Big Sur+)</string>
+				<string>Enables SATA Hot Plugging - macOS 11+</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				QGACAA==
-				</data>
+				<data>QGACAA==</data>
 				<key>Identifier</key>
 				<string>com.apple.driver.AppleAHCIPort</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
 				<string>20.0.0</string>
 				<key>Replace</key>
-				<data>
-				AAAAAA==
-				</data>
+				<data>AAAAAA==</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
@@ -1404,26 +1183,21 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Identifier</key>
 				<string>com.apple.filesystems.apfs</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
 				<string>20.4.0</string>
 				<key>Replace</key>
-				<data>
-				uAEAAADD
-				</data>
+				<data>uAEAAADD</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
@@ -1439,26 +1213,21 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Identifier</key>
 				<string>kernel</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
 				<string>20.0.0</string>
 				<key>Replace</key>
-				<data>
-				uAAAAADD
-				</data>
+				<data>uAAAAADD</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
@@ -1474,1291 +1243,21 @@
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>
-				AQAAAOgAAAAAhcB1
-				</data>
+				<data>AQAAAOgAAAAAhcB1</data>
 				<key>Identifier</key>
 				<string>com.apple.driver.AppleMobileFileIntegrity</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>
-				//////8AAAAA////
-				</data>
+				<data>//////8AAAAA////</data>
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
 				<string>22.0.0</string>
 				<key>Replace</key>
-				<data>
-				AQAAALgBAAAAhcB1
-				</data>
+				<data>AQAAALgBAAAAhcB1</data>
 				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>start</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				ZomDEAQAAA==
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				xoMQBAAAMA==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>___ath_attach</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				D7f4g/8w
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				D7f4g/8A
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>_ar9300ReadRevisions</string>
-				<key>Count</key>
-				<integer>4</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				wekMgeHA/w8A
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				wekMkLnAAQAA
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>_ar9300ReadRevisions #1</string>
-				<key>Count</key>
-				<integer>2</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				wegMJcD/DwA=
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				wegMuMABAAA=
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>_ar9300ReadRevisions #2</string>
-				<key>Count</key>
-				<integer>5</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				wekIg+EP
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				kLkCAAAA
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>_ar9300ReadRevisions #3</string>
-				<key>Count</key>
-				<integer>3</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				wegIg+AP
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				kLkCAAAA
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>_ar9300RxGainIndexGet</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				D7aHALIAAIPgDw==
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				D7aHALIAAJAxwA==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>_ar9300TxGainIndexGet</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				D7aHALIAAMHoBA==
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				D7aHALIAAJAxwA==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>_ar9300FillCapabilityInfo</string>
-				<key>Count</key>
-				<integer>4</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				ZomDFgkAAA==
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				xoMWCQAAAA==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>_ar9300FillCapabilityInfo #2</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				SLkAAAAAAGAQAA==
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				SLkAAAAAACAQAA==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>AR9565</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				OTM4MA==
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				OTU2NQ==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>_ar9300SetRxFilter</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				jZAABAAA
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				jZAABAgA
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>_ar9300Reset</string>
-				<key>Count</key>
-				<integer>2</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				ugcAAABMief/0A==
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				ugEAAABMief/0A==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>_ar9300Reset #2</string>
-				<key>Count</key>
-				<integer>2</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				ugcAAABMiedB/1UA
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				ugEAAABMiedB/1UA
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>_ar9300 #1</string>
-				<key>Count</key>
-				<integer>2</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				vohiAQA=
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				voxiAQA=
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>_ar9300 #2</string>
-				<key>Count</key>
-				<integer>4</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				vpBiAQA=
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				vpRiAQA=
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_ar9300_osprey_2p0_mac_core</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				CAAAAAAAAAAwAAAAhQAKADQAAAAFAAAAQAAAAAAAAABE
-				AAAAAAAAAEgAAAAIAAAATAAAABAAAABQAAAAAAAAAEAQ
-				AAAP/C8ARBAAAA/8LwBIEAAAD/wvAEwQAAAP/C8AUBAA
-				AA/8LwBUEAAAD/wvAFgQAAAP/C8AXBAAAA/8LwBgEAAA
-				D/wvAGQQAAAP/C8A8BAAAAABAABwEgAAAAAAALASAAAA
-				AAAA8BIAAAAAAAA8FAAAAAAAAHwUAAAAAAAAEBgAAAMA
-				AA8AgAAAAAAAAASAAAAAAAAACIAAAAAAAAAMgAAAAAAA
-				ABiAAAAAAAAAIIAAAAAAAAA4gAAAAAAAADyAAAAAAAAA
-				QIAAAAAAAABEgAAAAAAAAEiAAAAAAAAAVIAAAAAAAABY
-				gAAAAAAAAFyAAACPxw8AYIAAAA8AAABkgAAAAAAAAHCA
-				AAAQAwAAdIAAACAAAAB4gAAAAAAAAJyAAAAPAAAAoIAA
-				AAAAAACkgAAAAAD/AqiAAAAFBgcOrIAAAA0AAACwgAAA
-				AAAAALSAAAAAAAAAuIAAAAAAAAC8gAAAAAAAAMCAAAAA
-				AIAqxIAAAGgBkAbIgAAAIByIE8yAAAAAAPQB0IAAAAAl
-				JQDUgAAABQCwANiAAAACAEAA3IAAAAAAAADggAAA////
-				/+SAAAD//wAA6IAAAD8/Pz/sgAAAAAAAAPCAAAAAAAAA
-				9IAAAAAAAAD8gAAAAAACAACBAAAAAAAACIEAAFIAAAAM
-				gQAAAAAAABCBAAAAAAAAFIEAAP8HAAAYgQAAqgAAAByB
-				AAAQMgAAJIEAAAAAAAAogQAAAAAAACyBAAAAAAAAMIEA
-				AAAAAAA0gQAAAAAAADiBAAAAAAAAPIEAAP//AABEgQAA
-				/////2iBAAAAAAAAbIEAAAAAAABwgQAAAGJIGHSBAAAQ
-				IjMzeIEAAAAAAAB8gQAAAAACAMSBAAAQIjMzyIEAAAAA
-				AADMgQAAAAAAANSBAAAAAAAA7IEAAAAAAADwgQAAAAAA
-				APSBAAAAAAAA+IEAAAAAAAD8gQAAAAAAAECCAAAAABAA
-				RIIAACT0EABIggAAAAgAAEyCAABI6AEAUIIAAAAAAABU
-				ggAAAAAAAFiCAAAAAAAAXIIAAAAAAEBgggAAIgkIAGSC
-				AAAQAECdaIIAAP////9sggAA//8AAHCCAAAAAAAAdIIA
-				AAAAAEB4ggAAgEE+AHyCAAAEAAAAhIIAACwAAACIggAA
-				LAAAAIyCAAD/AAAAlIIAAAAAAACYggAAAAAAAJyCAAAA
-				AAAAAIMAAEABAAAUgwAAAAAAAByDAAANAQAAKIMAAAAA
-				AAAsgwAAHwAAADCDAAACAwAANIMAAAAHAAA4gwAAAAD/
-				/zyDAAAAAEACQIMAAP8HAQBEgwAAWxBIqkiDAAAAAI8A
-				XIMAAAAAAABggwAA/////2SDAAD/////aIMAAAAAAABw
-				gwAAAAAAAHSDAAD/AAAAeIMAAAAAAAB8gwAAAAAAAICD
-				AAD/////hIMAAP////+QgwAA/////5SDAAD/////mIMA
-				AAAAAACcgwAAAAAAAKSDAAAU+gAAqIMAAAAMDwCsgwAA
-				ECIzM7CDAAAQIjMztIMAABAiMzO4gwAAECIzM7yDAAAA
-				AAAAwIMAAAAAAADEgwAAAAAAAMiDAAAAAAAAzIMAAAAC
-				AADQgwAA/wEDgAAAAAAAAAAAAAAAAAAAAAA=
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_ar9300_osprey_2p0_mac_postamble</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				MBAAADACAABgBAAAwAIAAGABAABwEAAAaAEAANACAAAY
-				AwAAjAEAALAQAABgDgAAwBwAAHB8AAA4PgAAFIAAAOgD
-				6APQB9AHABaAEAALQAgcgAAAJ4CNEk+AjRJXAOASKwDg
-				EiCBAAAASPAIAEjwCBBI8AgQSPAI0IEAABAyAAAQMgAA
-				CjIAAAoyAAAYgwAAgD4AAAB9AACAaAAAQDQAAA==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_ar9300_osprey_2p0_baseband_core</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				AJgAADCO5q8EmAAAAOAU/QiYAABrjwqcDJgAAAAAgAQU
-				mAAACsCAkhiYAAAAAAAAHJgAACgAAgA0mAAAkKIAZDiY
-				AAD/7AgBPJgAAAAGAA2AmAAAAP8fIISYAABCEAAApJgA
-				AAAEIACwmAAAvguEMtCYAACOaksA1JgAACAIAADcmAAA
-				AAAAAOSYAAD///8f6JgAAP///x/smAAA////H/CYAAAA
-				AAAA9JgAAAAAAADwmwAAAAAAgAScAABV/1X/CJwAAFX/
-				IAMMnAAAAAAAABCcAAAAAAAAFJwAAIRjBAAYnAAAQLS2
-				BRycAABAtLYAAJ0AADOjgMAEnQAAEGwgQAidAABgQJwA
-				DJ0AAAqAgxgQnQAAYUCDARSdAAAABMAAGJ0AAAAAAAAI
-				ngAADCM4ACSeAAAVtQeZKJ4AAAAAbxIwngAAd28zBjSe
-				AAAvU/ZqOJ4AAAAMyAxAngAAIBgmDUyeAAAEEAAAUJ4A
-				APED/wBUngAAx1XD5FyeAAAkhxnpwJ8AAMhPPoLEnwAA
-				te8BAMyfAAAUAABADKIAAAAAAAAgogAAAAAAACSiAAAA
-				AAAAKKIAABAjABA8ogAAAAAAAESiAAAAAAAMoKIAAAEA
-				AADAogAAAQAAAMiiAAAAAAAAzKIAADM0xBjUogAAAAAA
-				AOyiAAAAAAAA8KIAAAAAAAD0ogAAAAAAAPiiAAAAAAAA
-				RKMAAAAAAABMowAAAAAAAFCjAAAAoAAAZKMAAAAAAABw
-				owAAAAAAAJCjAAABAAAAlKMAAEQEAACYowAADw4fAJyj
-				AAA/OXUAoKMAACdkn7ekowAAEQAAAKijAABuqqqqrKMA
-				AFVkRjzAowAAICAgIMSjAAAgIiIiyKMAACAAICDMowAA
-				ICAgINCjAAAgICAg1KMAACAgICDYowAAICAgINyjAAAg
-				ICAg4KMAACAgICDkowAAICAgIOijAAAgICAg7KMAACAg
-				ICDwowAAAAAAAPSjAAAGAAAA+KMAAIDTmwz8owAAAQ8P
-				AACkAAABH6mPBKQAAAAAAAAIpAAAxuV5DgykAAAgCIIA
-				FKQAAMU55xwYpAAAzh0ALRykAADFOeccIKQAAM4BAAAk
-				pAAAxTnnHCikAADOAQAALKQAAM455xwwpAAAzjnnHDSk
-				AAAAAAAAOKQAAAEYAAA8pAAAAAAAAECkAAAAAAAARKQA
-				AAAAAABIpAAAlgAABUykAAABAAAAUKQAAAAAAQBUpAAA
-				AAAAA1ikAAAAAAAARKYAAHSdrb9IpgAACgZIAEymAAA3
-				PAAAcKYAAAABAgN0pgAABAUICXimAAAKCwwNfKYAABAR
-				EhOApgAAFBUwMYSmAAAyMzQ1iKYAADYAAACQpgAAOAgA
-				ALSmAAABLFEAwKcAAAAAAADEpwAA/P///8inAAAAAAAA
-				zKcAAAAAAADQpwAAAAAAANSnAAAEAAAA3KcAAAEAAADw
-				pwAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAA=
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_ar9300_osprey_2p0_baseband_postamble</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				EJgAAAWACtAFgArQBYAK0AmACtAgmAAALgJqIC4CaiAu
-				AWogrgFqICSYAADQQMZa0EDGWtBAxlraQMZjKJgAAIEw
-				kAaBMJAGgTiQBoE8FAksmAAA1KbuBdSm7gXUpu4F1Kbu
-				BTCYAACcBQAAnAUAAJwFAACcBQAAAJwAAMQAAADEAAAA
-				xAAAAMQAAAAAngAAGhFyAxoRcgOgFnIDoBZyAwSeAAAg
-				IIAAICCAACAgFAAgIBQADJ4AAOIAQGziAEBt4gBAbeIA
-				QGwQngAALo3Ifi6NyH4uTch+Lk3IfhSeAABeXbk3XmC5
-				N15geTNeXXkzGJ4AAAAAAAAAAAAAAAAAAAAAAAAcngAA
-				nM8BAJzPAQCcHwIAnB8CACCeAAC1AwAAtQMAAKQDAACk
-				AwAALJ4AABwAAAAcAAAAIQAAACEAAAA8ngAAImKUzyJi
-				lM8gYpTPIGKUz0SeAAAnHjL+Jx4y/iceKf4nHin+SJ4A
-				ABogMFAaIDBQEiAwUBIgMFDInwAAAPADAADwAwAAoAEA
-				AKABAASiAADAjzEHxI8xB8SPMQfAjzEHCKIAAAQBAAAE
-				AQAABAAAAAQAAAAsogAAL2oCASdqAgEvagIBL2oCATCi
-				AAAKQAAAFEAAABZAAAALQAAANKIAAP8PAAD/DwAQ/w8A
-				EP8PAAA4ogAAGBC4/xgQuP8YELj/GBC4/1CiAAAAAAAA
-				AAAAABACAAAIAQAAVKIAANAHAACgDwAAMBEAAJgIAABY
-				ogAAAgACAgIAAgICAAICAgACAlyiAAAODgABDg4AAQ4O
-				AAEODgABYKIAAAEVAgoBFQIKARUCOgEVAjpkogAADg4A
-				AA4OAAAODgAADg4AAICiAAAHAAAABwAAAAsAAAALAAAA
-				hKIAAAAAAAAAAAAAUAEAAFABAACIogAAEAUQABAFEAAQ
-				BRAAEAUQAIyiAABRFQIAURUCAFEVAgBRFQIAxKIAABiN
-				BQAYjQUAGI0FABiNBQDQogAAghkHAIIZBwCCGQcAghkH
-				ANiiAAA7qJl5O6iZeTuomXk7qJl5WKMAAAAAAAAAAAAA
-				AAAAAAAAAAAErgAAAACAAAAAgAAAAIAAAACAABiuAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAA
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_ar9300_osprey_2p0_radio_core</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				AGABALZt2zYEYAEAQNu2bQhgAQAAAPBzDGABAAAAAAAQ
-				YAEAATaCbUBgAQD4/4B/TGABAE/gmRxQYAEAbNu2bVhg
-				AQAAACBsgGABAAAADACEYAEAjARomohgAQAURSFUjGAB
-				AAsEAxKQYAEAkGSSJJhgAQAwM4vSoGABAP6PEAqkYAEA
-				kcQvgahgAQAAgDxCtGABAAAAAJK4YAEA3N2FArxgAQCI
-				iJACwGABANC2bQDEYAEAYNvWbchgAQBs27ZtzGABALDB
-				5m0AYQEABL7/PwRhAQAAAPj/CGEBAAAEIAAQYQEAAAAA
-				AERhAQCAQAgCSGEBAMCAAACAYgEAAQAKBYRiAQBAFIQ9
-				iGIBAAAAAACMYgEAAAAA45BiAQCAQAChlGIBACgAAECY
-				YgEAACmqVUBjAQB6ghwTRGMBAAAAMAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_ar9300_osprey_2p0_radio_postamble</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				nGABACTljgsk5Y4LJOWOCyTljgusYAEACGxkpAhsZKQI
-				bGSkCGxkpLBgAQBwf9YBcH/WAXB/1gFwf9YBDGEBAAAA
-				AEAAAABAAAAAQAAAAEBAYQEACECAEAhAgBAIQIBQCECA
-				UAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_ar9300_osprey_2p0_soc_preamble</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				pEAAAMnJoAAQcAAAMyIAACBwAAAAAAAANHAAAAIAAAA4
-				cAAAwgQAAAAAAAAAAAAA
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_ar9300_osprey_2p0_soc_postamble</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				EHAAADMiAAAzIgAAMyIAADMiAAAAAAAAAAAAAAAAAAA=
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_ar9300Common_rx_gain_table_osprey_2p0</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				AKAAAAAAAQAEoAAAAgADAAigAAAEAAUADKAAAIAAgQAQ
-				oAAAggCDABSgAACAAYEBGKAAAIIBgwEcoAAAhAGFASCg
-				AACIAYkBJKAAAIoBiwEooAAAjAGNASygAACQAYIDMKAA
-				AIMDhAM0oAAAhQOIAzigAACJA4oDPKAAAIsDjANAoAAA
-				jQOQA0SgAACRA5IDSKAAAJMDlANMoAAAlQOWA1CgAAAA
-				AAAAVKAAAAAAAABYoAAAAAAAAFygAAAAAAAAYKAAAAAA
-				AABkoAAAAAAAAGigAAAAAAAAbKAAAAAAAABwoAAAAAAA
-				AHSgAAAAAAAAeKAAAAAAAAB8oAAAAAAAAICgAAApKSkp
-				hKAAACkpKSmIoAAAKSkpKYygAAApKSkpkKAAACkpKSKU
-				oAAAIiIdHZigAAAXEREMnKAAAAMDAwCgoAAAAAAAAKSg
-				AAAAAAAAqKAAAAAAAACsoAAAAAAAALCgAAAAAAAAtKAA
-				AAAAAAC4oAAAAAAAALygAAAAAAAAwKAAAKAAvwDEoAAA
-				oRGgEcigAAC/Eb4RzKAAAL0RvBHQoAAAZCJjItSgAABi
-				ImEi2KAAAGAifyLcoAAAfiIiQ+CgAAAhQyBD5KAAAD9D
-				PkPooAAAPUNiROygAABhRGBE8KAAAH9EfkT0oAAAfUSC
-				VfigAACBVYBV/KAAAJ9VnlUAoQAAgmaBZgShAACAZp9m
-				CKEAAJ5mnWYMoQAAY3didxChAABhd2B3FKEAAAAAAAAY
-				oQAAAAAAAByhAAAAAAAAIKEAAAAAAAAkoQAAAAAAACih
-				AAAAAAAALKEAAAAAAAAwoQAAAAAAADShAAAAAAAAOKEA
-				AAAAAAA8oQAAAAAAAEChAACgAL8ARKEAAKERoBFIoQAA
-				vxG+EUyhAAC9EbwRUKEAAGQiYyJUoQAAYiJhIlihAABg
-				In8iXKEAAH4iIkNgoQAAIUMgQ2ShAAA/Qz5DaKEAAD1D
-				YkRsoQAAYURgRHChAAB/RH5EdKEAAH1EglV4oQAAgVWA
-				VXyhAACfVZ5VgKEAAIJmgWaEoQAAgGafZoihAACeZp1m
-				jKEAAOd35ncQoQAA5Xfkd5ShAAAAAAAAmKEAAAAAAACc
-				oQAAAAAAAKChAAAAAAAApKEAAAAAAACooQAAAAAAAKyh
-				AAAAAAAAsKEAAAAAAAC0oQAAAAAAALihAAAAAAAAvKEA
-				AAAAAADAoQAAAAAAAMShAAAAAAAAyKEAAAAAAADMoQAA
-				AAAAANChAAAAAAAA1KEAAAAAAADYoQAAAAAAANyhAAAA
-				AAAA4KEAAAAAAADkoQAAAAAAAOihAAAAAAAA7KEAAAAA
-				AADwoQAAlgMAAPShAACWAwAA+KEAAJYDAAD8oQAAlgEA
-				AACwAAAAAAEABLAAAAIAAwAIsAAABAAFAAywAACAAIEA
-				ELAAAIIAgwAUsAAAgAGBARiwAACCAYMBHLAAAIQBhQEg
-				sAAAgAKBAiSwAACCAoMCKLAAAIQChQIssAAAiAKJAjCw
-				AACKAosCNLAAAIwCiAM4sAAAiQOKAzywAACLA4wDQLAA
-				AI0DkANEsAAAkQOSA0iwAACTA5QDTLAAAJUDlgNQsAAA
-				AAAAAFSwAAAAAAAAWLAAAAAAAABcsAAAAAAAAGCwAAAA
-				AAAAZLAAAAAAAABosAAAAAAAAGywAAAAAAAAcLAAAAAA
-				AAB0sAAAAAAAAHiwAAAAAAAAfLAAAAAAAACAsAAAMjIy
-				MoSwAAAyMi8viLAAAC0qKCOMsAAAIyEeHJCwAAAZGRcU
-				lLAAABQSDg6YsAAABwcFA5ywAAADAwMAoLAAAAAAAACk
-				sAAAAAAAAKiwAAAAAAAArLAAAAAAAACwsAAAAAAAALSw
-				AAAAAAAAuLAAAAAAAAC8sAAAAAAAAMCwAAAgAD8AxLAA
-				AEEAQADIsAAAXwBAAcywAABfAWAB0LAAAH8BfgHUsAAA
-				QgJBAtiwAABAAl8C3LAAAGACfwLgsAAAfgJBA+SwAABA
-				A18D6LAAAGADfwPssAAAQQRABPCwAABfBGAE9LAAAH8E
-				QQX4sAAAQAVfBfywAABgBX8FALEAAEEGQAYEsQAAXwZg
-				BgixAAB/Bn4GDLEAAEIHQQcQsQAAQAdfBxSxAABgB38H
-				GLEAAIEHgAccsQAAnwegByCxAAC/B8EHJLEAAMAHAAAo
-				sQAAAAAAACyxAAAAAAAAMLEAAAAAAAA0sQAAAAAAADix
-				AAAAAAAAPLEAAAAAAABAsQAAIAA/AESxAABBAEAASLEA
-				AF8AQAFMsQAAXwFgAVCxAAB/AX4BVLEAAEICQQJYsQAA
-				QAJfAlyxAABgAn8CYLEAAH4CQQNksQAAQANfA2ixAABg
-				A38DbLEAAEEEQARwsQAAXwRgBHSxAAB/BEEFeLEAAEAF
-				XwV8sQAAYAV/BYCxAABBBkAGhLEAAF8GYAaIsQAAfwZ+
-				BoyxAABCB0EHkLEAAEAHXweUsQAAYAd/B5ixAACBB4AH
-				nLEAAJ8HoAegsQAAvwfBB6SxAADABwAAqLEAAAAAAACs
-				sQAAAAAAALCxAAAAAAAAtLEAAAAAAAC4sQAAAAAAALyx
-				AAAAAAAAwLEAAAAAAADEsQAAAAAAAMixAAAAAAAAzLEA
-				AAAAAADQsQAAAAAAANSxAAAAAAAA2LEAAAAAAADcsQAA
-				AAAAAOCxAAAAAAAA5LEAAAAAAADosQAAAAAAAOyxAAAA
-				AAAA8LEAAJYDAAD0sQAAlgMAAPixAACWAwAA/LEAAJYB
-				AAA=
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_ar9300Modes_lowest_ob_db_tx_gain_table_osprey_2p0</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				3KIAAICTCvyAkwr8Ulur/VJbq/3gogAAAOzs/wDs7P+E
-				nDP9hJwz/eSiAAAAAA/8AAAP/ADgw/4A4MP+6KIAAAAA
-				EPwAABD8AAD8/wAA/P8QpAAA2VAAANlQAADfUAAA31AA
-				AAClAAAgIgAAICIAAAAAAAAAAAAABKUAACMiAAYjIgAG
-				AgAABAIAAAQIpQAAICICCyAiAgsEAAAIBAAACAylAAAj
-				IgIQIyICEAACAAwAAgAMEKUAACAmAhUgJgIVAgIAEAIC
-				ABAUpQAAIiYCGSImAhkABAATAAQAExilAAAiKAIcIigC
-				HAIEABcCBAAXHKUAAEIoAiFCKAIhBAQAGwQEABsgpQAA
-				QSwCJEEsAiQDBgAeAwYAHiSlAABCMAIpQjACKQIKACMC
-				CgAjKKUAAEQwAi1EMAItBAoAJwQKACcspQAARDYCMUQ2
-				AjEgCgAqIAoAKjClAABDVgI2Q1YCNiAOAC4gDgAuNKUA
-				AERaAjpEWgI6Ig4AMiIOADI4pQAARV4CPUVeAj0kDgA2
-				JA4ANjylAABKXgJDSl4CQ0AWADpAFgA6QKUAAGxeAkps
-				XgJKYBYAPmAWAD5EpQAAjl4CUI5eAlBhGABBYRgAQUil
-				AACyXgJWsl4CVoEaAEWBGgBFTKUAALVeAly1XgJcgxoA
-				SYMaAElQpQAA9l4CYvZeAmKEHABMhBwATFSlAABWXwJl
-				Vl8CZeMcAE/jHABPWKUAAFZ/AmlWfwJp5RwAU+UcAFNc
-				pQAAVp8CbVafAm3pHABX6RwAV2ClAABWnwRzVp8Ec+sc
-				AFvrHABbZKUAAFb/BHhW/wR48BwAYPAcAGBopQAAVv8E
-				eFb/BHjxHABh8RwAYWylAABW/wR4Vv8EePIcAGLyHABi
-				cKUAAFb/BHhW/wR48xwAY/McAGN0pQAAVv8EeFb/BHj0
-				HABk9BwAZHilAABW/wR4Vv8EePYfAGb2HwBmfKUAAFb/
-				BHhW/wR49h8AZvYfAGYApgAAAAAAAAAAAAAAAAAAAAAA
-				AASmAAAAAAAAAAAAAAAAAAAAAAAACKYAAAAAAAAAAAAA
-				AAAAAAAAAAAMpgAAAECAAABAgAAAAAAAAAAAABCmAAAB
-				QoAAAUKAAAAAAAAAAAAAFKYAAAFCgAABQoAAAEBAAQBA
-				QAEYpgAAAUKAAAFCgAABRUABAUVAARymAAABggACAYIA
-				AgGFAAIBhQACIKYAAAMKwQIDCsECA8qAAgPKgAIkpgAA
-				BVKBBAVSgQQEC8ECBAvBAiimAAAG1IEFBtSBBQRLgQME
-				S4EDLKYAAAfWgQUH1oEFBY4BBQWOAQUwpgAAB9aBBQfW
-				gQUGlAEFBpQBBTSmAAAH1oEFB9aBBQaUAQUGlAEFOKYA
-				AAfWgQUH1oEFBpQBBQaUAQU8pgAAB9aBBQfWgQUGlAEF
-				BpQBBURgAQDkgm0F5IJtBeSCbQXkgm0FSGABAGCQtI1g
-				kLSNYJC0jWCQtI1UYAEAAAC2bQAAtm0AALZtAAC2bQAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-				AAAA
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_ar9300PciePhy_pll_on_clkreq_disable_L1_osprey_2p0</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				AIwBAN4uIRgEjAEA2AEIAAiMAQAMeAMAAAAAAAAAAAA=
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string>_ar9300Modes_fast_clock_osprey_2p0</string>
-				<key>Comment</key>
-				<string></string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>
-				</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>
-				</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>
-				MBAAAGgCAADQBAAAcBAAAIwBAAAYAwAAsBAAANAPAACg
-				HwAAFIAAAEwETASYCJgIHIAAACvAjhRXwI4UGIMAAMBE
-				AACAiQAAAJ4AACEYcgMhGHIDMKIAAAtAAAAWQAAAVKIA
-				AJgIAAAwEQAAAAAAAA==
-				</data>
-				<key>ReplaceMask</key>
-				<data>
-				</data>
+				<data></data>
 				<key>Skip</key>
 				<integer>0</integer>
 			</dict>
@@ -2773,10 +1272,10 @@
 			<false/>
 			<key>AppleXcpmForceBoost</key>
 			<false/>
-			<key>CustomPciSerialDevice</key>
-			<false/>
 			<key>CustomSMBIOSGuid</key>
 			<true/>
+			<key>CustomPciSerialDevice</key>
+			<false/>
 			<key>DisableIoMapper</key>
 			<true/>
 			<key>DisableIoMapperMapping</key>
@@ -2901,11 +1400,9 @@
 			<key>HaltLevel</key>
 			<integer>2147483648</integer>
 			<key>PasswordHash</key>
-			<data>
-			</data>
+			<data></data>
 			<key>PasswordSalt</key>
-			<data>
-			</data>
+			<data></data>
 			<key>ScanPolicy</key>
 			<integer>0</integer>
 			<key>SecureBootModel</key>
@@ -2930,9 +1427,7 @@
 				<key>LineControl</key>
 				<integer>7</integer>
 				<key>PciDeviceInfo</key>
-				<data>
-				/w==
-				</data>
+				<data>/w==</data>
 				<key>RegisterAccessWidth</key>
 				<integer>8</integer>
 				<key>RegisterBase</key>
@@ -2959,38 +1454,27 @@
 			<key>4D1EDE05-38C7-4A6A-9CC6-4BCCA8B38C14</key>
 			<dict>
 				<key>DefaultBackgroundColor</key>
-				<data>
-				AAAAAA==
-				</data>
+				<data>AAAAAA==</data>
 				<key>UIScale</key>
-				<data>
-				AQ==
-				</data>
+				<data>AQ==</data>
 			</dict>
 			<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
 			<dict>
 				<key>rev patch</key>
 				<string>sbvmm</string>
 				<key>rtc-blacklist</key>
-				<data>
-				sg==
-				</data>
+				<data>sg==</data>
 			</dict>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<dict>
 				<key>#prev-lang:kbd</key>
-				<data>
-				</data>
+				<data></data>
 				<key>SystemAudioVolume</key>
-				<data>
-				Rg==
-				</data>
+				<data>Rg==</data>
 				<key>boot-args</key>
 				<string>-v amfi=0x80 ipc_control_port_options=0</string>
 				<key>csr-active-config</key>
-				<data>
-				AwgAAA==
-				</data>
+				<data>AwgAAA==</data>
 				<key>run-efi-updater</key>
 				<string>No</string>
 			</dict>
@@ -3020,10 +1504,10 @@
 		</dict>
 		<key>LegacyOverwrite</key>
 		<false/>
-		<key>LegacySchema</key>
-		<dict/>
 		<key>WriteFlash</key>
 		<true/>
+		<key>LegacySchema</key>
+		<dict/>
 	</dict>
 	<key>PlatformInfo</key>
 	<dict>
@@ -3035,15 +1519,14 @@
 		<dict>
 			<key>AdviseFeatures</key>
 			<true/>
-			<key>MLB</key>
-			<string></string>
 			<key>MaxBIOSVersion</key>
 			<false/>
+			<key>MLB</key>
+			<string></string>
 			<key>ProcessorType</key>
 			<integer>0</integer>
 			<key>ROM</key>
-			<data>
-			</data>
+			<data></data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemMemoryStatus</key>
@@ -3103,10 +1586,10 @@
 			<integer>0</integer>
 			<key>PointerPollMask</key>
 			<integer>-1</integer>
-			<key>PointerPollMax</key>
-			<integer>80</integer>
 			<key>PointerPollMin</key>
 			<integer>10</integer>
+			<key>PointerPollMax</key>
+			<integer>80</integer>
 			<key>PointerSpeedDiv</key>
 			<integer>1</integer>
 			<key>PointerSpeedMul</key>
@@ -3255,10 +1738,10 @@
 			<false/>
 			<key>TextRenderer</key>
 			<string>BuiltinGraphics</string>
-			<key>UIScale</key>
-			<integer>-1</integer>
 			<key>UgaPassThrough</key>
 			<false/>
+			<key>UIScale</key>
+			<integer>-1</integer>
 		</dict>
 		<key>ProtocolOverrides</key>
 		<dict>
