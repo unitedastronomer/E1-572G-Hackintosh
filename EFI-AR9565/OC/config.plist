@@ -1237,7 +1237,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>QGACAA==</data>
 				<key>Identifier</key>
@@ -1267,7 +1267,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>ZomDEAQAAA==</data>
 				<key>Identifier</key>
@@ -1293,11 +1293,11 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string> ___ath_attach</string>
+				<string>___ath_attach</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>D7f4g/8w</data>
 				<key>Identifier</key>
@@ -1327,7 +1327,7 @@
 				<key>Count</key>
 				<integer>4</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>wekMgeHA/w8A</data>
 				<key>Identifier</key>
@@ -1357,7 +1357,7 @@
 				<key>Count</key>
 				<integer>2</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>wegMJcD/DwA=</data>
 				<key>Identifier</key>
@@ -1387,7 +1387,7 @@
 				<key>Count</key>
 				<integer>5</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>wekIg+EP</data>
 				<key>Identifier</key>
@@ -1417,7 +1417,7 @@
 				<key>Count</key>
 				<integer>3</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>wegIg+AP</data>
 				<key>Identifier</key>
@@ -1447,7 +1447,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>D7aHALIAAIPgDw==</data>
 				<key>Identifier</key>
@@ -1477,7 +1477,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>D7aHALIAAMHoBA==</data>
 				<key>Identifier</key>
@@ -1507,7 +1507,7 @@
 				<key>Count</key>
 				<integer>4</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>ZomDFgkAAA==</data>
 				<key>Identifier</key>
@@ -1537,7 +1537,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>SLkAAAAAAGAQAA==</data>
 				<key>Identifier</key>
@@ -1567,7 +1567,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>OTM4MA==</data>
 				<key>Identifier</key>
@@ -1597,7 +1597,7 @@
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>jZAABAAA</data>
 				<key>Identifier</key>
@@ -1627,7 +1627,7 @@
 				<key>Count</key>
 				<integer>2</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>ugcAAABMief/0A==</data>
 				<key>Identifier</key>
@@ -1657,7 +1657,7 @@
 				<key>Count</key>
 				<integer>2</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>ugcAAABMiedB/1UA</data>
 				<key>Identifier</key>
@@ -1687,7 +1687,7 @@
 				<key>Count</key>
 				<integer>2</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>vohiAQA=</data>
 				<key>Identifier</key>
@@ -1717,7 +1717,7 @@
 				<key>Count</key>
 				<integer>4</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>vpBiAQA=</data>
 				<key>Identifier</key>
@@ -1747,7 +1747,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1777,7 +1777,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1807,7 +1807,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1837,7 +1837,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1867,7 +1867,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1897,7 +1897,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1927,7 +1927,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1957,7 +1957,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1987,7 +1987,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -2017,7 +2017,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -2047,7 +2047,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -2077,7 +2077,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
