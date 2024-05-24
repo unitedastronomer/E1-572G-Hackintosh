@@ -899,21 +899,21 @@
 				<key>Arch</key>
 				<string>x86_64</string>
 				<key>Base</key>
-				<string>__ZN11BCM5701Enet14getAdapterInfoEv</string>
+				<string></string>
 				<key>Comment</key>
-				<string>Broadcom BCM57786 Patch</string>
+				<string>Broadcom BCM57786 Patch - macOS &lt; 11</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
-				<data>6AAA//9miYMABQAA</data>
+				<data>6Mqe//9miYMABQAA</data>
 				<key>Identifier</key>
 				<string>com.apple.iokit.AppleBCM5701Ethernet</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
-				<data>/wAA////////////</data>
+				<data></data>
 				<key>MaxKernel</key>
 				<string>19.99.9</string>
 				<key>MinKernel</key>
@@ -931,7 +931,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>Broadcom BCM57786 Patch - macOS 11+</string>
+				<string>Broadcom BCM57786 Patch - macOS &lt;= 11</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -999,7 +999,7 @@
 				<key>Find</key>
 				<data>NTc3NjU=</data>
 				<key>Identifier</key>
-				<string>com.apple.iokit.AppleBCM57XXEthernet</string>
+				<string>com.apple.iokit.CatalinaBCM5701Ethernet</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
@@ -1040,36 +1040,6 @@
 				<string>19.0.0</string>
 				<key>Replace</key>
 				<data>ww==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>x86_64</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>Enables SATA Hot Plugging - macOS 11+</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>QGACAA==</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AppleAHCIPort</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>20.0.0</string>
-				<key>Replace</key>
-				<data>AAAAAA==</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -1160,6 +1130,36 @@
 				<string>22.0.0</string>
 				<key>Replace</key>
 				<data>AQAAALgBAAAAhcB1</data>
+				<key>ReplaceMask</key>
+				<data></data>
+				<key>Skip</key>
+				<integer>0</integer>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>x86_64</string>
+				<key>Base</key>
+				<string></string>
+				<key>Comment</key>
+				<string>Enable SATA Hot Plugging  - macOS &lt; 11</string>
+				<key>Count</key>
+				<integer>1</integer>
+				<key>Enabled</key>
+				<true/>
+				<key>Find</key>
+				<data>QGACAA==</data>
+				<key>Identifier</key>
+				<string>com.apple.driver.AppleAHCIPort</string>
+				<key>Limit</key>
+				<integer>0</integer>
+				<key>Mask</key>
+				<data></data>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string>20.0.0</string>
+				<key>Replace</key>
+				<data>AAAAAA==</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>

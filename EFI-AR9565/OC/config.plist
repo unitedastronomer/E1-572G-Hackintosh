@@ -467,6 +467,10 @@
 				<string>pci168c,30</string>
 				<key>built-in</key>
 				<data>AQ==</data>
+				<key>device-id</key>
+				<data>MAAAAA==</data>
+				<key>compatible</key>
+				<string>pci168c,30</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
@@ -1007,9 +1011,9 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>19.99.9</string>
 				<key>MinKernel</key>
-				<string>20.0.0</string>
+				<string></string>
 				<key>Replace</key>
 				<data>uLQWAABmiYMABQAA</data>
 				<key>ReplaceMask</key>
@@ -1091,7 +1095,7 @@
 				<key>Find</key>
 				<data>NTc3NjU=</data>
 				<key>Identifier</key>
-				<string>com.apple.iokit.AppleBCM57XXEthernet</string>
+				<string>com.apple.iokit.CatalinaBCM5701Ethernet</string>
 				<key>Limit</key>
 				<integer>0</integer>
 				<key>Mask</key>
