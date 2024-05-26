@@ -297,7 +297,7 @@
 				<key>Comment</key>
 				<string>_UPC to XUPC</string>
 				<key>Count</key>
-				<integer>0</integer>
+				<integer>21</integer>
 				<key>Enabled</key>
 				<true/>
 				<key>Find</key>
@@ -313,11 +313,11 @@
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
-				<integer>0</integer>
+				<integer>17</integer>
 				<key>TableLength</key>
 				<integer>0</integer>
 				<key>TableSignature</key>
-				<data></data>
+				<data>RFNEVA==</data>
 			</dict>
 		</array>
 		<key>Quirks</key>

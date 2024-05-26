@@ -5,20 +5,13 @@
     {
         Scope (XXXX)
         {
-            Method (_UPC, 0, Serialized)  // I am not sure,  Method (_UPC) was set as "Serialized" in DSDT, I just copied it.
+            Method (_UPC, 0, Serialized)  // Method (_UPC) was set as "Serialized" in DSDT, I just copied it.
             {
-                If (_OSI ("Darwin")) // If OS is macOS
-                {
+
                     Return (GUPC             // The GUPC method:
                     (0xFF,                   //  0xFF = enable, Zero is disabled    
                                   0x03))     //  0xFF = Internal, 0x00 = USB 2.0, 0x03 = USB 3.0 
-                }
-                Else
-                {
-                    Return (\_SB.PCI0.XHC.HUBN.XXXX.XUPC ()) // if not macOS, return to the original method in DSDT 
-                                                             // I think other OS are not reliant on ACPI in enumerating ports,
-                                                             // I just added the OSI check because I feel like it.
-                }
+             }
         }
     
 
@@ -28,29 +21,7 @@
 DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
 {
 
-    External (_SB_.PCI0, DeviceObj)
-    External (_SB_.PCI0.EH01, DeviceObj)
-    External (_SB_.PCI0.EH01.HUBN, DeviceObj)
-    External (_SB_.PCI0.EH01.HUBN.PR01, DeviceObj)
-    External (_SB_.PCI0.EH01.HUBN.PR01.PR11, DeviceObj)
-    External (_SB_.PCI0.EH01.HUBN.PR01.PR11.XUPC, MethodObj)     
-    External (_SB_.PCI0.EH01.HUBN.PR01.PR12, DeviceObj)
-    External (_SB_.PCI0.EH01.HUBN.PR01.PR12.XUPC, MethodObj)     
-    External (_SB_.PCI0.EH01.HUBN.PR01.PR13, DeviceObj)
-    External (_SB_.PCI0.EH01.HUBN.PR01.PR13.XUPC, MethodObj)     
-    External (_SB_.PCI0.EH01.HUBN.PR01.PR14, DeviceObj)
-    External (_SB_.PCI0.EH01.HUBN.PR01.PR14.XUPC, MethodObj)     
-    External (_SB_.PCI0.EH01.HUBN.PR01.PR15, DeviceObj)
-    External (_SB_.PCI0.EH01.HUBN.PR01.PR15.XUPC, MethodObj)     
-    External (_SB_.PCI0.EH01.HUBN.PR01.PR16, DeviceObj)
-    External (_SB_.PCI0.EH01.HUBN.PR01.PR16.XUPC, MethodObj)     
-    External (_SB_.PCI0.EH01.HUBN.PR01.PR17, DeviceObj)
-    External (_SB_.PCI0.EH01.HUBN.PR01.PR17.XUPC, MethodObj)     
-    External (_SB_.PCI0.EH01.HUBN.PR01.PR18, DeviceObj)
-    External (_SB_.PCI0.EH01.HUBN.PR01.PR18.WCAM, DeviceObj)
-    External (_SB_.PCI0.EH01.HUBN.PR01.PR18.WCAM.XUPC, MethodObj)     
-    External (_SB_.PCI0.EH01.HUBN.PR01.PR18.XUPC, MethodObj)     
-    External (_SB_.PCI0.EH01.HUBN.PR01.XUPC, MethodObj)     
+    External (_SB_.PCI0, DeviceObj)    
     External (_SB_.PCI0.XHC_, DeviceObj)
     External (_SB_.PCI0.XHC_.RHUB, DeviceObj)
     External (_SB_.PCI0.XHC_.RHUB.HS01, DeviceObj)
@@ -117,100 +88,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
         {
             Scope (PCI0)
             {
-                Scope (EH01)
-                {
-                    Scope (HUBN)
-                    {
-                        Scope (PR01)
-                        {
-                            Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
-                            {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (Zero, Zero))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
-                            }
-
-                            Scope (PR11)
-                            {
-                                Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
-                                {
-                                    Return (XUPC)
-                                }
-                            }
-
-                            Scope (PR12)
-                            {
-                                Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
-                                {
-                                    Return (XUPC)
-                                }
-                            }
-
-                            Scope (PR13)
-                            {
-                                Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
-                                {
-                                    Return (XUPC)
-                                }
-                            }
-
-                            Scope (PR14)
-                            {
-                                Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
-                                {
-                                    Return (XUPC)
-                                }
-                            }
-
-                            Scope (PR15)
-                            {
-                                Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
-                                {
-                                    Return (XUPC)
-                                }
-                            }
-
-                            Scope (PR16)
-                            {
-                                Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
-                                {
-                                    Return (XUPC)
-                                }
-                            }
-
-                            Scope (PR17)
-                            {
-                                Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
-                                {
-                                    Return (XUPC)
-                                }
-                            }
-
-                            Scope (PR18)
-                            {
-                                Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
-                                {
-                                    Return (XUPC)
-                                }
-
-                                Scope (WCAM)
-                                {
-                                    Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
-                                    {
-                                        Return (XUPC)
-                                    }
-                                }
-                            }
-                        }
-                    }
-                }
-
-                Scope (XHC)
+                                Scope (XHC)
                 {
                     Scope (RHUB)
                     {
@@ -218,14 +96,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (0xFF, Zero))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (0xFF, Zero))
                             }
                         }
 
@@ -233,14 +104,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (0xFF, Zero))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (0xFF, Zero))
                             }
                         }
 
@@ -248,14 +112,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (0xFF, Zero))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (0xFF, Zero))
                             }
                         }
 
@@ -263,14 +120,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (Zero, Zero))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (Zero, Zero))
                             }
                         }
 
@@ -278,14 +128,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (0xFF, 0xFF))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (0xFF, 0xFF))
                             }
                         }
 
@@ -293,14 +136,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (Zero, Zero))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (Zero, Zero))
                             }
                         }
 
@@ -308,14 +144,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (Zero, Zero))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (Zero, Zero))
                             }
                         }
 
@@ -323,14 +152,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (0xFF, 0xFF))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (0xFF, 0xFF))
                             }
                         }
 
@@ -338,14 +160,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (Zero, Zero))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (Zero, Zero))
                             }
                         }
 
@@ -353,14 +168,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (Zero, Zero))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (Zero, Zero))
                             }
                         }
 
@@ -368,14 +176,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (Zero, Zero))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (Zero, Zero))
                             }
                         }
 
@@ -383,14 +184,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (Zero, Zero))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (Zero, Zero))
                             }
                         }
 
@@ -398,14 +192,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (Zero, Zero))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (Zero, Zero))
                             }
                         }
 
@@ -413,14 +200,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (Zero, Zero))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (Zero, Zero))
                             }
                         }
 
@@ -428,14 +208,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (Zero, Zero))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (Zero, Zero))
                             }
                         }
 
@@ -443,14 +216,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (0xFF, 0x03))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (0xFF, 0x03))
                             }
                         }
 
@@ -458,14 +224,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (Zero, Zero))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (Zero, Zero))
                             }
                         }
 
@@ -473,14 +232,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (Zero, Zero))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (Zero, Zero))
                             }
                         }
 
@@ -488,14 +240,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (Zero, Zero))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (Zero, Zero))
                             }
                         }
 
@@ -503,14 +248,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (Zero, Zero))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (Zero, Zero))
                             }
                         }
 
@@ -518,14 +256,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "USBMap", 0x00001000)
                         {
                             Method (_UPC, 0, Serialized)  // _UPC: USB Port Capabilities
                             {
-                                If (_OSI ("Darwin"))
-                                {
-                                    Return (GUPC (Zero, Zero))
-                                }
-                                Else
-                                {
-                                    Return (XUPC)
-                                }
+                                Return (GUPC (Zero, Zero))
                             }
                         }
                     }
