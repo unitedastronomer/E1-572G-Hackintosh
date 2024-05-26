@@ -30,9 +30,7 @@ Please refer the Dortania Opencore Install Guide as your main guide. Consider th
 - Accessing DRM content (macOS 11+)
 - Lid Wake, requires keyboard intervention.
 - Fan reading
-- Hibernation [:)](https://github.com/acidanthera/bugtracker/issues/386#issuecomment-503042790)
-
-* There is a weird issue where the USB 2.0 and internal ports transfers from XHC to EHC after sleep.
+- Hibernation[.](https://github.com/acidanthera/bugtracker/issues/386#issuecomment-503042790)
 
 # Preparation
 
