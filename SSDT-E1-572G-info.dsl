@@ -81,7 +81,7 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "E1-572G", 0x00001000)
         {
             Scope (PCI0)
             {
-                Method (GUPC, 2, Serialized) // Method for _UPC
+                Method (GUPC, 2, Serialized) // Reference Method for _UPC
                 {
                     Name (PCKG, Package (0x04)
                     {
