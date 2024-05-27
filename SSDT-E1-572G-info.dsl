@@ -82,19 +82,19 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "E1-572G", 0x00001000)
             Scope (PCI0)
             {
                 Method (GUPC, 2, Serialized) // Reference Method for _UPC
+// Make sure this Method is accessible if for all USB Ports In DSDT. In this case my ports are under  _SB.PCI0.XHC, I just placed the method with its parent _SB.PCI0.
                 {
                     Name (PCKG, Package (0x04)
                     {
                         0xFF, // 0xFF = Port exists, Zero = Port doesn't exist
                         0x03, // 0xFF = Internal, 0x00 = USB 2.0, 0x03 = USB 3.0
-                              // These 2 above are just a template for _UPC methods.
                         Zero, 
                         Zero
                     })
                     PCKG [Zero] = Arg0 // The first input // ex. 0xFF = Port exists
                     PCKG [One] = Arg1  // The second input  // ex. 0xFF = Internal    
                     Return (PCKG)      // Return (first, second)
-                                       // So if GUPC Method is called by a _UPC, it returns this PCKG template.
+                                       // So if GUPC Method is called by a _UPC, it returns this PCKG.
                 }
 
                 Scope (EHC1) // SSDT-USB-Reset.dsl, it is apparently needed to rename EHC1 to EH01 in macOS
@@ -136,6 +136,16 @@ DefinitionBlock ("", "SSDT", 2, "ACER", "E1-572G", 0x00001000)
                             Method (_UPC, 0, Serialized) // USB Port Capabilities
                             {
                                 Return (GUPC (0xFF, 0xFF)) // Enable, Internal
+
+// _UPC needs the PCKG for garhering information in defining an active (or absent) port, and its type. If _UPC is called -> it calls GUPC, it finally return the PCKG with its custom Arg0 and Arg1.
+
+// Such as:
+// Return (GUPC (0xFF, Zero))
+
+      
+// If port is just the same, Arg0 which is 0xFF = Enabled, Arg1 which is 0x03 = Internal, then you can just call the method directly
+
+// Such as: Return (GUPC ())
                             }                           
 
                             Device (PR12)
