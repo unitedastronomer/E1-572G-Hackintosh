@@ -883,7 +883,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>Broadcom BCM57786 Patch - macOS &lt;= 11</string>
+				<string>Broadcom BCM57786 Patch - macOS &gt;= 11</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
@@ -1093,7 +1093,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>Enable SATA Hot Plugging  - macOS &lt; 11</string>
+				<string>Enable SATA Hot Plugging  - macOS &gt; 11</string>
 				<key>Count</key>
 				<integer>1</integer>
 				<key>Enabled</key>
