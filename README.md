@@ -57,7 +57,6 @@ Root patching via Opencore Legacy Patcher is needed to restore Graphics Accelera
 ![](assets/oclp.png)
 
 
-#
  * Do not use Migration Assistant within the Setup Assistant (setup screen right after macOS installation)
  * Do not use Migration Assistant if root patches are applied, revert patches first then apply it back after using Migration Assistant.
 
