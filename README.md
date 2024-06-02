@@ -54,6 +54,7 @@ This OpenCore configuration was set up to allow booting macOS versions as early 
 
 ## macOS Monterey, Ventura and Sonoma
 Root patching via Opencore Legacy Patcher is needed to restore Graphics Acceleration since Ventura, and WiFi functionality since Monterey. 
+
 ![](assets/oclp.png)
 
 
