@@ -104,6 +104,14 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
+				<string>Disable unsupported discrete GPU</string>
+				<key>Enabled</key>
+				<true/>
+				<key>Path</key>
+				<string>SSDT-dGPUOFF.aml</string>
+			</dict>
+			<dict>
+				<key>Comment</key>
 				<string>Disable EHC1 controller</string>
 				<key>Enabled</key>
 				<false/>
