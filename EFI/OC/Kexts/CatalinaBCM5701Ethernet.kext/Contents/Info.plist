@@ -106,7 +106,6 @@
 				<string>pci14e4,16b4</string>
 				<string>pci14e4,1682</string>
 				<string>pci14e4,1686</string>
-				<string>pci14e4,16b3</string>
 			</array>
 			<key>IOPCITunnelCompatible</key>
 			<true/>
