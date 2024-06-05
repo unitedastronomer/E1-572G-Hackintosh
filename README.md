@@ -84,7 +84,7 @@ Guides:
 
 Tools:
 - [CorpNewt](https://github.com/corpnewt/SSDTTime): SSDTTime, GenSMBIOS, Propertree, and USBMap
-- [Acidanthera](https://github.com/acidanthera/MaciASL): MaciASL
+- [Acidanthera](https://github.com/acidanthera/MaciASL): MaciASL, and OpenCorePkg
 - [Benbaker76](https://github.com/benbaker76/Hackintool): Hackintool
 <br>
 
