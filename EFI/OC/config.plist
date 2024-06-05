@@ -865,7 +865,7 @@
 				<key>BundlePath</key>
 				<string>AutoPkgInstaller.kext</string>
 				<key>Comment</key>
-				<string>Auto patch WiFi (maOS 11+) and Graphics Acceleration (maOS 12+) if USB installer is created within OCLP</string>
+				<string>(OCLP) Automatic root patching if USB installer is created within OCLP. Patches WiFi and Graphics Acceleration on initial installation.</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
