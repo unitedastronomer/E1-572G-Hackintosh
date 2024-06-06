@@ -829,7 +829,7 @@
 				<key>BundlePath</key>
 				<string>CatalinaBCM5701Ethernet.kext</string>
 				<key>Comment</key>
-				<string>Restore Broadcom Ethernet (maOS 11+)</string>
+				<string>Restore Broadcom Ethernet in macOS 11+</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -2430,11 +2430,11 @@
 			<key>MaxBIOSVersion</key>
 			<false/>
 			<key>MLB</key>
-			<string>C025394034NFH31JC</string>
+			<string></string>
 			<key>ProcessorType</key>
 			<integer>0</integer>
 			<key>ROM</key>
-			<data>IBoGRMdO</data>
+			<data></data>
 			<key>SpoofVendor</key>
 			<true/>
 			<key>SystemMemoryStatus</key>
@@ -2442,9 +2442,9 @@
 			<key>SystemProductName</key>
 			<string>MacBookPro11,1</string>
 			<key>SystemSerialNumber</key>
-			<string>C02QG4YZFH00</string>
+			<string></string>
 			<key>SystemUUID</key>
-			<string>309708B3-77D8-4B43-A37F-42A59769F634</string>
+			<string></string>
 		</dict>
 		<key>UpdateDataHub</key>
 		<true/>
