@@ -13,7 +13,7 @@ Please refer the Dortania Opencore Install Guide as your main guide. Consider th
 |----------------|-----------------------------------------|
 | **CPU**        | Intel® Core™ i5-4200U Processor         |
 | **iGPU**       | Intel HD Graphics 4400                  |
-| **dGPU**       | AMD Radeon HD 8670M <br><sup>_Disabled_, not supported on macOS</sup>        |
+| **dGPU**       | AMD Radeon HD  <br><sup>_Disabled_, not supported on macOS</sup>        |
 | **Wi-Fi & BT** | Qualcomm Atheros AR9565  </sup>      |
 | **Ethernet**   | Broadcom NetXtreme BCM57786 Gigabit Ethernet PCIe                            |
 | **Audio Codec**| Realtek ALC282<br><sup>Layout ID: 28</sup>                                   |
