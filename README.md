@@ -49,9 +49,9 @@ Please refer the Dortania Opencore Install Guide as your main guide. Consider th
 There are two versions of EFI.
 
 * EFI (Big Sur and earlier)
-	* Configured to boot only up to Big Sur. macOS Big Sur is the last natively supported OS without the need to apply root-patches with OCLP.
+	* Configured to boot macOS ONLY up to Big Sur. macOS Big Sur is the last natively supported OS without the need to apply root-patches throughOCLP.
 * EFI 
-	* Configured to boot up to **Sonoma**, however security features are loosened in order for root patches be applied.
+	* Configured to boot up to **Sonoma**, however security features are loosened in order for root patches to be applied.
 
 In the config.plist, section <code>PlatformInfo > Generic</code> is currently left empty, generate your own SMBIOS data. 
 * Use a **MacbookPro11,1** SMBIOS
