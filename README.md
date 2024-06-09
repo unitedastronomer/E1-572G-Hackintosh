@@ -16,7 +16,7 @@ Please refer the Dortania Opencore Install Guide as your main guide. Consider th
 | **iGPU**       | Intel HD Graphics 4400                  |
 | **dGPU**       | AMD Radeon R7 M265  <br><sup>_Disabled_, not supported on macOS</sup>        |
 | **Wi-Fi & BT** | Qualcomm Atheros AR9565  </sup>      |
-| **Ethernet**   | Broadcom NetXtreme BCM57786 Gigabit Ethernet PCIe                            |
+| **Ethernet**   | Broadcom NetXtreme BCM57786                           |
 | **Audio Codec**| Realtek ALC282<br><sup>Layout ID: 28</sup>                                   |
 | **Trackpad**   | Synaptics TM2682 <br><sup>PS/2</sup>                                          |
 
@@ -32,7 +32,7 @@ Please refer the Dortania Opencore Install Guide as your main guide. Consider th
 - Lid Wake
 	- Requires keyboard intervention.
 - Fan reading
-	- VirtualSMC does not support fan reading of this device's ENE ECs.
+	- VirtualSMC does not support fan reading on ENE ECs.
 - Hibernation[.](https://github.com/acidanthera/bugtracker/issues/386#issuecomment-503042790)
 
 
