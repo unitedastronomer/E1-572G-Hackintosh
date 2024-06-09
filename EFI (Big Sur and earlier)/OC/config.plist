@@ -575,7 +575,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/Lilu</string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -593,7 +593,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/WhateverGreen</string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -611,7 +611,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AppleALC</string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -629,7 +629,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VirtualSMC</string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -647,7 +647,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/SMCProcessor</string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -665,7 +665,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/SMCBatteryManager</string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -683,7 +683,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/SMCLightSensor</string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -701,7 +701,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooPS2Controller</string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -719,7 +719,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooInput</string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -737,7 +737,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooPS2Keyboard</string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -755,7 +755,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooPS2Mouse</string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -773,7 +773,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/VoodooPS2Trackpad</string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -791,7 +791,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/RTCMemoryFixup</string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -809,7 +809,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/HoRNDIS</string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>12.0.0</string>
 				<key>PlistPath</key>
@@ -827,63 +827,9 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/CatalinaBCM5701Ethernet</string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>20.0.0</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>AMFIPass.kext</string>
-				<key>Comment</key>
-				<string>Partially re-enable AMFI. Resolves permissions prompts not showing due to disabled AMFI</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/AMFIPass</string>
-				<key>MaxKernel</key>
-				<string>23.0.0</string>
-				<key>MinKernel</key>
-				<string>20.0.0</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>AutoPkgInstaller.kext</string>
-				<key>Comment</key>
-				<string>Automatically apply root patches for WiFi and Graphics Acceleration on initial installation (if USB installer is made within  OCLP)</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/AutoPkgInstaller</string>
-				<key>MaxKernel</key>
-				<string>23.0.0</string>
-				<key>MinKernel</key>
-				<string>21.0.0</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>RestrictEvents.kext</string>
-				<key>Comment</key>
-				<string>Forces VMM board-id.  Allows OTA updates in macOS 11.3+</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/RestrictEvents</string>
-				<key>MaxKernel</key>
-				<string>23.0.0</string>
-				<key>MinKernel</key>
-				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -899,7 +845,7 @@
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -917,7 +863,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/CPUFriend</string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -935,7 +881,7 @@
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -953,7 +899,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/corecaptureElCap</string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>16.0.0</string>
 				<key>PlistPath</key>
@@ -971,7 +917,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/IO80211ElCap</string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>16.0.0</string>
 				<key>PlistPath</key>
@@ -989,7 +935,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/AirPortAtheros40</string>
 				<key>MaxKernel</key>
-				<string>23.0.0</string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>PlistPath</key>
@@ -1071,7 +1017,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>19.0.0</string>
 				<key>Replace</key>
@@ -1101,101 +1047,11 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>20.0.0</string>
 				<key>Replace</key>
 				<data>AAAAAA==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>Base</key>
-				<string>_apfs_filevault_allowed</string>
-				<key>Comment</key>
-				<string>Force FileVault on Broken Seal</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data></data>
-				<key>Identifier</key>
-				<string>com.apple.filesystems.apfs</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>20.4.0</string>
-				<key>Replace</key>
-				<data>uAEAAADD</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>Base</key>
-				<string>_cs_require_lv</string>
-				<key>Comment</key>
-				<string>Disable Library Validation Enforcement</string>
-				<key>Count</key>
-				<integer>0</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data></data>
-				<key>Identifier</key>
-				<string>kernel</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>20.0.0</string>
-				<key>Replace</key>
-				<data>uAAAAADD</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>Base</key>
-				<string>__ZL22_vnode_check_signatureP5vnodeP5labeliP7cs_blobPjS5_ijPPcPm</string>
-				<key>Comment</key>
-				<string>Disable _csr_check() in _vnode_check_signature</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>AQAAAOgAAAAAhcB1</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AppleMobileFileIntegrity</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data>//////8AAAAA////</data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>22.0.0</string>
-				<key>Replace</key>
-				<data>AQAAALgBAAAAhcB1</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -1281,7 +1137,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>20.0.0</string>
 				<key>Replace</key>
@@ -1311,7 +1167,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>20.0.0</string>
 				<key>Replace</key>
@@ -1341,7 +1197,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1371,7 +1227,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1401,7 +1257,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1431,7 +1287,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1461,7 +1317,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1491,7 +1347,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1521,7 +1377,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1551,7 +1407,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1581,7 +1437,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1611,7 +1467,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1641,7 +1497,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1671,7 +1527,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1701,7 +1557,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1731,7 +1587,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1761,7 +1617,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1791,7 +1647,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1821,7 +1677,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1851,7 +1707,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1881,7 +1737,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1911,7 +1767,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1941,7 +1797,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -1971,7 +1827,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -2001,7 +1857,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -2031,7 +1887,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -2061,7 +1917,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -2091,7 +1947,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -2121,7 +1977,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -2151,7 +2007,7 @@
 				<key>Mask</key>
 				<data></data>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string>18.0.0</string>
 				<key>Replace</key>
@@ -2360,8 +2216,6 @@
 			</dict>
 			<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
 			<dict>
-				<key>revpatch</key>
-				<string>sbvmm</string>
 				<key>rtc-blacklist</key>
 				<data>sg==</data>
 			</dict>
@@ -2370,9 +2224,9 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>amfi=0x80 ipc_control_port_options=0</string>
+				<string></string>
 				<key>csr-active-config</key>
-				<data>AwgAAA==</data>
+				<data>AAAAAA==</data>
 				<key>prev-lang:kbd</key>
 				<string>en-US:0</string>
 				<key>run-efi-updater</key>
@@ -2391,8 +2245,6 @@
 			<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
 			<array>
 				<string>rtc-blacklist</string>
-				<string>OCLP-Settings</string>
-				<string>revpatch</string>
 			</array>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<array>

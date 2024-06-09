@@ -1,7 +1,8 @@
 # Acer Aspire E1-572G OpenCore Configuration
 
 
-[![OpenCore](https://img.shields.io/badge/OpenCore-0.9.9-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![OpenCore](https://img.shields.io/badge/OpenCore-1.0.0-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
+[![OpenCore](https://img.shields.io/badge/macOS-Sonoma-green.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/unitedastronomer/E1-572G-Hackintosh/blob/main/LICENSE.md)<br>
 
 Please refer the Dortania Opencore Install Guide as your main guide. Consider this a reference.
@@ -23,10 +24,15 @@ Please refer the Dortania Opencore Install Guide as your main guide. Consider th
 ### What's not working?
 
 - AirDrop, and other Airport related features.
-- DRM (macOS 11+)
+	- Replace to `BCM94360HMB`, and stay on Big Sur for full functionality.
+- DRM
+	- Broken on any non-mac intel iGPUs.
 - Bluetooth (macOS 12+)
-- Lid Wake, requires keyboard intervention.
+	- `Ath3kBT.kext` is not being maintained anymore.
+- Lid Wake
+	- Requires keyboard intervention.
 - Fan reading
+	- VirtualSMC does not support fan reading of this device's ENE ECs.
 - Hibernation[.](https://github.com/acidanthera/bugtracker/issues/386#issuecomment-503042790)
 
 
@@ -39,21 +45,20 @@ Please refer the Dortania Opencore Install Guide as your main guide. Consider th
 
 ### config.plist
 
+
+There are two versions of EFI.
+
+* EFI (Big Sur and earlier)
+	* Configured to boot only up to Big Sur. macOS Big Sur is the last natively supported OS without the need to apply root-patches with OCLP.
+* EFI 
+	* Configured to boot up to **Sonoma**, however security features are loosened in order for root patches be applied.
+
 In the config.plist, section <code>PlatformInfo > Generic</code> is currently left empty, generate your own SMBIOS data. 
 * Use a **MacbookPro11,1** SMBIOS
 
-This OpenCore configuration was set up to allow booting macOS versions as early as High Sierra up to Sonoma. Some security was lifted up needed to allow root patching.
-* If you choose to install Big Sur or earlier, you can leave this config as-is or re-enable security features by:
-    * Delete `amfi=0x80` in boot-args
-    * Set `csr-active-config` to `00000000`
-    * Disable these Kernel -> Patches
-      * Force FileVault on Broken Seal
-      * Disable Library Validation Enforcement
-      * Disable _csr_check() in _vnode_check_signature
-    * Set `SecureBootModel` to `Default`, and do an NVRAM reset if you have set this setting after OS was already installed.
 
 ## macOS Monterey, Ventura and Sonoma
-Root patching via Opencore Legacy Patcher is needed to restore Graphics Acceleration since Ventura, and WiFi functionality since Monterey. 
+Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi functionality on since Monterey, and Graphics Acceleration since Ventura. 
 
 ![](assets/oclp.png)
 
@@ -67,12 +72,13 @@ Root patching via Opencore Legacy Patcher is needed to restore Graphics Accelera
 ### Troubleshoot
 * Don't stop midway of the installation process; **patience is key!**
 	* If you can't get past a looping error code, (from e.g., `failed lookup: name = com.apple.logd`): remove the battery, and press power button for at least 30 seconds.
-* Unable to [set the boot option back to macOS](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html#installation) after booting on windows?
+* Windows keeps taking over boot order, or unable to [set the boot option back to macOS](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html#installation) after booting on windows?
 * [Fixing Window features after installing macOS](https://github.com/5T33Z0/OC-Little-Translated/blob/main/I_Windows/Windows_fixes.md)
 * [Use Windows partition under macOS via VMWare](https://github.com/mackonsti/s145-14iwl/blob/master/Fusion.md)
 
 
 #### Note:
+* If you at least once booted from Windows then macOS, certain ports transfer from EHC to XHC after sleep.
 * Fun fact: VGA port is actually a DisplayPort internally according to the schematics, you may need to adjust the device properties - such as the connector type, bus ID, etc. 
 
 ## Credits
