@@ -52,7 +52,7 @@ There are two versions of EFI.
 	* macOS Big Sur is the last natively supported OS without the need to apply root-patches.
 * macOS 10.13 - 14.4
 	* Configured to boot up to **Sonoma**, however some security are partially lifted in order for root patches be applied.
->>>>>>> Stashed changes
+
 
 In the config.plist, section <code>PlatformInfo > Generic</code> is currently left empty, generate your own SMBIOS data. 
 * Use a **MacbookPro11,1** SMBIOS
