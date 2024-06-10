@@ -24,7 +24,7 @@ Please refer the Dortania Opencore Install Guide as your main guide. Consider th
 ### What's not working?
 
 - AirDrop, and other Airport related features.
-	- Replace to `BCM94360HMB`, and stay on Big Sur for full functionality.
+	- Replace to **BCM94360HMB**, and stay on Big Sur for full functionality.
 - DRM
 	- Broken on any non-mac Intel iGPUs.
 - Bluetooth (macOS 12+)
@@ -46,16 +46,14 @@ Please refer the Dortania Opencore Install Guide as your main guide. Consider th
 ### config.plist
 
 
-There are two versions of EFI.
+There are two versions of EFI:
 
-* macOS 10.13 - 11.7
-	* macOS Big Sur is the last natively supported OS without the need to apply root-patches.
+* macOS 10.13 - 11.7 
+	*  Configured to boot up _only_ up to **Big Sur**. It is the last natively supported OS without the need to apply root-patches.
 * macOS 10.13 - 14.4
-	* Configured to boot up to **Sonoma**, however some security are partially lifted in order for root patches be applied.
+	* Configured to boot up to **Sonoma**, however some security are partially lifted in order for root patches to be applied.
 
-
-In the config.plist, section <code>PlatformInfo > Generic</code> is currently left empty, generate your own SMBIOS data. 
-* Use a **MacbookPro11,1** SMBIOS
+In the config.plist, section <code>PlatformInfo > Generic</code> is currently left empty, generate your own SMBIOS data. Use a **MacbookPro11,1** SMBIOS.
 
 
 ## macOS Monterey, Ventura and Sonoma
