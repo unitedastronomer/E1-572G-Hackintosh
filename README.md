@@ -48,8 +48,8 @@ Please refer the Dortania Opencore Install Guide as your main guide. Consider th
 
 There are two versions of EFI.
 
-* EFI (< macOS 11 - Big Sur)
-	* Configured to be booted only up to macOS 11, as it is the last natively supported OS without the need to apply root-patches throughOCLP.
+* EFI (macOS 11)
+	* Configured to be booted only up to macOS 11 (Big Sur), as it is the last natively supported OS without the need to apply root-patches through OCLP.
 * EFI 
 	* Configured to boot up to **Sonoma**, however security features are loosened in order for root patches to be applied.
 
