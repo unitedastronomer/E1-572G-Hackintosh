@@ -50,7 +50,7 @@ There are two versions of EFI:
 
 * macOS 10.13 - 11.7 
 	*  Configured to boot up _only_ up to **Big Sur**. It is the last natively supported OS without the need to apply root-patches.
-* macOS 10.13 - 14.4
+* macOS 10.13 - 14.5
 	* Configured to boot up to **Sonoma**, however some security are partially lifted in order for root patches to be applied.
 
 In the config.plist, section <code>PlatformInfo > Generic</code> is currently left empty, generate your own SMBIOS data. Use a **MacbookPro11,1** SMBIOS.
@@ -64,6 +64,11 @@ Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi f
 
  * Do not use Migration Assistant within the Setup Assistant (setup screen right after macOS installation)
  * Do not use Migration Assistant if root patches are applied, revert patches first then apply it back after using Migration Assistant.
+
+## macOS Seqouia
+
+ macOS Seqouia is currently unsupported by OCLP.
+![](assets/oclp_unsupportedhost.png)
 
 # Post-Install
 
