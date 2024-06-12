@@ -45,14 +45,6 @@ Please refer the Dortania Opencore Install Guide as your main guide. Consider th
 
 ### config.plist
 
-
-There are two versions of EFI:
-
-* macOS 10.13 - 11.7 
-	*  Configured to boot up _only_ up to **Big Sur**. It is the last natively supported OS without the need to apply root-patches.
-* macOS 10.13 - 14.5
-	* Configured to boot up to **Sonoma**, however some security are partially lifted in order for root patches to be applied.
-
 In the config.plist, section <code>PlatformInfo > Generic</code> is currently left empty, generate your own SMBIOS data. Use a **MacbookPro11,1** SMBIOS.
 
 
@@ -68,7 +60,6 @@ Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi f
 ## macOS Seqouia
 
  macOS Seqouia is currently not supported by OCLP.
-![](assets/oclp_unsupportedhost.png)
 
 # Post-Install
 
