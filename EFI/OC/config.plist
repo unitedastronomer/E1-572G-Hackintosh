@@ -16,14 +16,6 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Disable if switching to Intel Card | Device properties for AR9565</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-ARPT-AR9565.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
 				<string>Fake Embedded Controller</string>
 				<key>Enabled</key>
 				<true/>
@@ -96,7 +88,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>USBMap backup if SMBIOS is changed or USBMap.kext is disabled.</string>
+				<string>USB Map</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -531,6 +523,14 @@
 			<dict>
 				<key>built-in</key>
 				<data>AQ==</data>
+				<key>model</key>
+				<string>Qualcomm Atheros AR9565 Wireless Network Adapter</string>
+				<key>IOName</key>
+				<string>pci168c,30</string>
+				<key>compatible</key>
+				<string>pci168c,30</string>
+				<key>device-id</key>
+				<data>MA==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
@@ -767,7 +767,7 @@
 				<key>BundlePath</key>
 				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Trackpad.kext</string>
 				<key>Comment</key>
-				<string>Trackpad Driver</string>
+				<string>PS2 Trackpad Driver</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -785,7 +785,7 @@
 				<key>BundlePath</key>
 				<string>RTCMemoryFixup.kext</string>
 				<key>Comment</key>
-				<string>Block macOS from accessing some CMOS offset. Resolves sleep/wake</string>
+				<string>Block macOS from accessing some CMOS offset to resolve sleep/wake issue.</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -821,7 +821,7 @@
 				<key>BundlePath</key>
 				<string>CatalinaBCM5701Ethernet.kext</string>
 				<key>Comment</key>
-				<string>Restore Broadcom Ethernet in macOS 11+</string>
+				<string>Restore Broadcom Ethernet on macOS 11+</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -839,7 +839,7 @@
 				<key>BundlePath</key>
 				<string>AMFIPass.kext</string>
 				<key>Comment</key>
-				<string>Partially re-enable AMFI. Resolves permissions prompts not showing due to disabled AMFI</string>
+				<string>Needed if system volume was patched by OCLP (macOS 12+)</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -857,7 +857,7 @@
 				<key>BundlePath</key>
 				<string>AutoPkgInstaller.kext</string>
 				<key>Comment</key>
-				<string>Automatically apply root patches for WiFi and Graphics Acceleration on initial installation (if USB installer is made within  OCLP)</string>
+				<string>Automatically apply root patches for WiFi and Graphics Acceleration on initial installation if USB installer is made within OCLP.</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -875,7 +875,7 @@
 				<key>BundlePath</key>
 				<string>RestrictEvents.kext</string>
 				<key>Comment</key>
-				<string>Forces VMM board-id.  Allows OTA updates in macOS 11.3+</string>
+				<string>Allow OTA updates in macOS 11.3+</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -893,79 +893,7 @@
 				<key>BundlePath</key>
 				<string>USBMap.kext</string>
 				<key>Comment</key>
-				<string>USB Map</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string></string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>CPUFriend.kext</string>
-				<key>Comment</key>
-				<string>CPUFriend - Patching X86PlatformPlugin</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/CPUFriend</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>CPUFriendDataProvider.kext</string>
-				<key>Comment</key>
-				<string>CPUFriendDataProvider - Data for CPU Friend</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string></string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>SimpleMSR.kext</string>
-				<key>Comment</key>
-				<string>Disables BD PROCHOT to prevent firmware throttling</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/SimpleMSR</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>ASPP-Override.kext</string>
-				<key>Comment</key>
-				<string>Forces ACPI_SMC_PlatformPlugin to outmatch X86PlatformPlugin and disable firmware throttling</string>
+				<string>USB Map for Acer Aspire E1-572G</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -983,7 +911,7 @@
 				<key>BundlePath</key>
 				<string>corecaptureElCap.kext</string>
 				<key>Comment</key>
-				<string>Disable if switching to Intel Card | Atheros WiFi Driver</string>
+				<string>Restore Legacy Wireless (Atheros) on macos 10.14+</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -991,7 +919,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string>16.0.0</string>
+				<string>18.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -1001,7 +929,7 @@
 				<key>BundlePath</key>
 				<string>IO80211ElCap.kext</string>
 				<key>Comment</key>
-				<string>Disable if switching to Intel Card | Atheros WiFi Driver</string>
+				<string>Restore Legacy Wireless (Atheros) on macos 10.14+</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -1009,7 +937,7 @@
 				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string>16.0.0</string>
+				<string>18.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -1019,7 +947,7 @@
 				<key>BundlePath</key>
 				<string>IO80211ElCap.kext/Contents/PlugIns/AirPortAtheros40.kext</string>
 				<key>Comment</key>
-				<string>Disable if switching to Intel Card | Atheros WiFi Driver</string>
+				<string>Restore Legacy Wireless (Atheros) on macos 10.14+</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -1037,7 +965,7 @@
 				<key>BundlePath</key>
 				<string>Ath3kBT.kext</string>
 				<key>Comment</key>
-				<string>Disable if switching to Intel Card | Uploads Atheros Bluetooth Firmware</string>
+				<string>Uploads Atheros Bluetooth Firmware</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -1055,13 +983,85 @@
 				<key>BundlePath</key>
 				<string>Ath3kBTInjector.kext</string>
 				<key>Comment</key>
-				<string>Disable if switching to Intel Card | Enables Bluetooth on-off switch (maOS &lt;=11)</string>
+				<string>Enables Bluetooth on-off switch in maOS &lt;=11</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>MaxKernel</key>
 				<string>20.99.9</string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>CPUFriend.kext</string>
+				<key>Comment</key>
+				<string>Custom Power Management Data</string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/CPUFriend</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>CPUFriendDataProvider.kext</string>
+				<key>Comment</key>
+				<string>Custom Power Management Data</string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>SimpleMSR.kext</string>
+				<key>Comment</key>
+				<string>Prevent firmware throttling | Caution: If enabled, laptop will automatically shutdown if CPU reaches critical temperature.</string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/SimpleMSR</string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>ASPP-Override.kext</string>
+				<key>Comment</key>
+				<string>Disable firmware throttling  | Caution: If enabled, laptop will automatically shutdown if CPU reaches critical temperature.</string>
+				<key>Enabled</key>
+				<false/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
@@ -1187,7 +1187,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1363,66 +1363,6 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>start</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>ZomDEAQAAA==</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>xoMQBAAAMA==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>___ath_attach</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>D7f4g/8w</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>D7f4g/8A</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
 				<string>_ar9300ReadRevisions</string>
 				<key>Count</key>
 				<integer>4</integer>
@@ -1442,36 +1382,6 @@
 				<string>18.0.0</string>
 				<key>Replace</key>
 				<data>wekMkLnAAQAA</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>_ar9300ReadRevisions #1</string>
-				<key>Count</key>
-				<integer>2</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>wegMJcD/DwA=</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>wegMuMABAAA=</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -1543,66 +1453,6 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>_ar9300RxGainIndexGet</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>D7aHALIAAIPgDw==</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>D7aHALIAAJAxwA==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>_ar9300TxGainIndexGet</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>D7aHALIAAMHoBA==</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>D7aHALIAAJAxwA==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
 				<string>_ar9300FillCapabilityInfo</string>
 				<key>Count</key>
 				<integer>4</integer>
@@ -1633,127 +1483,7 @@
 				<key>Base</key>
 				<string></string>
 				<key>Comment</key>
-				<string>_ar9300FillCapabilityInfo #2</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>SLkAAAAAAGAQAA==</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>SLkAAAAAACAQAA==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>AR9565</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>OTM4MA==</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>OTU2NQ==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>_ar9300SetRxFilter</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>jZAABAAA</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>jZAABAgA</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
 				<string>_ar9300Reset</string>
-				<key>Count</key>
-				<integer>2</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>ugcAAABMief/0A==</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>ugEAAABMief/0A==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>_ar9300Reset #2</string>
 				<key>Count</key>
 				<integer>2</integer>
 				<key>Enabled</key>
@@ -1772,66 +1502,6 @@
 				<string>18.0.0</string>
 				<key>Replace</key>
 				<data>ugEAAABMiedB/1UA</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>_ar9300 #1</string>
-				<key>Count</key>
-				<integer>2</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>vohiAQA=</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>voxiAQA=</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>Base</key>
-				<string></string>
-				<key>Comment</key>
-				<string>_ar9300 #2</string>
-				<key>Count</key>
-				<integer>4</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>vpBiAQA=</data>
-				<key>Identifier</key>
-				<string>com.apple.driver.AirPort.Atheros40</string>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>18.0.0</string>
-				<key>Replace</key>
-				<data>vpRiAQA=</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
