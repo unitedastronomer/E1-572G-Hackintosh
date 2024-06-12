@@ -949,7 +949,7 @@
 				<key>Comment</key>
 				<string>Disables BD PROCHOT to prevent firmware throttling</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/SimpleMSR</string>
 				<key>MaxKernel</key>
@@ -967,7 +967,7 @@
 				<key>Comment</key>
 				<string>Forces ACPI_SMC_PlatformPlugin to outmatch X86PlatformPlugin and disable firmware throttling</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>MaxKernel</key>
