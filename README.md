@@ -67,7 +67,7 @@ Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi f
 
 ## macOS Seqouia
 
- macOS Seqouia is currently unsupported by OCLP.
+ macOS Seqouia is currently not supported by OCLP.
 ![](assets/oclp_unsupportedhost.png)
 
 # Post-Install
