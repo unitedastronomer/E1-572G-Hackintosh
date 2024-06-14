@@ -785,7 +785,7 @@
 				<key>BundlePath</key>
 				<string>RTCMemoryFixup.kext</string>
 				<key>Comment</key>
-				<string>Block macOS from accessing some CMOS offset. Resolves sleep/wake</string>
+				<string>Block macOS from accessing some CMOS offset to resolve sleep/wake issue.</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -839,7 +839,7 @@
 				<key>BundlePath</key>
 				<string>AMFIPass.kext</string>
 				<key>Comment</key>
-				<string>Partially re-enable AMFI. Resolves permissions prompts not showing due to disabled AMFI</string>
+				<string>Partially re-enables AMFI. Resolves permissions prompts not showing due to disabled AMFI.</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -857,7 +857,7 @@
 				<key>BundlePath</key>
 				<string>AutoPkgInstaller.kext</string>
 				<key>Comment</key>
-				<string>Automatically apply root patches for WiFi and Graphics Acceleration on initial installation (if USB installer is made within  OCLP)</string>
+				<string>Automatically apply root patches for WiFi and Graphics Acceleration on initial installation if USB installer is made within OCLP.</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -875,7 +875,7 @@
 				<key>BundlePath</key>
 				<string>RestrictEvents.kext</string>
 				<key>Comment</key>
-				<string>Forces VMM board-id.  Allows OTA updates in macOS 11.3+</string>
+				<string>Allow OTA updates in macOS 11.3+</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -893,7 +893,7 @@
 				<key>BundlePath</key>
 				<string>USBMap.kext</string>
 				<key>Comment</key>
-				<string>USB Map</string>
+				<string>Acer Aspire E1-572G USB Map</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -911,7 +911,7 @@
 				<key>BundlePath</key>
 				<string>corecaptureElCap.kext</string>
 				<key>Comment</key>
-				<string>Disable if switching to Intel Card | Atheros WiFi Driver</string>
+				<string>Atheros WiFi Driver</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -929,7 +929,7 @@
 				<key>BundlePath</key>
 				<string>IO80211ElCap.kext</string>
 				<key>Comment</key>
-				<string>Disable if switching to Intel Card | Atheros WiFi Driver</string>
+				<string>Atheros WiFi Driver</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -947,7 +947,7 @@
 				<key>BundlePath</key>
 				<string>IO80211ElCap.kext/Contents/PlugIns/AirPortAtheros40.kext</string>
 				<key>Comment</key>
-				<string>Disable if switching to Intel Card | Atheros WiFi Driver</string>
+				<string>Atheros WiFi Driver</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -965,7 +965,7 @@
 				<key>BundlePath</key>
 				<string>Ath3kBT.kext</string>
 				<key>Comment</key>
-				<string>Disable if switching to Intel Card | Uploads Atheros Bluetooth Firmware</string>
+				<string>Uploads Atheros Bluetooth Firmware</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -983,7 +983,7 @@
 				<key>BundlePath</key>
 				<string>Ath3kBTInjector.kext</string>
 				<key>Comment</key>
-				<string>Disable if switching to Intel Card | Enables Bluetooth on-off switch (maOS &lt;=11)</string>
+				<string>Enables Bluetooth on-off switch in maOS &lt;=11</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -1001,7 +1001,7 @@
 				<key>BundlePath</key>
 				<string>CPUFriend.kext</string>
 				<key>Comment</key>
-				<string>Modify/Custom Power Management Data</string>
+				<string>Custom Power Management Data</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -1019,7 +1019,7 @@
 				<key>BundlePath</key>
 				<string>CPUFriendDataProvider.kext</string>
 				<key>Comment</key>
-				<string>Modify/Custom Power Management Data</string>
+				<string>Custom Power Management Data</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -1037,7 +1037,7 @@
 				<key>BundlePath</key>
 				<string>SimpleMSR.kext</string>
 				<key>Comment</key>
-				<string>Disables BD PROCHOT to prevent firmware throttling | Caution: Laptop will automatically shutdown if CPU reaches critical temperature</string>
+				<string>Prevent firmware throttling | Caution: If enabled, laptop will automatically shutdown if CPU reaches critical temperature.</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -1055,7 +1055,7 @@
 				<key>BundlePath</key>
 				<string>ASPP-Override.kext</string>
 				<key>Comment</key>
-				<string>Forces ACPI_SMC_PlatformPlugin to outmatch X86PlatformPlugin and disable firmware throttling  | Caution: Laptop will automatically shutdown if CPU reaches critical temperature</string>
+				<string>Disable firmware throttling  | Caution: If enabled, laptop will automatically shutdown if CPU reaches critical temperature.</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
