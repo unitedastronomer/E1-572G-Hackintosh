@@ -49,7 +49,7 @@ In the config.plist, section <code>PlatformInfo > Generic</code> is currently le
 
 
 ## macOS Monterey, Ventura and Sonoma
-Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi functionality on since Monterey, and Graphics Acceleration since Ventura. 
+Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi functionality since Monterey, and Graphics Acceleration since Ventura. 
 
 ![](assets/oclp.png)
 
