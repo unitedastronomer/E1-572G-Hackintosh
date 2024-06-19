@@ -47,6 +47,7 @@ Please refer the Dortania Opencore Install Guide as your main guide. Consider th
 
 In the config.plist, section <code>PlatformInfo > Generic</code> is currently left empty, generate your own SMBIOS data. Use a **MacbookPro11,1** SMBIOS.
 
+# Post-Install
 
 ## macOS Monterey, Ventura and Sonoma
 Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi functionality since Monterey, and Graphics Acceleration since Ventura. 
@@ -57,11 +58,9 @@ Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi f
  * Do not use Migration Assistant within the Setup Assistant (setup screen right after macOS installation)
  * Do not use Migration Assistant if root patches are applied, revert patches first then apply it back after using Migration Assistant.
 
-## macOS Seqouia
+## ⚠️ macOS Seqouia
 
- macOS Seqouia is currently not supported by OCLP.
-
-# Post-Install
+ macOS Seqouia is currently not supported by OCLP. 
 
 
 ### Troubleshoot
