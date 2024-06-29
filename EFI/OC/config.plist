@@ -96,7 +96,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>USBMap backup if SMBIOS is changed or USBMap.kext is disabled</string>
+				<string>USB Map</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -1157,7 +1157,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
