@@ -8,7 +8,7 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Add ACPI name for WiFi card slot</string>
+				<string>Add ACPI name for WiFi card</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -521,16 +521,16 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)</key>
 			<dict>
-				<key>built-in</key>
-				<data>AQ==</data>
-				<key>model</key>
-				<string>Qualcomm Atheros AR9565 Wireless Network Adapter</string>
 				<key>IOName</key>
 				<string>pci168c,30</string>
+				<key>built-in</key>
+				<data>AQ==</data>
 				<key>compatible</key>
 				<string>pci168c,30</string>
 				<key>device-id</key>
 				<data>MA==</data>
+				<key>model</key>
+				<string>Qualcomm Atheros AR9565 Wireless Network Adapter</string>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
@@ -1367,7 +1367,7 @@
 				<key>Count</key>
 				<integer>4</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>wekMgeHA/w8A</data>
 				<key>Identifier</key>
@@ -1397,7 +1397,7 @@
 				<key>Count</key>
 				<integer>5</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>wekIg+EP</data>
 				<key>Identifier</key>
@@ -1427,7 +1427,7 @@
 				<key>Count</key>
 				<integer>3</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>wegIg+AP</data>
 				<key>Identifier</key>
@@ -1457,7 +1457,7 @@
 				<key>Count</key>
 				<integer>4</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>ZomDFgkAAA==</data>
 				<key>Identifier</key>
@@ -1487,7 +1487,7 @@
 				<key>Count</key>
 				<integer>2</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data>ugcAAABMiedB/1UA</data>
 				<key>Identifier</key>
@@ -1517,7 +1517,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1547,7 +1547,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1577,7 +1577,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1607,7 +1607,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1637,7 +1637,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1667,7 +1667,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1697,7 +1697,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1727,7 +1727,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1757,7 +1757,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1787,7 +1787,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1817,7 +1817,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1847,7 +1847,7 @@
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
