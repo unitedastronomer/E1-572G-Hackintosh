@@ -63,12 +63,16 @@ This OC configuration has disabled AMFI, and SIP partially disabled, these are n
    * Disable _csr_check() in _vnode_check_signature
 * Set `SecureBootModel` to `Default`, and then do an NVRAM Reset before booting into macOS
 
+
 ## macOS Monterey, Ventura and Sonoma
+
 Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi functionality since Monterey, and Graphics Acceleration since Ventura. 
 
 > If you made the macOS installer through OCLP, and booted through this EFI, the patches for Graphics and WiFi will automatically be applied during installation — thus graphics acceleration and WiFi will _work out of the box_.
 
-![](assets/oclp.png)
+<div align="center">
+<img align="center" src="./assets/oclp.png" alt="" width="600">
+</div>
 
 After root patching, remove `amfi=0x80` in boot-args. Just re-add if root patches are needed to be re-applied — typically after an OS update. 
 > **AMFIPass.kext** present in this OC configuration will allow the device to boot without this boot-arg. However, this boot-arg is still **required** and must be present in every fresh installations, or after an OS update to allow OCLP apply the root patches, it can only be removed if root patches are already applied. Leaving this boot-arg present will cause unnecessary issue down the lane as permission prompts may not show up if apps ask certain permissions (Mic, Camera, etc.).
@@ -80,10 +84,14 @@ After root patching, remove `amfi=0x80` in boot-args. Just re-add if root patche
 
 Root patches for Haswell's integrated graphics and Atheros WiFi (Legacy Wireless) is currently not supported by OCLP.
 
+## Multi-boot with Windows
+Windows keeps taking over boot order, or unable to [set the boot option back to macOS](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html#installation) after booting on windows?
+
+<br><br>
+
 # Troubleshoot
 * Don't stop midway of the installation process; **patience is key!**
 	* If you can't get past a looping error code, (from e.g., `failed lookup: name = com.apple.logd`): remove the battery, and press power button for at least 30 seconds.
-* Windows keeps taking over boot order, or unable to [set the boot option back to macOS](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html#installation) after booting on windows?
 * [Fixing Window features after installing macOS](https://github.com/5T33Z0/OC-Little-Translated/blob/main/I_Windows/Windows_fixes.md)
 * [Use Windows partition under macOS via VMWare](https://github.com/mackonsti/s145-14iwl/blob/master/Fusion.md)
 
