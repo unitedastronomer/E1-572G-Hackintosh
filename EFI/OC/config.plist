@@ -605,7 +605,7 @@
 				<key>BundlePath</key>
 				<string>AppleALC.kext</string>
 				<key>Comment</key>
-				<string>Audio Patches</string>
+				<string>DO NOT UPDATE | Audio Patches</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -677,7 +677,7 @@
 				<key>BundlePath</key>
 				<string>SMCLightSensor.kext</string>
 				<key>Comment</key>
-				<string>Allows for smoother brightness control.</string>
+				<string>Smoother brightness control</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -749,7 +749,7 @@
 				<key>BundlePath</key>
 				<string>VoodooPS2Controller.kext/Contents/PlugIns/VoodooPS2Mouse.kext</string>
 				<key>Comment</key>
-				<string>Mouse</string>
+				<string></string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -785,7 +785,7 @@
 				<key>BundlePath</key>
 				<string>RTCMemoryFixup.kext</string>
 				<key>Comment</key>
-				<string>Block macOS from accessing some CMOS offset to resolve sleep/wake issue.</string>
+				<string>Block macOS from accessing certain CMOS offset to resolve sleep/wake issue</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -839,7 +839,7 @@
 				<key>BundlePath</key>
 				<string>AMFIPass.kext</string>
 				<key>Comment</key>
-				<string>Needed if system volume was patched by OCLP (macOS 12+)</string>
+				<string>Partially re-enable AMFI</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -855,27 +855,9 @@
 				<key>Arch</key>
 				<string>Any</string>
 				<key>BundlePath</key>
-				<string>AutoPkgInstaller.kext</string>
-				<key>Comment</key>
-				<string>Automatically apply root patches for WiFi and Graphics Acceleration on initial installation if USB installer is made within OCLP.</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string>Contents/MacOS/AutoPkgInstaller</string>
-				<key>MaxKernel</key>
-				<string></string>
-				<key>MinKernel</key>
-				<string>21.0.0</string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
 				<string>RestrictEvents.kext</string>
 				<key>Comment</key>
-				<string>Allow OTA updates on macOS 11.3+</string>
+				<string>Allow native OS update through settings on macOS 11.3+</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -965,7 +947,7 @@
 				<key>BundlePath</key>
 				<string>Ath3kBT.kext</string>
 				<key>Comment</key>
-				<string>Uploads Atheros Bluetooth Firmware</string>
+				<string>Uploads Atheros Bluetooth Firmware on maOS &lt;= 11</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -973,7 +955,7 @@
 				<key>MaxKernel</key>
 				<string>20.99.9</string>
 				<key>MinKernel</key>
-				<string></string>
+				<string>16.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -983,7 +965,7 @@
 				<key>BundlePath</key>
 				<string>Ath3kBTInjector.kext</string>
 				<key>Comment</key>
-				<string>Enables Bluetooth on-off switch on maOS &lt;=11</string>
+				<string>Enables Bluetooth on-off switch on maOS &lt;= 11</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -991,7 +973,43 @@
 				<key>MaxKernel</key>
 				<string>20.99.9</string>
 				<key>MinKernel</key>
-				<string></string>
+				<string>16.0.0</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>BlueToolFixup.kext</string>
+				<key>Comment</key>
+				<string>Fix USB Bluetooth with CSR/Broadcom chip (e.g, ASUS BT400 &amp; TP LINK UB400) on macOS 12 - 14</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/BlueToolFixup</string>
+				<key>MaxKernel</key>
+				<string>23.99.9</string>
+				<key>MinKernel</key>
+				<string>21.0.0</string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>AdvancedMap.kext</string>
+				<key>Comment</key>
+				<string>Enable features (e.g, 3D Globe) in Maps.app on macOS 12 - 15</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string>Contents/MacOS/AdvancedMap</string>
+				<key>MaxKernel</key>
+				<string>24.99.9</string>
+				<key>MinKernel</key>
+				<string>21.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -1367,7 +1385,7 @@
 				<key>Count</key>
 				<integer>4</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>wekMgeHA/w8A</data>
 				<key>Identifier</key>
@@ -1397,7 +1415,7 @@
 				<key>Count</key>
 				<integer>5</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>wekIg+EP</data>
 				<key>Identifier</key>
@@ -1427,7 +1445,7 @@
 				<key>Count</key>
 				<integer>3</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>wegIg+AP</data>
 				<key>Identifier</key>
@@ -1457,7 +1475,7 @@
 				<key>Count</key>
 				<integer>4</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>ZomDFgkAAA==</data>
 				<key>Identifier</key>
@@ -1487,7 +1505,7 @@
 				<key>Count</key>
 				<integer>2</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data>ugcAAABMiedB/1UA</data>
 				<key>Identifier</key>
@@ -1513,11 +1531,11 @@
 				<key>Base</key>
 				<string>_ar9300_osprey_2p0_mac_core</string>
 				<key>Comment</key>
-				<string>(from ATH9Fixup) </string>
+				<string>(from ATH9Fixup)</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1543,11 +1561,11 @@
 				<key>Base</key>
 				<string>_ar9300_osprey_2p0_mac_postamble</string>
 				<key>Comment</key>
-				<string>(from ATH9Fixup) </string>
+				<string>(from ATH9Fixup)</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1573,11 +1591,11 @@
 				<key>Base</key>
 				<string>_ar9300_osprey_2p0_baseband_core</string>
 				<key>Comment</key>
-				<string>(from ATH9Fixup) </string>
+				<string>(from ATH9Fixup)</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1603,11 +1621,11 @@
 				<key>Base</key>
 				<string>_ar9300_osprey_2p0_baseband_postamble</string>
 				<key>Comment</key>
-				<string>(from ATH9Fixup) </string>
+				<string>(from ATH9Fixup)</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1633,11 +1651,11 @@
 				<key>Base</key>
 				<string>_ar9300_osprey_2p0_radio_core</string>
 				<key>Comment</key>
-				<string>(from ATH9Fixup) </string>
+				<string>(from ATH9Fixup)</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1663,11 +1681,11 @@
 				<key>Base</key>
 				<string>_ar9300_osprey_2p0_radio_postamble</string>
 				<key>Comment</key>
-				<string>(from ATH9Fixup) </string>
+				<string>(from ATH9Fixup)</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1693,11 +1711,11 @@
 				<key>Base</key>
 				<string>_ar9300_osprey_2p0_soc_preamble</string>
 				<key>Comment</key>
-				<string>(from ATH9Fixup) </string>
+				<string>(from ATH9Fixup)</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1723,11 +1741,11 @@
 				<key>Base</key>
 				<string>_ar9300_osprey_2p0_soc_postamble</string>
 				<key>Comment</key>
-				<string>(from ATH9Fixup) </string>
+				<string>(from ATH9Fixup)</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1753,11 +1771,11 @@
 				<key>Base</key>
 				<string>_ar9300Common_rx_gain_table_osprey_2p0</string>
 				<key>Comment</key>
-				<string>(from ATH9Fixup) </string>
+				<string>(from ATH9Fixup)</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1783,11 +1801,11 @@
 				<key>Base</key>
 				<string>_ar9300Modes_lowest_ob_db_tx_gain_table_osprey_2p0</string>
 				<key>Comment</key>
-				<string>(from ATH9Fixup) </string>
+				<string>(from ATH9Fixup)</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1813,11 +1831,11 @@
 				<key>Base</key>
 				<string>_ar9300PciePhy_pll_on_clkreq_disable_L1_osprey_2p0</string>
 				<key>Comment</key>
-				<string>(from ATH9Fixup) </string>
+				<string>(from ATH9Fixup)</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -1843,11 +1861,11 @@
 				<key>Base</key>
 				<string>_ar9300Modes_fast_clock_osprey_2p0</string>
 				<key>Comment</key>
-				<string>(from ATH9Fixup) </string>
+				<string>(from ATH9Fixup)</string>
 				<key>Count</key>
 				<integer>0</integer>
 				<key>Enabled</key>
-				<false/>
+				<true/>
 				<key>Find</key>
 				<data></data>
 				<key>Identifier</key>
@@ -2076,7 +2094,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>amfi=0x80 ipc_control_port_options=0</string>
+				<string>amfi=0x80 ipc_control_port_options=0 -alcbeta -advmapbeta</string>
 				<key>csr-active-config</key>
 				<data>AwgAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -2104,6 +2122,8 @@
 			<array>
 				<string>boot-args</string>
 				<string>csr-active-config</string>
+				<string>bluetoothInternalControllerInfo</string>
+				<string>bluetoothExternalDongleFailed</string>
 			</array>
 			<key>E09B9297-7928-4440-9AAB-D1F8536FBF0A</key>
 			<array/>

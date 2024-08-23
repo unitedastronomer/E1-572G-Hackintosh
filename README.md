@@ -24,13 +24,16 @@ Please refer the Dortania Opencore Install Guide as your main guide. Consider th
 ### What's not working?
 
 - AirDrop, and other Airport related features.
-	- This laptop has a mPCIe slot, if you need these features, replace to **BCM94360HMB** and stay on Big Sur — as some airport features does not properly work on this card since Monterey.
+	- If you need these features, replace to **BCM94360HMB** (this laptop has mPCIe) and stay on Big Sur — most airport features does not properly work on this card starting Monterey.
 - DRM
 	- Broken on any non-mac Intel iGPUs. Workaround is to use  chromium-based browsers or Firefox.
 - Bluetooth (on macOS Monterey and newer)
 	- Apple rewrote the macOS' Bluetooth stack in Monterey.  `Ath3KBT.kext` has been abandoned by its author, and thus was not updated to accomodate those changes.
+	- If you need this, use USB Bluetooth dongle with Broadcom/CSR chip such as ASUS BT400 and TP Link UB400.
 - Lid Wake (from sleep)
 	- Requires keyboard intervention.
+- USB Wake
+	- Wake from USB keyboard does not work due to 06D Patch.
 - Fan reading
 	- VirtualSMC does not support fan reading on ENE ECs.
 - Hibernation[.](https://github.com/acidanthera/bugtracker/issues/386#issuecomment-503042790)
@@ -85,7 +88,7 @@ After root patching, remove `amfi=0x80` in boot-args. Just re-add if root patche
 Root patches for Haswell's integrated graphics and Atheros WiFi (Legacy Wireless) is currently not supported by OCLP.
 
 ## Multi-boot with Windows
-Windows keeps taking over boot order, or unable to [set the boot option back to macOS](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html#installation) after booting on windows?
+Windows keeps taking over boot order, or unable to set the boot option back to macOS after booting windows? [Install Bootcamp utilities](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html#installation).
 
 <br><br>
 
