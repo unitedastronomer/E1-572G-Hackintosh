@@ -96,7 +96,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Disable unsupported discrete GPU</string>
+				<string>Disable unsupported dGPU</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
