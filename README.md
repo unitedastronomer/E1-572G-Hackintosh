@@ -5,9 +5,6 @@
 [![OpenCore](https://img.shields.io/badge/macOS-Sonoma-green.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/unitedastronomer/E1-572G-Hackintosh/blob/main/LICENSE.md)<br>
 
-Please refer the Dortania Opencore Install Guide as your main guide. Consider this a reference.
-
-
 ### 💻 System Specification
 
 | Category       | Component                               |
@@ -24,12 +21,14 @@ Please refer the Dortania Opencore Install Guide as your main guide. Consider th
 ### What's not working?
 
 - AirDrop, and other Airport related features.
-	- If you need these features, replace to **BCM94360HMB** (this laptop has mPCIe) and stay on Big Sur — most airport features does not properly work on this card starting Monterey.
-- DRM
-	- Broken on any non-mac Intel iGPUs. Workaround is to use  chromium-based browsers or Firefox.
+	- If you need those features, replace to **BCM94360HMB**, and stay on Big Sur — most airport features does not properly work on this card starting Monterey.
+		- This machine uses mPCIe slot for the WiFi Card
+- Playing DRM content
+	- Broken on any non-mac Intel iGPUs. 
+	- To work-around this, use a chromium-based browser or Firefox.
 - Bluetooth (on macOS Monterey and newer)
 	- Apple rewrote the macOS' Bluetooth stack in Monterey.  `Ath3KBT.kext` has been abandoned by its author, and thus was not updated to accomodate those changes.
-	- If you need this, use USB Bluetooth dongle with Broadcom/CSR chip such as ASUS BT400 and TP Link UB400.
+	- To work-around this, use a USB Bluetooth dongle with Broadcom/CSR chip such as ASUS BT400 and TP Link UB400.
 - Lid Wake (from sleep)
 	- Requires keyboard intervention.
 - USB Wake
@@ -44,11 +43,13 @@ Please refer the Dortania Opencore Install Guide as your main guide. Consider th
 ### BIOS 
 
 *  **Update BIOS to the** [**latest version**](https://www.acer.com/us-en/support/product-support/Aspire_E1-572G). This resolves the issue of the laptop failing to fully power down when shutting down.
-* Configure the BIOS with these settings: **Secure Boot** -> **Disabled**
+* Configure BIOS with these settings:
+	* **Secure Boot** &rarr; **Disabled**
+	* **F12 Boot** &rarr; **Enabled**
 
 ### config.plist
 
-In the config.plist, section <code>PlatformInfo > Generic</code> is currently left empty, generate your own SMBIOS data. Use a **MacbookPro11,1** SMBIOS.
+In the config.plist, section <code>PlatformInfo > Generic</code> is currently left empty, [generate your own SMBIOS data](https://github.com/corpnewt/GenSMBIOS). Use a **MacbookPro11,1** SMBIOS.
 
 # Post-Install
 
@@ -74,11 +75,8 @@ Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi f
 > If you made the macOS installer through OCLP, and booted through this EFI, the patches for Graphics and WiFi will automatically be applied during installation — thus graphics acceleration and WiFi will _work out of the box_.
 
 <div align="center">
-<img align="center" src="./assets/oclp.png" alt="" width="600">
+<img align="center" src="./assets/oclp.png" width="600">
 </div>
-
-After root patching, remove `amfi=0x80` in boot-args. Just re-add if root patches are needed to be re-applied — typically after an OS update. 
-> **AMFIPass.kext** present in this OC configuration will allow the device to boot without this boot-arg. However, this boot-arg is still **required** and must be present in every fresh installations, or after an OS update to allow OCLP apply the root patches, it can only be removed if root patches are already applied. Leaving this boot-arg present will cause unnecessary issue down the lane as permission prompts may not show up if apps ask certain permissions (Mic, Camera, etc.).
 
  * Do not use Migration Assistant within the Setup Assistant (setup screen right after macOS installation)
  * Do not use Migration Assistant if root patches are applied, revert patches first then apply it back after using Migration Assistant.
@@ -87,21 +85,22 @@ After root patching, remove `amfi=0x80` in boot-args. Just re-add if root patche
 
 Root patches for Haswell's integrated graphics and Atheros WiFi (Legacy Wireless) is currently not supported by OCLP.
 
-## Multi-boot with Windows
-Windows keeps taking over boot order, or unable to set the boot option back to macOS after booting windows? [Install Bootcamp utilities](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html#installation).
-
-<br><br>
 
 # Troubleshoot
-* Don't stop midway of the installation process; **patience is key!**
-	* If you can't get past a looping error code, (from e.g., `failed lookup: name = com.apple.logd`): remove the battery, and press power button for at least 30 seconds.
+* Multi-boot with Windows
+	* Windows keeps taking over boot order, or unable to set the boot option back to macOS after booting windows? [Install Bootcamp utilities](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html#installation).
+* Cannot connect to Wi-Fi
+	* To work-around this, manually connect using the "Other" option in the Wi-Fi menu bar or manually adding the network in the "Network" preference pane.
+* The install is taking too long; **patience is key!**
+	* Do not manually power off or reboot your machine as this will break the installation and require you to reinstall.
+	* However, if you can't get past a looping error (`-v` boot-arg must be present to see), remove the battery, and press power button for at least 30 seconds. 
 * [Fixing Window features after installing macOS](https://github.com/5T33Z0/OC-Little-Translated/blob/main/I_Windows/Windows_fixes.md)
 * [Use Windows partition under macOS via VMWare](https://github.com/mackonsti/s145-14iwl/blob/master/Fusion.md)
 
 
 #### Note:
 * If you at least once booted from Windows then macOS, certain ports transfer from XHC to EHC after sleep.
-* Fun fact: VGA port is actually a DisplayPort internally according to the schematics, you may need to adjust the device properties - such as the connector type, bus ID, etc.  
+* VGA port is actually a DisplayPort internally according to the schematics, you may need to adjust the device properties - such as the connector type, bus ID, etc.  
 * WiFi icon will only show one bar, this is a known issue with this WiFi card.
 
 ## Credits
