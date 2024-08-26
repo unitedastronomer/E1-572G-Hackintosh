@@ -72,8 +72,6 @@ This OC configuration has disabled AMFI, and SIP partially disabled, these are n
 
 Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi functionality since Monterey, and Graphics Acceleration since Ventura. 
 
-> If you made the macOS installer through OCLP, and booted through this EFI, the patches for Graphics and WiFi will automatically be applied during installation — thus graphics acceleration and WiFi will _work out of the box_.
-
 <div align="center">
 <img align="center" src="./assets/oclp.png" width="600">
 </div>
