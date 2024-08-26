@@ -72,6 +72,10 @@ This OC configuration has disabled AMFI, and SIP partially disabled, these are n
 
 Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi functionality since Monterey, and Graphics Acceleration since Ventura. 
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
 <div align="center">
 <img align="center" src="./assets/oclp.png" width="600">
 </div>
@@ -97,6 +101,8 @@ Root patches for Haswell's integrated graphics and Atheros WiFi (Legacy Wireless
 
 
 #### Note:
+* **Do not update AppleALC**. `-alcbeta` boot-arg allows AppleALC to load up until macOS Sequoia. It is compiled to only contain layout 28 of ALC282. 
+	* 86KB (vs. originally 3.43 MB).
 * If you at least once booted from Windows then macOS, certain ports transfer from XHC to EHC after sleep.
 * VGA port is actually a DisplayPort internally according to the schematics, you may need to adjust the device properties - such as the connector type, bus ID, etc.  
 * WiFi icon will only show one bar, this is a known issue with this WiFi card.

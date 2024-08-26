@@ -8,7 +8,7 @@
 		<array>
 			<dict>
 				<key>Comment</key>
-				<string>Add ACPI name for WiFi card</string>
+				<string>Add ACPI name for WiFi card in ACPI; fix device properties injection failure</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -16,7 +16,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Fake Embedded Controller</string>
+				<string>Dummy Embedded Controller</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -24,7 +24,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Fixes Sleep and Wake issue</string>
+				<string>Fixes unable to wake from sleep</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -32,7 +32,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>IRQ Fixes for enabling Audio</string>
+				<string>IRQ Fixes enabling Audio</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -48,7 +48,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Adds Backlight Level Control</string>
+				<string>Allows Backlight Level Control</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -56,7 +56,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Brightness Key remap</string>
+				<string>Remap Brightness Key</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -72,7 +72,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>Fake Ambient Light Sensor, which allows storing brightness level on reboot</string>
+				<string>Dummy Ambient Light Sensor; allows storing brightness level on reboot</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -80,15 +80,7 @@
 			</dict>
 			<dict>
 				<key>Comment</key>
-				<string>(FixShutdown-USB-SSDT.dsl) Attempt to fix sleep randomly breaking</string>
-				<key>Enabled</key>
-				<true/>
-				<key>Path</key>
-				<string>SSDT-PMEE.aml</string>
-			</dict>
-			<dict>
-				<key>Comment</key>
-				<string>USB Map</string>
+				<string>USB Map; fallback USB mapping if USBMap.kext is disabled or SMBIOS/Model Identifier is changed</string>
 				<key>Enabled</key>
 				<true/>
 				<key>Path</key>
@@ -338,36 +330,6 @@
 				<data>AAAAAA==</data>
 				<key>Replace</key>
 				<data>WFExMg==</data>
-				<key>ReplaceMask</key>
-				<data></data>
-				<key>Skip</key>
-				<integer>0</integer>
-				<key>TableLength</key>
-				<integer>0</integer>
-				<key>TableSignature</key>
-				<data></data>
-			</dict>
-			<dict>
-				<key>Base</key>
-				<string></string>
-				<key>BaseSkip</key>
-				<integer>0</integer>
-				<key>Comment</key>
-				<string>_PTS to ZPTS</string>
-				<key>Count</key>
-				<integer>1</integer>
-				<key>Enabled</key>
-				<true/>
-				<key>Find</key>
-				<data>X1BUUw==</data>
-				<key>Limit</key>
-				<integer>0</integer>
-				<key>Mask</key>
-				<data></data>
-				<key>OemTableId</key>
-				<data>AAAAAA==</data>
-				<key>Replace</key>
-				<data>WlBUUw==</data>
 				<key>ReplaceMask</key>
 				<data></data>
 				<key>Skip</key>
@@ -659,7 +621,7 @@
 				<key>BundlePath</key>
 				<string>SMCBatteryManager.kext</string>
 				<key>Comment</key>
-				<string>Battery Monitoring</string>
+				<string>Battery Percent Monitoring</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -677,7 +639,7 @@
 				<key>BundlePath</key>
 				<string>SMCLightSensor.kext</string>
 				<key>Comment</key>
-				<string>Smoother brightness control</string>
+				<string>Allows for smoother brightness control</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
