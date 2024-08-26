@@ -21,22 +21,21 @@
 ### What's not working?
 
 - AirDrop, and other Airport related features.
-	- If you need those features, replace to **BCM94360HMB**, and stay on Big Sur — most airport features does not properly work on this card starting Monterey.
+	- If you need those features, replace to **BCM94360HMB**, and stay on Big Sur — most airport features does not work on this card starting Monterey.
 		- This machine uses mPCIe slot for the WiFi Card
 - Playing DRM content
-	- Broken on any non-mac Intel iGPUs. 
 	- To work-around this, use a chromium-based browser or Firefox.
-- Bluetooth (on macOS Monterey and newer)
-	- Apple rewrote the macOS' Bluetooth stack in Monterey.  `Ath3KBT.kext` has been abandoned by its author, and thus was not updated to accomodate those changes.
+- Bluetooth (Atheros; on macOS Monterey and newer)
 	- To work-around this, use a USB Bluetooth dongle with Broadcom/CSR chip such as ASUS BT400 and TP Link UB400.
 - Lid Wake (from sleep)
-	- Requires keyboard intervention.
+	- Wake through keyboard press works just fine.
 - USB Wake
-	- Wake from USB keyboard does not work due to 06D Patch.
+	- Wake from USB Mouse/keyboard does not work due to 06D Patch.
 - Fan reading
 	- VirtualSMC does not support fan reading on ENE ECs.
+- Automatic Sleep on critical battery level
+	- To work-around this, use [this app](https://github.com/HsOjo/SleeperX).
 - Hibernation[.](https://github.com/acidanthera/bugtracker/issues/386#issuecomment-503042790)
-
 
 # Preparation
 
@@ -72,16 +71,13 @@ This OC configuration has disabled AMFI, and SIP partially disabled, these are n
 
 Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi functionality since Monterey, and Graphics Acceleration since Ventura. 
 
-<<<<<<< Updated upstream
-=======
+ * Do not use Migration Assistant within the Setup Assistant (setup screen right after macOS installation)
+ * Do not use Migration Assistant if root patches are applied, revert patches first then apply it back after using Migration Assistant.
 
->>>>>>> Stashed changes
 <div align="center">
 <img align="center" src="./assets/oclp.png" width="600">
 </div>
 
- * Do not use Migration Assistant within the Setup Assistant (setup screen right after macOS installation)
- * Do not use Migration Assistant if root patches are applied, revert patches first then apply it back after using Migration Assistant.
 
 ## ⚠️ macOS Seqouia
 
@@ -103,6 +99,7 @@ Root patches for Haswell's integrated graphics and Atheros WiFi (Legacy Wireless
 #### Note:
 * **Do not update AppleALC**. `-alcbeta` boot-arg allows AppleALC to load up until macOS Sequoia. It is compiled to only contain layout 28 of ALC282. 
 	* 86KB (vs. originally 3.43 MB).
+* Sleep may randomly break if machine is still doing task while it is transitioning into sleep mode on it's own (no user intervention). Temporary disable sleep via pmset command if you are doing something important.
 * If you at least once booted from Windows then macOS, certain ports transfer from XHC to EHC after sleep.
 * VGA port is actually a DisplayPort internally according to the schematics, you may need to adjust the device properties - such as the connector type, bus ID, etc.  
 * WiFi icon will only show one bar, this is a known issue with this WiFi card.
