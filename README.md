@@ -21,21 +21,22 @@
 ### What's not working?
 
 - AirDrop, and other Airport related features.
-	- If you need those features, replace to **BCM94360HMB**, and stay on Big Sur — most airport features does not work on this card starting Monterey.
+	- If you need those features, replace with **BCM94360HMB**, and stay on Big Sur — however, most airport features do not work on this card starting Monterey.
 		- This machine uses mPCIe slot for the WiFi Card
 - Playing DRM content
-	- To work-around this, use a chromium-based browser or Firefox.
+	- To work around this, use a Chromium-based browser or Firefox.
 - Bluetooth (Atheros; on macOS Monterey and newer)
-	- To work-around this, use a USB Bluetooth dongle with Broadcom/CSR chip such as ASUS BT400 and TP Link UB400.
+	- To work around this, use a USB Bluetooth dongle with Broadcom/CSR chip such as ASUS BT400 and TP-Link UB400.
 - Lid Wake (from sleep)
 	- Wake through keyboard press works just fine.
-- USB Wake
+- USB Wake  (from sleep)
 	- Wake from USB Mouse/keyboard does not work due to 06D Patch.
+- Automatic Sleep on critical battery level
+	- To work around this, use [this app](https://github.com/HsOjo/SleeperX).
+- Hibernation[.](https://github.com/acidanthera/bugtracker/issues/386#issuecomment-503042790)
+	- Disable it. 
 - Fan reading
 	- VirtualSMC does not support fan reading on ENE ECs.
-- Automatic Sleep on critical battery level
-	- To work-around this, use [this app](https://github.com/HsOjo/SleeperX).
-- Hibernation[.](https://github.com/acidanthera/bugtracker/issues/386#issuecomment-503042790)
 
 # Preparation
 
@@ -72,7 +73,7 @@ This OC configuration has disabled AMFI, and SIP partially disabled, these are n
 Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi functionality since Monterey, and Graphics Acceleration since Ventura. 
 
  * Do not use Migration Assistant within the Setup Assistant (setup screen right after macOS installation)
- * Do not use Migration Assistant if root patches are applied, revert patches first then apply it back after using Migration Assistant.
+ * Do not use Migration Assistant if root patches are applied, revert patches first then apply them back after using Migration Assistant.
 
 <div align="center">
 <img align="center" src="./assets/oclp.png" width="600">
@@ -81,17 +82,17 @@ Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi f
 
 ## ⚠️ macOS Seqouia
 
-Root patches for Haswell's integrated graphics and Atheros WiFi (Legacy Wireless) is currently not supported by OCLP.
+[OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) currently does not provide patches for Intel Haswell's graphics and Atheros WiFi (Legacy Wireless) on macOS Sequoia.
 
 
 # Troubleshoot
 * Multi-boot with Windows
-	* Windows keeps taking over boot order, or unable to set the boot option back to macOS after booting windows? [Install Bootcamp utilities](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html#installation).
+	* Once booted through Windows, it will take over the boot order and you'll be unable to set the boot option. Make sure to [install Bootcamp utilities](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html#installation) in Windows after installing macOS if you are multi-booting.
 * Cannot connect to Wi-Fi
-	* To work-around this, manually connect using the "Other" option in the Wi-Fi menu bar or manually adding the network in the "Network" preference pane.
+	* To work around this, manually connect using the "Other" option in the Wi-Fi menu bar or manually add the network in the "Network" preference pane.
 * The install is taking too long; **patience is key!**
-	* Do not manually power off or reboot your machine as this will break the installation and require you to reinstall.
-	* However, if you can't get past a looping error (`-v` boot-arg must be present to see), remove the battery, and press power button for at least 30 seconds. 
+	* Do not manually power off or reboot your machine as this will break the installation and require reinstalling. 
+	* However, if you can't get past a looping error (`-v` boot-arg must be present to see), remove the battery, and press the power button for at least 30 seconds.
 * [Fixing Window features after installing macOS](https://github.com/5T33Z0/OC-Little-Translated/blob/main/I_Windows/Windows_fixes.md)
 * [Use Windows partition under macOS via VMWare](https://github.com/mackonsti/s145-14iwl/blob/master/Fusion.md)
 
@@ -99,7 +100,7 @@ Root patches for Haswell's integrated graphics and Atheros WiFi (Legacy Wireless
 #### Note:
 * **Do not update AppleALC**. `-alcbeta` boot-arg allows AppleALC to load up until macOS Sequoia. It is compiled to only contain layout 28 of ALC282. 
 	* 86KB (vs. originally 3.43 MB).
-* Sleep may randomly break if machine is still doing task while it is transitioning into sleep mode on it's own (no user intervention). Temporary disable sleep via pmset command if you are doing something important.
+* Sleep may randomly break if the machine is still doing tasks while it is transitioning into sleep mode on it's own. Temporary disable sleep via `pmset` command if you are doing something important.
 * If you at least once booted from Windows then macOS, certain ports transfer from XHC to EHC after sleep.
 * VGA port is actually a DisplayPort internally according to the schematics, you may need to adjust the device properties - such as the connector type, bus ID, etc.  
 * WiFi icon will only show one bar, this is a known issue with this WiFi card.
