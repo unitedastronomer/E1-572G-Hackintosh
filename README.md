@@ -87,7 +87,7 @@ Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi f
 
 # Troubleshoot
 * Multi-boot with Windows
-	* Once booted through Windows, it will take over the boot order and you'll be unable to set the boot option. Make sure to [install Bootcamp utilities](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html#installation) in Windows after installing macOS if you are multi-booting.
+	* Once booted through Windows, it will take over the boot order and you'll be unable to boot through OpenCore. Make sure to [install Bootcamp utilities](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html#installation) in Windows after installing macOS if you are multi-booting.
 * Cannot connect to Wi-Fi
 	* To work around this, manually connect using the "Other" option in the Wi-Fi menu bar or manually add the network in the "Network" preference pane.
 * The install is taking too long; **patience is key!**
