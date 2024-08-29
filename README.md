@@ -20,7 +20,7 @@
 
 ### What's not working?
 
-- AirDrop, and other Airport related features.
+- AirDrop, and other Airport related features
 	- If you need those features, replace with **BCM94360HMB**, and stay on Big Sur — however, most airport features do not work on this card starting Monterey.
 		- This machine uses mPCIe slot for the WiFi Card
 - Playing DRM content
@@ -82,7 +82,7 @@ Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi f
 
 ## ⚠️ macOS Seqouia
 
-[OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) currently does not provide patches for Intel Haswell's graphics and Atheros WiFi (Legacy Wireless) on macOS Sequoia.
+[OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) currently does not provide patches for Intel Haswell's graphics and Legacy Wireless on macOS Sequoia.
 
 
 # Troubleshoot
