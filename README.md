@@ -12,7 +12,7 @@
 | **CPU**        | Intel® Core™ i5-4200U Processor         |
 | **iGPU**       | Intel HD Graphics 4400                |
 | **dGPU**       | AMD Radeon R7 M265  <br><sup>_Disabled_, not supported on macOS</sup>        |
-| **Wi-Fi & BT** | Qualcomm Atheros AR9565 <br><sup>Spoofed as AR93xx; partly compatible </sup>      |
+| **Wi-Fi & BT** | Qualcomm Atheros AR9565 <br><sup>Spoofed as AR93xx</sup>      |
 | **Ethernet**   | Broadcom NetXtreme BCM57786 <br><sup>Spoofed as BCM57785</sup>                           |
 | **Audio Codec**| Realtek ALC282<br><sup>Layout ID: 28</sup>                                   |
 | **Trackpad**   | Synaptics TM2682 <br><sup>PS/2</sup>                                          |
@@ -23,7 +23,7 @@
 - AirDrop, and other Airport related features
 	- If you need those features, replace with **BCM94360HMB**, and stay on Big Sur — however, most airport features do not work on this card starting Monterey.
 		- This machine uses mPCIe slot for the WiFi Card
-- Playing DRM content
+- Playing DRM content (on Safari 14+ and macOS Big Sur+)
 	- To work around this, use a Chromium-based browser or Firefox.
 - Bluetooth (Atheros; on macOS Monterey and newer)
 	- To work around this, use a USB Bluetooth dongle with Broadcom/CSR chip such as ASUS BT400 and TP-Link UB400.
@@ -37,6 +37,7 @@
 	- Disable it. 
 - Fan reading
 	- VirtualSMC does not support fan reading on ENE ECs.
+ - & [a lot more](https://github.com/dortania/OpenCore-Legacy-Patcher/issues/1008) on macOS Ventura+
 
 # Preparation
 
