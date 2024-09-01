@@ -1,9 +1,10 @@
 # Acer Aspire E1-572G OpenCore Configuration
 
-
 [![OpenCore](https://img.shields.io/badge/OpenCore-1.0.0-blue.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![OpenCore](https://img.shields.io/badge/macOS-Sonoma-green.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/unitedastronomer/E1-572G-Hackintosh/blob/main/LICENSE.md)<br>
+
+Recommended macOS version to install is **Big Sur**. This configuration supports booting macOS Mojave — Sonoma, earlier versions are untested.
 
 ### 💻 System Specification
 
@@ -11,35 +12,11 @@
 |----------------|-----------------------------------------|
 | **CPU**        | Intel® Core™ i5-4200U Processor         |
 | **iGPU**       | Intel HD Graphics 4400                |
-| **dGPU**       | AMD Radeon 8750M  <br><sup>Disabled, <a href="https://dortania.github.io/GPU-Buyers-Guide/misc/discrete-laptops.html#laptop-dgpus"> not supported</a> on macOS</sup>        |
+| **dGPU**       | AMD Radeon 8750M  <br><sup>Disabled; <a href="https://dortania.github.io/GPU-Buyers-Guide/misc/discrete-laptops.html#laptop-dgpus"> not supported</a></sup>        |
 | **Wi-Fi & BT** | Qualcomm Atheros AR9565 <br><sup>Spoofed as AR93xx</sup>      |
 | **Ethernet**   | Broadcom NetXtreme BCM57786 <br><sup>Spoofed as BCM57785</sup>                           |
 | **Audio Codec**| Realtek ALC282<br><sup>Layout ID: 28</sup>                                   |
 | **Trackpad**   | Synaptics TM2682 <br><sup>PS/2</sup>                                          |
-
-
-### What's not working?
-
-- AirDrop, and other Airport related features
-	- If you need those features, replace with **BCM94360HMB**, and stay on Big Sur — however, most airport features do not work on this card starting Monterey.
-		- This machine uses mPCIe slot for the WiFi Card
-- Playing DRM content (on Safari 14+ and macOS Big Sur+)
-	- To work around this, use a Chromium-based browser or Firefox.
-- Bluetooth (Atheros; on macOS Monterey and newer)
-	- To work around this, use a USB Bluetooth dongle with Broadcom/CSR chip such as ASUS BT400 and TP-Link UB400.
-- Lid Wake (from sleep)
-	- Wake through keyboard press works just fine.
-- USB Wake  (from sleep)
-	- Wake from USB Mouse/keyboard does not work due to 06D Patch.
-- Automatic Sleep on critical battery level
-	- To work around this, use [this app](https://github.com/HsOjo/SleeperX).
-- Hibernation[.](https://github.com/acidanthera/bugtracker/issues/386#issuecomment-503042790)
-	- Disable it. 
-- Fan reading
-	- VirtualSMC does not support fan reading on ENE ECs.
- - Multi-finger (3+) Trackpad Gestures
-	- Hardware limitation, trackpad is PS2.
- - & [a lot more](https://github.com/dortania/OpenCore-Legacy-Patcher/issues/1008) on macOS Ventura+
 
 # Preparation
 
@@ -73,7 +50,7 @@ This OC configuration has disabled AMFI, and SIP partially disabled, these are n
 
 ## macOS Monterey, Ventura and Sonoma
 
-Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi functionality since Monterey, and Graphics Acceleration since Ventura. 
+Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi functionality since macOS 12.x, and Graphics Acceleration since macOS 13.x. 
 
  * Do not use Migration Assistant within the Setup Assistant (setup screen right after macOS installation)
  * Do not use Migration Assistant if root patches are applied, revert patches first then apply them back after using Migration Assistant.
@@ -106,17 +83,41 @@ Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi f
 	* However, if you can't get past a looping error (`-v` boot-arg must be present to see), remove the battery, and press the power button for at least 30 seconds.
 
 Other Issues:
-* Sleep may randomly break if the machine is still doing tasks while it is transitioning into sleep mode on it's own. Temporary disable sleep via `pmset` command if you are doing something important.
+* Sleep may randomly break if the machine is still doing a heavy task while it is transitioning into sleep mode on it's own. Temporary disable sleep via `pmset` command if you are doing something important.
 * If you at least once booted from Windows then macOS, certain ports transfer from XHC to EHC after sleep.
 * VGA port is actually a DisplayPort internally according to the schematics, you may need to adjust the device properties - such as the connector type, bus ID, etc.  
 * WiFi icon will only show one bar, this is a known issue with this WiFi card.
 
+### What's not working?
+
+- AirDrop; Universal Control
+	- If you need these features, replace card with **BCM94360HMB** and stay on macOS 11.x — most airport features do not work on this card starting macOS 12.x.
+		- This laptop uses mPCIe slot for the WiFi Card
+- Playing DRM content (on Safari 14+ and macOS 11+)
+	- To work around this, use a Chromium-based browser or Firefox.
+- Bluetooth (Atheros; on macOS 12+)
+	- To work around this, use a Bluetooth dongle with Broadcom/CSR chip (e.g, ASUS BT400, and TP-Link UB400).
+- Lid Wake (from sleep)
+	- Press a key to wake.
+- USB wake (from sleep)
+	- Wake from **USB** Mouse/keyboard does not work,  press a key from built-in keyboard to wake.
+- Automatic Sleep on critical battery level
+	- To work around this, use [this app](https://github.com/HsOjo/SleeperX).
+- Hibernation[.](https://github.com/acidanthera/bugtracker/issues/386#issuecomment-503042790)
+	- Disable it. 
+- Fan reading
+	- VirtualSMC does not support fan reading on ENE ECs.
+ - Multi-finger (3+) Trackpad Gestures
+	- Hardware limitation, trackpad is PS2.
+ - & a [lot more](https://github.com/dortania/OpenCore-Legacy-Patcher/issues/1008) on macOS Ventura+
+
+
 ## Credits
 
 Guides:
-- [Dortania](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html): OpenCore Install Guide
+- [Dortania](https://dortania.github.io/OpenCore-Install-Guide/config.plist/haswell.html): OpenCore Install Guide, OpenCore Legacy Patcher
 - [5T33Z0](https://github.com/5T33Z0): [Remapping Brightness Keys](https://github.com/5T33Z0/OC-Little-Translated/blob/main/05_Laptop-specific_Patches/Fixing_Keyboard_Mappings_and_Brightness_Keys/Customizing_ThinkPad_Keyboard_Shortcuts.md), [Slimming AppleALC](https://github.com/5T33Z0/AppleALC-Guides/tree/main/Slimming_AppleALC)
-- [PG7](https://www.insanelymac.com/forum/topic/359007-wifi-atheros-monterey-ventura-sonoma-work/): Enabling Legacy Wireless on Monterey+
+- [PG7](https://www.insanelymac.com/forum/topic/359007-wifi-atheros-monterey-ventura-sonoma-work/): Enabling Legacy Wireless on macOS Monterey+
 
 Tools:
 - [CorpNewt](https://github.com/corpnewt/SSDTTime): SSDTTime, GenSMBIOS, Propertree, and USBMap
