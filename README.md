@@ -11,7 +11,7 @@
 |----------------|-----------------------------------------|
 | **CPU**        | Intel® Core™ i5-4200U Processor         |
 | **iGPU**       | Intel HD Graphics 4400                |
-| **dGPU**       | AMD Radeon R7 M265  <br><sup>_Disabled_, not supported on macOS</sup>        |
+| **dGPU**       | AMD Radeon 8750M  <br><sup>_Disabled_, not supported on macOS</sup>        |
 | **Wi-Fi & BT** | Qualcomm Atheros AR9565 <br><sup>Spoofed as AR93xx</sup>      |
 | **Ethernet**   | Broadcom NetXtreme BCM57786 <br><sup>Spoofed as BCM57785</sup>                           |
 | **Audio Codec**| Realtek ALC282<br><sup>Layout ID: 28</sup>                                   |
