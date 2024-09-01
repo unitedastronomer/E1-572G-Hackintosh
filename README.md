@@ -11,7 +11,7 @@
 |----------------|-----------------------------------------|
 | **CPU**        | Intel® Core™ i5-4200U Processor         |
 | **iGPU**       | Intel HD Graphics 4400                |
-| **dGPU**       | AMD Radeon 8750M  <br><sup>_Disabled_, not supported on macOS</sup>        |
+| **dGPU**       | AMD Radeon 8750M  <br><sup>Disabled, <a href="https://dortania.github.io/GPU-Buyers-Guide/misc/discrete-laptops.html#laptop-dgpus"> not supported</a> on macOS</sup>        |
 | **Wi-Fi & BT** | Qualcomm Atheros AR9565 <br><sup>Spoofed as AR93xx</sup>      |
 | **Ethernet**   | Broadcom NetXtreme BCM57786 <br><sup>Spoofed as BCM57785</sup>                           |
 | **Audio Codec**| Realtek ALC282<br><sup>Layout ID: 28</sup>                                   |
@@ -37,6 +37,8 @@
 	- Disable it. 
 - Fan reading
 	- VirtualSMC does not support fan reading on ENE ECs.
+ - Multi-finger (3+) Trackpad Gestures
+	- Hardware limitation, trackpad is PS2.
  - & [a lot more](https://github.com/dortania/OpenCore-Legacy-Patcher/issues/1008) on macOS Ventura+
 
 # Preparation
@@ -83,7 +85,8 @@ Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi f
 
 ## ⚠️ macOS Seqouia
 
-[OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) currently does not provide patches for Intel Haswell's graphics and Legacy Wireless on macOS Sequoia.
+[OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) currently does not provide patches for Intel Haswell's graphics.
+- Legacy Wireless are supported.
 
 
 # Troubleshoot
@@ -91,9 +94,6 @@ Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi f
 	* Once booted through Windows, it will take over the boot order and you'll be unable to boot through OpenCore. Make sure to [install Bootcamp utilities](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html#installation) in Windows after installing macOS if you are multi-booting.
 * Cannot connect to Wi-Fi
 	* To work around this, manually connect using the "Other" option in the Wi-Fi menu bar or manually add the network in the "Network" preference pane.
-* The install is taking too long; **patience is key!**
-	* Do not manually power off or reboot your machine as this will break the installation and require reinstalling. 
-	* However, if you can't get past a looping error (`-v` boot-arg must be present to see), remove the battery, and press the power button for at least 30 seconds.
 * [Fixing Window features after installing macOS](https://github.com/5T33Z0/OC-Little-Translated/blob/main/I_Windows/Windows_fixes.md)
 * [Use Windows partition under macOS via VMWare](https://github.com/mackonsti/s145-14iwl/blob/master/Fusion.md)
 
@@ -101,6 +101,11 @@ Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi f
 #### Note:
 * **Do not update AppleALC**. `-alcbeta` boot-arg allows AppleALC to load up until macOS Sequoia. It is compiled to only contain layout 28 of ALC282. 
 	* 86KB (vs. originally 3.43 MB).
+* The install is taking too long?; **patience is key!**
+	* Do not manually power off or reboot your machine as this will break the installation and require reinstalling. 
+	* However, if you can't get past a looping error (`-v` boot-arg must be present to see), remove the battery, and press the power button for at least 30 seconds.
+
+Other Issues:
 * Sleep may randomly break if the machine is still doing tasks while it is transitioning into sleep mode on it's own. Temporary disable sleep via `pmset` command if you are doing something important.
 * If you at least once booted from Windows then macOS, certain ports transfer from XHC to EHC after sleep.
 * VGA port is actually a DisplayPort internally according to the schematics, you may need to adjust the device properties - such as the connector type, bus ID, etc.  
