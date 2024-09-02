@@ -13,7 +13,7 @@ Recommended macOS version to install is **Big Sur**. This configuration supports
 | **CPU**        | Intel® Core™ i5-4200U Processor         |
 | **iGPU**       | Intel HD Graphics 4400                |
 | **dGPU**       | AMD Radeon 8750M  <br><sup>Disabled; <a href="https://dortania.github.io/GPU-Buyers-Guide/misc/discrete-laptops.html#laptop-dgpus"> not supported</a></sup>        |
-| **Wi-Fi & BT** | Qualcomm Atheros AR9565 <br><sup>Spoofed as AR93xx</sup>      |
+| **Wi-Fi & BT** | Qualcomm Atheros AR9565; AR3012 <br><sup>Spoofed as AR93xx</sup>      |
 | **Ethernet**   | Broadcom NetXtreme BCM57786 <br><sup>Spoofed as BCM57785</sup>                           |
 | **Audio Codec**| Realtek ALC282<br><sup>Layout ID: 28</sup>                                   |
 | **Trackpad**   | Synaptics TM2682 <br><sup>PS/2</sup>                                          |
