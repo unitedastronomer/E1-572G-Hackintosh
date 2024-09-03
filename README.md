@@ -6,7 +6,7 @@
 
 Recommended macOS version to install is **Big Sur**. This configuration supports booting macOS Mojave — Sonoma, earlier versions are untested.
 
-- I limited this configuration to only boot up to Sonoma. Seqouia support will be added later.
+- I limited this configuration to only boot up to Sonoma. Seqouia support will be added later this week.
 
 ### 💻 System Specification
 
