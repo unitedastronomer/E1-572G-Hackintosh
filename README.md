@@ -4,9 +4,7 @@
 [![OpenCore](https://img.shields.io/badge/macOS-Sonoma-green.svg)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/unitedastronomer/E1-572G-Hackintosh/blob/main/LICENSE.md)<br>
 
-Recommended macOS version to install is **Big Sur**. This configuration supports booting macOS Mojave — Sonoma, earlier versions are untested.
-
-- I limited this configuration to only boot up to Sonoma. Seqouia support will be added later this week.
+This configuration supports booting macOS Mojave — Sonoma, earlier (and newer) versions are untested.
 
 ### 💻 System Specification
 
@@ -15,9 +13,9 @@ Recommended macOS version to install is **Big Sur**. This configuration supports
 | **CPU**        | Intel® Core™ i5-4200U Processor         |
 | **iGPU**       | Intel HD Graphics 4400                |
 | **dGPU**       | AMD Radeon 8750M  <br><sup>Disabled; <a href="https://dortania.github.io/GPU-Buyers-Guide/misc/discrete-laptops.html#laptop-dgpus"> not supported</a></sup>        |
-| **Wi-Fi & BT** | Qualcomm Atheros AR9565; AR3012 <br><sup>Spoofed as AR93xx</sup>      |
+| **Wi-Fi & BT** | Qualcomm Atheros AR9565; BT: AR3012 <br><sup> AR9565 spoofed as AR93xx</sup>      |
 | **Ethernet**   | Broadcom NetXtreme BCM57786 <br><sup>Spoofed as BCM57785</sup>                           |
-| **Audio Codec**| Realtek ALC282<br><sup>Layout ID: 28</sup>                                   |
+| **Audio Codec**| Realtek ALC282<br><sup>Layout ID: 28, <b>DO NOT </b> update AppleALC</sup>                                   |
 | **Trackpad**   | Synaptics TM2682 <br><sup>PS/2</sup>                                          |
 
 # Preparation
@@ -35,6 +33,25 @@ In the config.plist, section <code>PlatformInfo > Generic</code> is currently le
 
 # Post-Install
 
+* **Do not update AppleALC**. `-alcbeta` boot-arg allows AppleALC to load up until macOS Sequoia. It is compiled to only contain layout 28 of ALC282. 
+	* 86KB (vs. originally 3.43 MB).
+
+## macOS Monterey, Ventura and Sonoma
+
+Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi functionality since macOS 12.x, and Graphics Acceleration since macOS 13.x. 
+
+ * Do not use Migration Assistant within the Setup Assistant (setup screen right after macOS installation)
+ * Do not use Migration Assistant if root patches are applied, revert patches first then apply them back after using Migration Assistant.
+
+<div align="center">
+<img align="center" src="./assets/oclp.png" width="600">
+</div>
+
+## macOS Seqouia
+* [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) early support for Haswell's Integrated Graphics is provided in the Nightly build.
+* Legacy wireless is supported.
+* Requires [disabling Gatekeeper](https://github.com/5T33Z0/OC-Little-Translated/blob/main/14_OCLP_Wintel/Guides/Disable_Gatekeeper.md).
+
 ## macOS Big Sur and earlier
 > [!WARNING]  
 > This can't be applied for Monterey and newer.
@@ -49,23 +66,6 @@ This OC configuration has disabled AMFI, and SIP partially disabled, these are n
    * Disable _csr_check() in _vnode_check_signature
 * Set `SecureBootModel` to `Default`, and then do an NVRAM Reset before booting into macOS
 
-
-## macOS Monterey, Ventura and Sonoma
-
-Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi functionality since macOS 12.x, and Graphics Acceleration since macOS 13.x. 
-
- * Do not use Migration Assistant within the Setup Assistant (setup screen right after macOS installation)
- * Do not use Migration Assistant if root patches are applied, revert patches first then apply them back after using Migration Assistant.
-
-<div align="center">
-<img align="center" src="./assets/oclp.png" width="600">
-</div>
-
-
-## ⚠️ macOS Seqouia
-[OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) <s>currently does not provide patches for Intel Haswell's graphics.</s> Early support had been added in the Nightly build.
-- Legacy Wireless are supported.
-
 # Troubleshoot
 * Multi-boot with Windows
 	* Once booted through Windows, Windows' boot manager will always take over the boot order on restart and you'll be unable to boot through OpenCore. To resolve this, [install Bootcamp utilities](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html#installation) in Windows after installing macOS (only if you are multi-booting).
@@ -73,43 +73,6 @@ Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi f
 	* To work around this, manually connect using the "Other" option in the Wi-Fi menu bar or manually add the network in the "Network" preference pane.
 * [Fixing Window features after installing macOS](https://github.com/5T33Z0/OC-Little-Translated/blob/main/I_Windows/Windows_fixes.md)
 * [Use Windows partition under macOS via VMWare](https://github.com/mackonsti/s145-14iwl/blob/master/Fusion.md)
-
-
-#### Note:
-* **Do not update AppleALC**. `-alcbeta` boot-arg allows AppleALC to load up until macOS Sequoia. It is compiled to only contain layout 28 of ALC282. 
-	* 86KB (vs. originally 3.43 MB).
-* The install is taking too long?; **patience is key!**
-	* Do not manually power off or reboot your machine as this will break the installation and require reinstalling. 
-	* However, if you can't get past a looping error (`-v` boot-arg must be present to see), remove the battery, and press the power button for at least 30 seconds.
-
-Other Issues:
-* Sleep may randomly break if the machine is still doing a heavy task while it is transitioning into sleep mode on it's own. Temporary disable sleep via `pmset` command if you are doing something important.
-* If you at least once booted from Windows then macOS, certain ports transfer from XHC to EHC after sleep.
-* VGA port is actually a DisplayPort internally according to the schematics, you may need to adjust the device properties - such as the connector type, bus ID, etc.  
-* WiFi icon will only show one bar, this is a known issue with this WiFi card.
-
-### What's not working?
-
-- AirDrop; Universal Control
-	- If you need these features, replace card with **BCM94360HMB** and stay on macOS 11.x — most airport features do not work on this card starting macOS 12.x.
-		- This laptop uses mPCIe slot for the WiFi Card
-- Playing DRM content (on Safari 14+ and macOS 11+)
-	- To work around this, use a Chromium-based browser or Firefox.
-- Bluetooth (Atheros; on macOS 12+)
-	- To work around this, use a Bluetooth dongle with Broadcom/CSR chip (e.g, ASUS BT400, and TP-Link UB400).
-- Lid Wake (from sleep)
-	- Press a key to wake.
-- USB wake (from sleep)
-	- Wake from **USB** Mouse/keyboard does not work,  press a key from built-in keyboard to wake.
-- Automatic Sleep on critical battery level
-	- To work around this, use [this app](https://github.com/HsOjo/SleeperX).
-- Hibernation[.](https://github.com/acidanthera/bugtracker/issues/386#issuecomment-503042790)
-	- Disable it. 
-- Fan reading
-	- VirtualSMC does not support fan reading on ENE ECs.
- - Multi-finger (3+) Trackpad Gestures
-	- Hardware limitation, trackpad is PS2.
- - & a [lot more](https://github.com/dortania/OpenCore-Legacy-Patcher/issues/1008) on macOS Ventura+
 
 
 ## Credits
