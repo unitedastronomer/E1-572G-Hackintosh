@@ -13,9 +13,9 @@ This configuration supports booting macOS Mojave — Sonoma, earlier (and newer)
 | **CPU**        | Intel® Core™ i5-4200U Processor         |
 | **iGPU**       | Intel HD Graphics 4400                |
 | **dGPU**       | AMD Radeon 8750M  <br><sup>Disabled; <a href="https://dortania.github.io/GPU-Buyers-Guide/misc/discrete-laptops.html#laptop-dgpus"> not supported</a></sup>        |
-| **Wi-Fi & BT** | Qualcomm Atheros AR9565; BT: AR3012 <br><sup> AR9565 spoofed as AR93xx</sup>      |
+| **Wi-Fi & BT** | Qualcomm Atheros AR9565; AR3012 <br><sup> AR9565 spoofed as AR93xx</sup>      |
 | **Ethernet**   | Broadcom NetXtreme BCM57786 <br><sup>Spoofed as BCM57785</sup>                           |
-| **Audio Codec**| Realtek ALC282<br><sup>Layout ID: 28, <b>DO NOT </b> update AppleALC</sup>                                   |
+| **Audio Codec**| Realtek ALC282<br><sup>Layout ID: 28, </sup>                                   |
 | **Trackpad**   | Synaptics TM2682 <br><sup>PS/2</sup>                                          |
 
 # Preparation
@@ -48,8 +48,7 @@ Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi f
 </div>
 
 ## macOS Seqouia
-* [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) early support for Haswell's Integrated Graphics is provided in the Nightly build.
-* Legacy wireless is supported.
+* [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) support for Haswell's Integrated Graphics, and Legacy wireless are provided in the nightly build.
 * Requires [disabling Gatekeeper](https://github.com/5T33Z0/OC-Little-Translated/blob/main/14_OCLP_Wintel/Guides/Disable_Gatekeeper.md).
 
 ## macOS Big Sur and earlier
