@@ -37,7 +37,7 @@ In the config.plist, section <code>PlatformInfo > Generic</code> is currently le
 
 ## macOS Monterey, Ventura and Sonoma
 
-Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi functionality since macOS 12.x, and Graphics Acceleration since macOS 13.x. 
+Patches are needed to be applied using Opencore Legacy Patcher to restore WiFi functionality since Monterey, and Graphics Acceleration since Ventura. 
 
  * Do not use Migration Assistant within the Setup Assistant (setup screen right after macOS installation)
  * Do not use Migration Assistant if root patches are applied, revert patches first then apply them back after using Migration Assistant.
@@ -67,11 +67,12 @@ This OC configuration has disabled AMFI, and SIP partially disabled, these are n
 # Troubleshoot
 * Multi-boot with Windows
 	* Once booted through Windows, Windows' boot manager will always take over the boot order on restart and you'll be unable to boot through OpenCore. To resolve this, [install Bootcamp utilities](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html#installation) in Windows after installing macOS (only if you are multi-booting).
+	* [Fixing Window features after installing macOS](https://github.com/5T33Z0/OC-Little-Translated/blob/main/I_Windows/Windows_fixes.md)
+	* [Use Windows partition under macOS via VMWare](https://github.com/mackonsti/s145-14iwl/blob/master/Fusion.md)
+
+
 * Cannot connect to Wi-Fi
 	* To work around this, manually connect using the "Other" option in the Wi-Fi menu bar or manually add the network in the "Network" preference pane.
-* [Fixing Window features after installing macOS](https://github.com/5T33Z0/OC-Little-Translated/blob/main/I_Windows/Windows_fixes.md)
-* [Use Windows partition under macOS via VMWare](https://github.com/mackonsti/s145-14iwl/blob/master/Fusion.md)
-
 
 ## Credits
 
