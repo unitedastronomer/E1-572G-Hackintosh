@@ -6,6 +6,10 @@
 [![Download](https://img.shields.io/badge/Download-114B14?logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48cGF0aCBkPSJNNC45NyAxMS4wM2EuNzUuNzUgMCAxIDEgMS4wNi0xLjA2TDExIDE0Ljk0VjIuNzVhLjc1Ljc1IDAgMCAxIDEuNSAwdjEyLjE5bDQuOTctNC45N2EuNzUuNzUgMCAxIDEgMS4wNiAxLjA2bC02LjI1IDYuMjVhLjc1Ljc1IDAgMCAxLTEuMDYgMGwtNi4yNS02LjI1Wm0tLjIyIDkuNDdhLjc1Ljc1IDAgMCAwIDAgMS41aDE0LjVhLjc1Ljc1IDAgMCAwIDAtMS41SDQuNzVaIiBzdHlsZT0iZmlsbDojZmZmZmZmIj48L3BhdGg+PC9zdmc+)](https://github.com/unitedastronomer/E1-572G-Hackintosh/archive/refs/heads/main.zip) 
 <br>
 
+<div align=center>
+<img align="right" src="./assets/m1nified_E1572G.png" width="400">
+</div>
+
 ### 💻 System Specification
 
 | Category       | Component                               |
