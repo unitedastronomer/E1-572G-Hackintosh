@@ -1,4 +1,6 @@
 #### Note:
+* Do not use Migration Assistant within the Setup Assistant (setup screen right after macOS installation)
+ * Do not use Migration Assistant if root patches are applied, revert patches first then apply them back after using Migration Assistant.
 * **Do not update AppleALC**. `-alcbeta` boot-arg allows AppleALC to load up until macOS Sequoia. It is compiled to only contain layout 28 of ALC282. 
 	* 86KB (vs. originally 3.43 MB).
 * The install is taking too long?; **patience is key!**
