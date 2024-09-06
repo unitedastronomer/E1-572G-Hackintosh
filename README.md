@@ -61,8 +61,9 @@ This OC configuration has lifted some security settings, which are necessary for
 
 ## macOS Seqouia 
 * ⚠️ **UNTESTED**
-* [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) early support are provided in the Nightly build of OCLP 1.6.0 from Sequoia Development Branch. 
-* Requires [disabling Gatekeeper](https://github.com/5T33Z0/OC-Little-Translated/blob/main/14_OCLP_Wintel/Guides/Disable_Gatekeeper.md).
+* [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) early support are provided in the Nightly build of OCLP 1.6.0 from Sequoia Development Branch
+* Requires `-lilubetaall` boot-arg
+* Requires [disabling Gatekeeper](https://github.com/5T33Z0/OC-Little-Translated/blob/main/14_OCLP_Wintel/Guides/Disable_Gatekeeper.md)
 
 # Troubleshoot
 * Cannot connect to Wi-Fi
