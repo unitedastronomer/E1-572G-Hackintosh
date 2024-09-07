@@ -9,7 +9,8 @@
 <img align="center" src="./assets/m1nified_E1572G.png" width="400">
 </div>
 
-###### Compatible with E1-572 and E1-572G (Haswell). Not compatible with E1-571 and E1-570 (Ivy Bridge).
+###### Also compatible with E1-572 (Haswell). 
+
 ### 💻 System Specification
 
 | Category       | Component                               |
