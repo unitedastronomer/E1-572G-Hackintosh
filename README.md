@@ -5,7 +5,7 @@
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/unitedastronomer/E1-572G-Hackintosh/blob/main/LICENSE.md)
 
 <div align=center>
-<img align="right" src="./assets/m1nified_E1572G.png" width="400">
+<img align="center" src="./assets/m1nified_E1572G.png" width="400">
 </div>
 
 ### 💻 System Specification
