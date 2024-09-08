@@ -56,7 +56,7 @@ This OC configuration has lifted some security settings, which are necessary for
    * Force FileVault on Broken Seal
    * Disable Library Validation Enforcement
    * Disable _csr_check() in _vnode_check_signature
-* Set `SecureBootModel` to `Default`, and then do an NVRAM Reset before booting into macOS
+* Set `SecureBootModel` to `Default`, and then **do an NVRAM Reset before booting into macOS**
 
 # Troubleshoot
 * Cannot connect to Wi-Fi
