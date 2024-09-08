@@ -9,14 +9,14 @@
 
 ### 💻 System Specification
 
-| Category       | Component                               |
-|----------------|-----------------------------------------|
-| **CPU**        | Intel® Core™ i5-4200U Processor         |
-| **iGPU**       | Intel HD Graphics 4400                |
-| **dGPU**       | AMD Radeon 8750M  <br><sup>Disabled; <a href="https://dortania.github.io/GPU-Buyers-Guide/misc/discrete-laptops.html#laptop-dgpus"> not supported</a></sup>        |
-| **Wi-Fi & BT** | Qualcomm Atheros AR9565<br><sup> Spoofed as AR93xx</sup>      |
-| **Ethernet**   | Broadcom NetXtreme BCM57786 <br><sup>Spoofed as BCM57785</sup>                           |
-| **Audio Codec**| Realtek ALC282<br><sup>Layout ID: 28</sup>                                   |
+| Category       | Component                                  |
+|----------------|--------------------------------------------|
+| **CPU**        | Intel® Core™ i5-4200U Processor            |
+| **iGPU**       | Intel HD Graphics 4400                     |
+| **dGPU**       | AMD Radeon 8750M  <br><sup>Disabled; <a href="https://dortania.github.io/GPU-Buyers-Guide/misc/discrete-laptops.html#laptop-dgpus"> not supported</a></sup> |
+| **Wi-Fi & BT** | Qualcomm Atheros AR9565                    |
+| **Ethernet**   | Broadcom NetXtreme BCM57786                |
+| **Audio Codec**| Realtek ALC282<br><sup>Layout ID: 28</sup> |
 
 # Preparation
 
@@ -66,6 +66,7 @@ This OC configuration has lifted some security settings, which are necessary for
 	* Once booted through Windows, Windows' boot manager will always take over the boot order on restart and you'll be unable to boot through OpenCore. To resolve this, [install Bootcamp utilities](https://dortania.github.io/OpenCore-Post-Install/multiboot/bootcamp.html#installation) in Windows after installing macOS (only if you are multi-booting).
 	* [Fixing Window features after installing macOS](https://github.com/5T33Z0/OC-Little-Translated/blob/main/I_Windows/Windows_fixes.md)
 	* [Use Windows partition under macOS via VMWare](https://github.com/mackonsti/s145-14iwl/blob/master/Fusion.md)
+
 
 ## Credits
 
