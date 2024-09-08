@@ -1,17 +1,14 @@
-#### Note:
-* Do not use Migration Assistant within the Setup Assistant (setup screen right after macOS installation)
- * Do not use Migration Assistant if root patches are applied, revert patches first then apply them back after using Migration Assistant.
-* **Do not update AppleALC**. `-alcbeta` boot-arg allows AppleALC to load up until macOS Sequoia. It is compiled to only contain layout 28 of ALC282. 
-	* 86KB (vs. originally 3.43 MB).
+### Note:
 * The install is taking too long?; **patience is key!**
 	* Do not manually power off or reboot your machine as this will break the installation and require reinstalling. 
-	* However, if you can't get past a looping error (`-v` boot-arg must be present to see), remove the battery, and press the power button for at least 30 seconds.
-
-Other Issues:
-* Sleep may randomly break if the machine is still doing a heavy task while it is transitioning into sleep mode on it's own. Temporary disable sleep via `pmset` command if you are doing something important.
-* If you at least once booted from Windows then macOS, certain ports transfer from XHC to EHC after sleep.
-* VGA port is actually a DisplayPort internally according to the schematics, you may need to adjust the device properties - such as the connector type, bus ID, etc.  
-* WiFi icon will only show one bar, this is a known issue with this WiFi card.
+* Do not use Migration Assistant within the Setup Assistant (setup screen right after macOS installation)
+* Do not use Migration Assistant if root patches are applied, revert patches first then apply them back after using Migration Assistant.
+* **Do not update AppleALC**. It is compiled to only contain layout 28 of ALC282. 
+* Can't add or adjust Memoji in settings?
+	* Scroll through the emojis, this will zoom out the icons allowing you to edit memojis.
+* Sleep may randomly break if the machine is still doing a heavy task while it is transitioning into sleep mode on it's own. 
+	* Temporary disable sleep via `pmset` command if you are doing something important.
+* VGA port is actually a DisplayPort internally according to the schematics, you may need to adjust the device properties.
 
 ### What's not working?
 
@@ -32,6 +29,11 @@ Other Issues:
 	- Disable it. 
 - Fan reading
 	- VirtualSMC does not support fan reading on ENE ECs.
- - Multi-finger (3+) Trackpad Gestures
+ - Multi-touch (3+) Trackpad Gestures
 	- Hardware limitation, trackpad is PS2.
- - & a [lot more](https://github.com/dortania/OpenCore-Legacy-Patcher/issues/1008) on macOS Ventura+
+ - & a [lot more](https://github.com/dortania/OpenCore-Legacy-Patcher/issues/1008) on macOS macOS 13+
+
+### Other Weird Issues:
+
+* If you at least once booted from Windows then macOS, certain ports transfer from XHC to EHC after sleep.  
+* WiFi icon will only show one bar, this is a known issue with this WiFi card.
