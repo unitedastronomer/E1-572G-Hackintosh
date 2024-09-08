@@ -5,11 +5,7 @@
 [![macOS](https://img.shields.io/badge/macOS-Mojave%20%E2%80%94%20Sonoma-7D1B35.svg?logo=apple)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/unitedastronomer/E1-572G-Hackintosh/blob/main/LICENSE.md)
 
-<div align=center>
-<img align="center" src="./assets/m1nified_E1572G.png" width="400">
-</div>
-
-###### Also compatible with E1-572 (Haswell). 
+###### Also compatible with E1-572 (Haswell)
 
 ### 💻 System Specification
 
@@ -42,7 +38,8 @@ In the config.plist, section <code>PlatformInfo > Generic</code> is currently le
 ## macOS Monterey, Ventura and Sonoma
 
 Requires root-patching with [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) to restore WiFi functionality since Monterey, and Graphics Acceleration since Ventura. 
-
+> [!NOTE]  
+> Sequoia requires OCLP 1.6.0, and [disabling Gatekeeper](https://github.com/5T33Z0/OC-Little-Translated/blob/main/14_OCLP_Wintel/Guides/Disable_Gatekeeper.md).
 <div align="center">
 <img align="center" src="./assets/oclp.png" width="600">
 </div>
@@ -61,11 +58,6 @@ This OC configuration has lifted some security settings, which are necessary for
    * Disable Library Validation Enforcement
    * Disable _csr_check() in _vnode_check_signature
 * Set `SecureBootModel` to `Default`, and then do an NVRAM Reset before booting into macOS
-
-## macOS Seqouia 
-* [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) early support are provided in the Nightly build of OCLP 1.6.0 from Sequoia Development Branch
-* Requires `-lilubetaall` boot-arg
-* Requires [disabling Gatekeeper](https://github.com/5T33Z0/OC-Little-Translated/blob/main/14_OCLP_Wintel/Guides/Disable_Gatekeeper.md)
 
 # Troubleshoot
 * Cannot connect to Wi-Fi
