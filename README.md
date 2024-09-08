@@ -4,7 +4,7 @@
 [![macOS](https://img.shields.io/badge/macOS-Sequoia-7D1B35.svg?logo=apple)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/unitedastronomer/E1-572G-Hackintosh/blob/main/LICENSE.md)
 
-#### [Issues](src/ISSUES.md)
+#### [Issues and Workarounds](src/ISSUES.md)
 ### 💻 System Specification
 
 
