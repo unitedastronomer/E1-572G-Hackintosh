@@ -12,7 +12,7 @@
 |----------------|--------------------------------------------|
 | **CPU**        | Intel® Core™ i5-4200U Processor            |
 | **iGPU**       | Intel HD Graphics 4400                     |
-| **dGPU**       | AMD Radeon 8750M  <br><sup>Disabled; <a href="https://dortania.github.io/GPU-Buyers-Guide/misc/discrete-laptops.html#laptop-dgpus"> not supported</a></sup> |
+| **dGPU**       | AMD R7 M265<br><sup>Disabled; <a href="https://dortania.github.io/GPU-Buyers-Guide/misc/discrete-laptops.html#laptop-dgpus"> not supported</a></sup> |
 | **Wi-Fi & BT** | Qualcomm Atheros AR9565                    |
 | **Ethernet**   | Broadcom NetXtreme BCM57786                |
 | **Audio Codec**| Realtek ALC282<br><sup>Layout ID: 28</sup> |
