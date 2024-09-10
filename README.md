@@ -38,7 +38,7 @@ In the config.plist, section <code>PlatformInfo > Generic</code> is currently le
 
 Requires root-patching with [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) to restore WiFi functionality since Monterey, and Graphics Acceleration since Ventura. 
 > [!NOTE]  
-> Sequoia requires OCLP 1.6.0, and an internet connection (ethernet).
+> Sequoia requires OCLP 2.0.0, and an internet connection, either via USB tethering or ethernet.
 <div align="center">
 <img align="center" src="./src/oclp.png" width="600">
 </div>
