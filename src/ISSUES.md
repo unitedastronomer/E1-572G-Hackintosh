@@ -1,7 +1,6 @@
 ### Note:
-* The install is taking too long?; **patience is key!**
-	* Do not manually power off or reboot your machine as this will break the installation and require reinstalling. 
-* Do not use Migration Assistant within the Setup Assistant (setup screen right after macOS installation)
+* The install is taking too long? Just be patient! Do not manually power off or reboot your machine as this will break the installation and require reinstalling. 
+* Do not use Migration Assistant within Setup Assistant (setup screen right after macOS installation) on macOS 13+. It would be too laggy to navigate.
 * Do not use Migration Assistant if root patches are applied, revert patches first then apply them back after using Migration Assistant.
 * **Do not update AppleALC**. It is compiled to only contain layout 28 of ALC282. 
 * Can't add or adjust Memoji in settings?
