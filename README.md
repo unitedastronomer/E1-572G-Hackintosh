@@ -4,7 +4,7 @@
 [![macOS](https://img.shields.io/badge/macOS-Sequoia-7D1B35.svg?logo=apple)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/unitedastronomer/E1-572G-Hackintosh/blob/main/LICENSE.md)
 
-#### [Issues and Workarounds](src/ISSUES.md)
+#### [Issues and Workarounds](.docs/ISSUES.md)
 ### 💻 System Specification
 
 
@@ -40,8 +40,9 @@ Requires root-patching with [OCLP](https://github.com/dortania/OpenCore-Legacy-P
 > [!NOTE]  
 > 1. Sequoia requires OCLP 2.0.0
 > 2. OCLP for Sequoia requires an internet connection, either via USB tethering or ethernet.
+
 <div align="center">
-<img align="center" src="./src/oclp.png" width="600">
+<img align="center" src=".docs/oclp.png" width="600">
 </div>
 
 
@@ -70,5 +71,5 @@ This OC configuration has lifted some security settings, which are necessary for
 
 ### **License** 
 
-This OpenCore configuration is made of multiple external applications from different people and organizations. [See each program for their licensing](src/CREDITS.md).
+This OpenCore configuration is made of multiple external applications from different people and organizations. [See each program for their licensing](.docs/CREDITS.md).
 
