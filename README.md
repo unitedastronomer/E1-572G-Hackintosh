@@ -50,10 +50,10 @@ Requires root-patching with [OCLP](https://github.com/dortania/OpenCore-Legacy-P
 > [!WARNING]  
 > This can't be applied for Monterey and newer.
 
-This OC configuration has lifted some security settings, which are necessary for root patching.  You can leave this config as-is or re-enable them by:
+This OC configuration has lifted some security settings, which are necessary for root patching.  **You can leave this config as-is** or re-enable them by:
 * Disable `AMFIPass.kext`
-* Delete `amfi=0x80` in boot-arg to re-enable AMFI
-* Set `csr-active-config` to `00000000` fully enable SIP
+* Delete `amfi=0x80` in boot-arg
+* Set `csr-active-config` to `00000000`
  * Disable these Kernel -> Patches:
    * Force FileVault on Broken Seal
    * Disable Library Validation Enforcement
