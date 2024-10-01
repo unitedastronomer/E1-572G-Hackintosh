@@ -821,7 +821,7 @@
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/BlueToolFixup</string>
 				<key>MaxKernel</key>
-				<string>23.99.9</string>
+				<string>24.99.9</string>
 				<key>MinKernel</key>
 				<string>21.0.0</string>
 				<key>PlistPath</key>
@@ -2080,6 +2080,8 @@
 			<dict>
 				<key>revpatch</key>
 				<string>sbvmm</string>
+				<key>revblock</key>
+				<string>media</string>
 				<key>rtc-blacklist</key>
 				<data>sg==</data>
 			</dict>
@@ -2088,7 +2090,7 @@
 				<key>SystemAudioVolume</key>
 				<data>Rg==</data>
 				<key>boot-args</key>
-				<string>amfi=0x80 ipc_control_port_options=0  -ar9565 -alcbeta -advmapbeta</string>
+				<string>amfi=0x80 ipc_control_port_options=0  -ar9565 -alcbeta -advmapbeta -btlfxbeta</string>
 				<key>csr-active-config</key>
 				<data>AwgAAA==</data>
 				<key>prev-lang:kbd</key>
@@ -2109,15 +2111,13 @@
 			<key>4D1FDA02-38C7-4A6A-9CC6-4BCCA8B30102</key>
 			<array>
 				<string>rtc-blacklist</string>
-				<string>OCLP-Settings</string>
 				<string>revpatch</string>
+				<string>revblock</string>
 			</array>
 			<key>7C436110-AB2A-4BBB-A880-FE41995C9F82</key>
 			<array>
 				<string>boot-args</string>
 				<string>csr-active-config</string>
-				<string>bluetoothInternalControllerInfo</string>
-				<string>bluetoothExternalDongleFailed</string>
 			</array>
 			<key>E09B9297-7928-4440-9AAB-D1F8536FBF0A</key>
 			<array/>
