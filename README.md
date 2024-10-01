@@ -24,6 +24,7 @@
 *  **Update BIOS to the** [**latest version**](https://www.acer.com/us-en/support/product-support/Aspire_E1-572G). This resolves the issue of the laptop failing to fully power down when shutting down.
 * Configure BIOS with these settings:
 	* **Secure Boot** &rarr; **Disabled**
+      * You can only toggle this setting if a BIOS password is set. Temporarily add password to set the this setting. To remove password, set a new password but leave it blank then save.
 	* **F12 Boot** &rarr; **Enabled**
 
 ### config.plist
@@ -36,7 +37,7 @@ In the config.plist, section <code>PlatformInfo > Generic</code> is currently le
 
 ## macOS Monterey - Sequoia
 
-Requires root-patching with [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) to restore WiFi functionality since Monterey, and Graphics Acceleration since Ventura. 
+Requires root-patching with [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) to restore Wi-Fi functionality since Monterey, and Graphics Acceleration since Ventura. 
 > [!NOTE]  
 > 1. Sequoia requires OCLP 2.0.0
 > 2. OCLP for Sequoia requires an internet connection, either via USB tethering or ethernet.
