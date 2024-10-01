@@ -1,23 +1,12 @@
-### Note:
-* The install is taking too long? Just be patient! Do not manually power off or reboot your machine as this will break the installation and require reinstalling. 
-* Do not use Migration Assistant within Setup Assistant (setup screen right after macOS installation) on macOS 13+. It would be too laggy to navigate.
-* Do not use Migration Assistant if root patches are applied, revert patches first then apply them back.
-* **Do not update AppleALC**. It is compiled to only contain layout 28 of ALC282. 
-* Can't add or adjust Memoji in settings?
-	* Scroll through the emojis, this will zoom out the icons allowing you to edit memojis.
-* Sleep may randomly break if the machine is still doing a heavy task while it is transitioning into sleep mode on it's own. 
-	* Temporary disable sleep via `pmset` command if you are doing something important.
-* VGA port is actually a DisplayPort internally according to the schematics, you may need to adjust the device properties. 
-
 ### What's not working?
 
 - Airport features (Airdrop etc.)
 	- If you need these features, replace card with **BCM94360HMB** and stay on macOS 11.x — most airport features do not work on this card starting macOS 12.x.
-		- This laptop uses mPCIe slot for the WiFi Card
+		- This laptop uses mPCIe slot for the Wi-Fi Card
 - Playing DRM content (on Safari 14+ and macOS 11+)
 	- To work around this, use a Chromium-based browser or Firefox.
 - Bluetooth (Atheros; on macOS 12+)
-	- To work around this, use a Bluetooth dongle with Broadcom/CSR chip (e.g, ASUS BT400, and TP-Link UB400).
+	- To work around this, use a Bluetooth dongle with Broadcom/CSR chip (e.g, ASUS BT400, and TP-Link UB400), or replace to an Intel card.
 - Lid Wake (from sleep)
 	- Press a key to wake.
 - USB wake (from sleep)
@@ -31,6 +20,34 @@
  - Multi-touch (3+) Trackpad Gestures
 	- Hardware limitation, trackpad is PS2.
  - & a [lot more](https://github.com/dortania/OpenCore-Legacy-Patcher/issues/1008) on macOS macOS 13+
+
+### Fixing Sleep issues
+If you have issues with sleep, run the following commands in Terminal:
+
+```
+sudo pmset hibernatemode 0
+sudo rm /var/vm/sleepimage
+sudo touch /var/vm/sleepimage
+sudo chflags uchg /var/vm/sleepimage
+```
+Disable these settings:
+- Wake on LAN
+- Power Nap
+- In Bluetooth Settings, "Advanced Options…" disable the 3rd entry about allowing Bluetooth devices to exit sleep
+
+### Additional Note
+* The install is taking too long? Just be patient! Do not manually power off or reboot your machine as this will break the installation and require reinstalling. 
+* Do not use Migration Assistant within Setup Assistant (setup screen right after macOS installation) on macOS 13+. It would be too laggy to navigate.
+* Do not use Migration Assistant if OCLP root patches are applied, revert patches first.
+* Can't add or adjust Memoji in settings?
+	* Scroll through the emojis, this will zoom out the icons allowing you to edit memojis.
+* Sleep may randomly break if the machine is still doing a **heavy** task while it is transitioning into sleep mode on it's own. 
+     * If you are doing something important, temporary disable sleep via `pmset` command.
+```
+sudo pmset disablesleep 1
+```
+> Set it to `0` to re-enable sleep option.
+* VGA port is actually a DisplayPort internally according to the schematics, you may need to adjust the device properties. 
 
 ### Other Weird Issues:
 
