@@ -476,6 +476,8 @@
 			<dict>
 				<key>built-in</key>
 				<data>AQ==</data>
+				<key>IOName</key>
+				<string>pci14e4,16b4</string>
 				<key>compatible</key>
 				<string>pci14e4,16b4</string>
 			</dict>
