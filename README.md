@@ -24,7 +24,7 @@
 *  **Update BIOS to the** [**latest version**](https://www.acer.com/us-en/support/product-support/Aspire_E1-572G). This resolves the issue of the laptop failing to fully power down when shutting down.
 * Configure BIOS with these settings:
 	* **Secure Boot** &rarr; **Disabled**
-      * You can only toggle this setting if a BIOS password is set. Temporarily add password to set the this setting. To remove password, set a new password but leave it blank then save.
+      * You can only toggle this setting if a BIOS password is set. Temporarily add password to set this setting. To remove password, set a new password but leave it blank then save.
 	* **F12 Boot** &rarr; **Enabled**
 
 ### config.plist
