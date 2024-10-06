@@ -474,10 +474,10 @@
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x0)/Pci(0x0,0x0)</key>
 			<dict>
-				<key>built-in</key>
-				<data>AQ==</data>
 				<key>IOName</key>
 				<string>pci14e4,16b4</string>
+				<key>built-in</key>
+				<data>AQ==</data>
 				<key>compatible</key>
 				<string>pci14e4,16b4</string>
 			</dict>
@@ -637,7 +637,7 @@
 				<key>BundlePath</key>
 				<string>SMCLightSensor.kext</string>
 				<key>Comment</key>
-				<string>Allows for smoother brightness control</string>
+				<string>Allows for smoother brightness control, paired with SSDT-ALS0</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -751,9 +751,27 @@
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>MaxKernel</key>
-				<string></string>
+				<string>20.99.9</string>
 				<key>MinKernel</key>
 				<string></string>
+				<key>PlistPath</key>
+				<string>Contents/Info.plist</string>
+			</dict>
+			<dict>
+				<key>Arch</key>
+				<string>Any</string>
+				<key>BundlePath</key>
+				<string>USBMap_HideBluetooth.kext</string>
+				<key>Comment</key>
+				<string>Hide Atheros Bluetooth on macOS 11+</string>
+				<key>Enabled</key>
+				<true/>
+				<key>ExecutablePath</key>
+				<string></string>
+				<key>MaxKernel</key>
+				<string></string>
+				<key>MinKernel</key>
+				<string>21.0.0</string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
