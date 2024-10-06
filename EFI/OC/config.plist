@@ -819,7 +819,7 @@
 				<key>Comment</key>
 				<string>Fix USB Bluetooth with CSR/Broadcom chip (e.g, ASUS BT400 &amp; TP LINK UB400) on macOS 12 - 14</string>
 				<key>Enabled</key>
-				<true/>
+				<false/>
 				<key>ExecutablePath</key>
 				<string>Contents/MacOS/BlueToolFixup</string>
 				<key>MaxKernel</key>
