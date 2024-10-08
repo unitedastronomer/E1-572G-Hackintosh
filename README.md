@@ -4,7 +4,12 @@
 [![macOS](https://img.shields.io/badge/macOS-Sequoia-7D1B35.svg?logo=apple)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/unitedastronomer/E1-572G-Hackintosh/blob/main/LICENSE.md)
 
-#### [WHAT'S NOT WORKING?](.docs/ISSUES.md)
+While this was configured to boot up to Sequoia, the most _compatible_ macOS version to run on this device is Big Sur — as some of support were stripped out starting Monterey.
+
+(Atheros) Bluetooth do not work since Monterey. You will need to use a dongle with a supported CSR/Broadcom chipset such as TP Link UB400, and Asus BT400. 
+
+See what else are [not working](.docs/ISSUES.md).
+
 ### 💻 System Specification
 
 
@@ -35,9 +40,9 @@ In the config.plist, section <code>PlatformInfo > Generic</code> is currently le
 
 * **Do not update AppleALC**. It is compiled to only contain layout 28 of ALC282.
 
-## macOS Monterey - Sequoia
+## macOS Monterey - Sequoia  
 
-Requires root-patching with [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) to restore Wi-Fi functionality since Monterey, and Graphics Acceleration since Ventura. 
+It requires root-patching with [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) to restore Wi-Fi functionality since Monterey, and Graphics Acceleration since Ventura. 
 > [!NOTE]  
 > 1. Sequoia requires OCLP 2.0.0
 > 2. OCLP for Sequoia requires an internet connection, either via USB tethering or ethernet.
@@ -45,7 +50,6 @@ Requires root-patching with [OCLP](https://github.com/dortania/OpenCore-Legacy-P
 <div align="center">
 <img align="center" src=".docs/oclp.png" width="600">
 </div>
-
 
 ## macOS Big Sur and earlier
 > [!WARNING]  
