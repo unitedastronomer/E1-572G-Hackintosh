@@ -6,10 +6,7 @@
 
 While this was configured to boot up to Sequoia, the most _compatible_ macOS version to run on this device is Big Sur — as some support were stripped out starting Monterey.
 
-- (Atheros) Bluetooth do not work since Monterey. You will need to use a dongle with a supported CSR/Broadcom chipset such as TP Link UB400, and Asus BT400. 
-  - Enable BlueToolFixup.kext in config.plist if you will be using one of these dongles.
-
-See what else are [not working](.docs/ISSUES.md).
+See what's [not working](.docs/ISSUES.md).
 
 ### 💻 System Specification
 
@@ -49,6 +46,8 @@ It requires root-patching with [OCLP](https://github.com/dortania/OpenCore-Legac
 <div align="center">
 <img align="center" src=".docs/oclp.png" width="600">
 </div>
+
+- Enable **BlueToolFixup.kext** in config.plist if you will be using a Bluetooth dongle.
 
 ## macOS Big Sur and earlier
 > [!WARNING]  
