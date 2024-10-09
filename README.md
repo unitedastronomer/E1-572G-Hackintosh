@@ -47,6 +47,7 @@ It requires root-patching with [OCLP](https://github.com/dortania/OpenCore-Legac
 <img align="center" src=".docs/oclp.png" width="600">
 </div>
 
+Atheros Bluetooth are not supported since Monterey, use a Bluetooth dongle with supported CSR/Broadcom chipset such as TP Link UB400, and Asus BT400
 - Enable **BlueToolFixup.kext** in config.plist if you will be using a Bluetooth dongle.
 
 ## macOS Big Sur and earlier
