@@ -480,6 +480,8 @@
 				<data>AQ==</data>
 				<key>compatible</key>
 				<string>pci14e4,16b4</string>
+				<key>pci-aspm-default</key>
+				<data>AgEAAA==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x1C,0x3)/Pci(0x0,0x0)</key>
 			<dict>
@@ -491,6 +493,8 @@
 				<string>pci168c,30</string>
 				<key>model</key>
 				<string>Qualcomm Atheros AR9565 Wireless Network Adapter</string>
+				<key>pci-aspm-default</key>
+				<data>AgEAAA==</data>
 			</dict>
 			<key>PciRoot(0x0)/Pci(0x2,0x0)</key>
 			<dict>
@@ -514,6 +518,27 @@
 				<data>AQAAAA==</data>
 				<key>framebuffer-stolenmem</key>
 				<data>AAAwAQ==</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x0)</key>
+			<dict>
+				<key>#model</key>
+				<string>8 Series PCI Express Root Port 3</string>
+				<key>pci-aspm-default</key>
+				<data>AgAAAA==</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x0)/Pci(0x0,0x1)</key>
+			<dict>
+				<key>#model</key>
+				<string>BCM57765/57785 SDXC/MMC Card Reader</string>
+				<key>pci-aspm-default</key>
+				<data>AgEAAA==</data>
+			</dict>
+			<key>PciRoot(0x0)/Pci(0x1C,0x3)</key>
+			<dict>
+				<key>#model</key>
+				<string>8 Series PCI Express Root Port 4</string>
+				<key>pci-aspm-default</key>
+				<data>AgAAAA==</data>
 			</dict>
 		</dict>
 		<key>Delete</key>
@@ -565,7 +590,7 @@
 				<key>BundlePath</key>
 				<string>AppleALC.kext</string>
 				<key>Comment</key>
-				<string>DO NOT UPDATE</string>
+				<string></string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -781,7 +806,7 @@
 				<key>BundlePath</key>
 				<string>RTCMemoryFixup.kext</string>
 				<key>Comment</key>
-				<string>Block access to certain CMOS offset - resolve sleep/wake issue</string>
+				<string>Resolve unable to wake from sleep</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -835,7 +860,7 @@
 				<key>BundlePath</key>
 				<string>BlueToolFixup.kext</string>
 				<key>Comment</key>
-				<string>Fix USB Bluetooth with CSR/Broadcom chip (e.g, ASUS BT400 &amp; TP LINK UB400) on macOS 12 - 14</string>
+				<string>Fix USB Bluetooth on macOS 12 - 14</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -871,7 +896,7 @@
 				<key>BundlePath</key>
 				<string>AdvancedMap.kext</string>
 				<key>Comment</key>
-				<string>Enable features (e.g, 3D Globe) in Maps.app on macOS 12 - 15</string>
+				<string>Enable 3D features in Maps.app on macOS 12 - 15</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -997,7 +1022,7 @@
 				<key>BundlePath</key>
 				<string>ATH9KInjector.kext</string>
 				<key>Comment</key>
-				<string>Inject device-id of AR9565</string>
+				<string></string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -1015,7 +1040,7 @@
 				<key>BundlePath</key>
 				<string>ATH9KFixup.kext</string>
 				<key>Comment</key>
-				<string>Fix AR9565 support on  &lt;= macOS 10.13</string>
+				<string>AR9565 support on  &lt;= macOS 10.13</string>
 				<key>Enabled</key>
 				<true/>
 				<key>ExecutablePath</key>
@@ -1069,7 +1094,7 @@
 				<key>BundlePath</key>
 				<string>SimpleMSR.kext</string>
 				<key>Comment</key>
-				<string>Prevent firmware throttling | Caution: If enabled, laptop will automatically shutdown if CPU reaches critical temperature.</string>
+				<string>Prevent firmware throttling. If enabled, laptop will automatically shutdown if CPU reaches critical temperature.</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
@@ -1087,7 +1112,7 @@
 				<key>BundlePath</key>
 				<string>ASPP-Override.kext</string>
 				<key>Comment</key>
-				<string>Disable firmware throttling  | Caution: If enabled, laptop will automatically shutdown if CPU reaches critical temperature.</string>
+				<string>Disable firmware throttling. If enabled, laptop will automatically shutdown if CPU reaches critical temperature.</string>
 				<key>Enabled</key>
 				<false/>
 				<key>ExecutablePath</key>
