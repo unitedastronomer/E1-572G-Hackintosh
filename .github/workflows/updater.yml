@@ -1,0 +1,221 @@
+name: Kext and OpenCore Updater
+
+on:
+  schedule:
+    - cron: '0 0 * * *'  # Run daily at midnight UTC
+  workflow_dispatch:  # Allow manual triggering
+
+env:
+  EFI_PATH: EFI
+  KEXT_PATH: EFI/OC/Kexts
+  DRIVERS_PATH: EFI/OC/Drivers
+
+jobs:
+  update-kexts-and-opencore:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Fetch all history for all tags and branches
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.x'
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install requests
+
+      - name: Download and update kexts and OpenCore
+        id: update
+        run: |
+          python <<EOF
+          import os
+          import requests
+          import json
+          import re
+          from datetime import datetime
+
+          def download_and_extract(url, file_name, extract_path):
+              response = requests.get(url)
+              with open(file_name, 'wb') as f:
+                  f.write(response.content)
+              os.system(f"unzip -o {file_name} -d {extract_path}")
+              os.remove(file_name)
+
+          def get_latest_release(repo):
+              api_url = f"https://api.github.com/repos/{repo}/releases/latest"
+              response = requests.get(api_url)
+              return json.loads(response.text)
+
+          def update_kext(repo):
+              release = get_latest_release(repo)
+              version = release['tag_name']
+              for asset in release['assets']:
+                  if asset['name'].endswith('.kext.zip'):
+                      download_url = asset['browser_download_url']
+                      kext_name = asset['name']
+                      download_and_extract(download_url, kext_name, os.environ['KEXT_PATH'])
+                      print(f"Updated {kext_name} to version {version}")
+                      return version
+              return None
+
+          def update_opencore():
+              release = get_latest_release("acidanthera/OpenCorePkg")
+              version = release['tag_name']
+              for asset in release['assets']:
+                  if asset['name'] == 'OpenCore-' + version + '-RELEASE.zip':
+                      download_url = asset['browser_download_url']
+                      file_name = asset['name']
+                      download_and_extract(download_url, file_name, '/tmp/OpenCore')
+                      
+                      # Update BOOTx64.efi and OpenCore.efi
+                      os.system(f"cp /tmp/OpenCore/X64/EFI/BOOT/BOOTx64.efi {os.environ['EFI_PATH']}/BOOT/")
+                      os.system(f"cp /tmp/OpenCore/X64/EFI/OC/OpenCore.efi {os.environ['EFI_PATH']}/")
+                      
+                      # Update existing drivers
+                      for driver in os.listdir(os.environ['DRIVERS_PATH']):
+                          if os.path.exists(f"/tmp/OpenCore/X64/EFI/OC/Drivers/{driver}"):
+                              os.system(f"cp /tmp/OpenCore/X64/EFI/OC/Drivers/{driver} {os.environ['DRIVERS_PATH']}/")
+                      
+                      print(f"Updated OpenCore to version {version}")
+                      return version
+              return None
+
+          # List of repositories to check for kext updates
+          kext_repos = [
+              "acidanthera/Lilu",
+              "acidanthera/VirtualSMC",
+              "acidanthera/RestrictEvents",
+              "acidanthera/WhateverGreen",
+              "acidanthera/BrcmPatchRAM",
+              "acidanthera/Lilu",
+              "acidanthera/CPUFriend",
+              "acidanthera/VoodooPS2",
+              "notjosh/AdvancedMap",
+              # Add more repositories as needed
+          ]
+
+          update_info = []
+          
+          # Update kexts
+          for repo in kext_repos:
+              version = update_kext(repo)
+              if version:
+                  update_info.append(f"{repo.split('/')[-1]}: {version}")
+
+          # Update OpenCore
+          oc_version = update_opencore()
+          if oc_version:
+              update_info.append(f"OpenCore: {oc_version}")
+
+
+          # Output update information
+          if update_info:
+              print("::set-output name=updated::true")
+              print("::set-output name=update_info::" + ", ".join(update_info))
+          else:
+              print("::set-output name=updated::false")
+          
+          # Set the current date as the new version (YYYY.MM.DD format)
+          current_date = datetime.now().strftime("%Y.%m.%d")
+          print(f"::set-output name=new_version::{current_date}")
+          EOF
+
+      - name: Fetch latest release
+        if: steps.update.outputs.updated == 'true'
+        id: fetch_release
+        run: |
+          latest_release=$(curl -s https://api.github.com/repos/${{ github.repository }}/releases/latest)
+          echo "::set-output name=body::$(echo "$latest_release" | jq -r .body)"
+
+      - name: Update Changelog
+        if: steps.update.outputs.updated == 'true'
+        id: update_changelog
+        run: |
+          NEW_VERSION="${{ steps.update.outputs.new_version }}"
+          UPDATE_INFO="${{ steps.update.outputs.update_info }}"
+          CURRENT_CHANGELOG="${{ steps.fetch_release.outputs.body }}"
+          
+          # Extract the header (everything before "### Changelog")
+          HEADER=$(echo "$CURRENT_CHANGELOG" | sed -n '1,/### Changelog/p')
+          
+          # Extract the existing changelog (everything after "### Changelog")
+          EXISTING_CHANGELOG=$(echo "$CURRENT_CHANGELOG" | sed -n '/### Changelog/,$p')
+          
+          # Create the new changelog entry
+          NEW_ENTRY="#### ${NEW_VERSION}
+
+          * ${UPDATE_INFO}"
+          
+          # Combine everything
+          NEW_CHANGELOG="${HEADER}
+
+          ${EXISTING_CHANGELOG}
+
+          ${NEW_ENTRY}"
+          
+          echo "::set-output name=changelog::$NEW_CHANGELOG"
+
+      - name: Create EFI zip
+        if: steps.update.outputs.updated == 'true'
+        run: |
+          zip -r EFI.zip ${{ env.EFI_PATH }}
+          echo "::set-output name=zip_path::EFI.zip"
+
+      - name: Commit changes
+        if: steps.update.outputs.updated == 'true'
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add ${{ env.EFI_PATH }}
+          git commit -m "Update kexts and OpenCore: ${{ steps.update.outputs.update_info }}"
+
+      - name: Push changes
+        if: steps.update.outputs.updated == 'true'
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref }}
+
+      - name: Create Release
+        if: steps.update.outputs.updated == 'true'
+        id: create_release
+        uses: actions/create-release@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag_name: ${{ steps.update.outputs.new_version }}
+          release_name: Release ${{ steps.update.outputs.new_version }}
+          body: ${{ steps.update_changelog.outputs.changelog }}
+          draft: false
+          prerelease: false
+
+      - name: Upload Release Asset
+        if: steps.update.outputs.updated == 'true'
+        uses: actions/upload-release-asset@v1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          upload_url: ${{ steps.create_release.outputs.upload_url }}
+          asset_path: ./EFI.zip
+          asset_name: EFI.zip
+          asset_content_type: application/zip
+
+      - name: Delete old release comments
+        if: steps.update.outputs.updated == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          releases=$(curl -s -H "Authorization: token $GITHUB_TOKEN" \
+            "https://api.github.com/repos/${{ github.repository }}/releases")
+          
+          for release in $(echo "$releases" | jq -r '.[].id'); do
+            curl -X PATCH -H "Authorization: token $GITHUB_TOKEN" \
+              -H "Accept: application/vnd.github.v3+json" \
+              "https://api.github.com/repos/${{ github.repository }}/releases/$release" \
+              -d '{"body": ""}'
+          done
