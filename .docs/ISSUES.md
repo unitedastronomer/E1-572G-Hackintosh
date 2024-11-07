@@ -13,12 +13,12 @@
 	- Wake from **USB** Mouse/keyboard does not work,  press a key from built-in keyboard to wake.
 - Automatic Sleep on critical battery level
 	- To work around this, use [this app](https://github.com/HsOjo/SleeperX).
-- Hibernation[.](https://github.com/acidanthera/bugtracker/issues/386#issuecomment-503042790)
-	- Disable it.
+- Hibernation
 - Fan reading
 	- VirtualSMC does not support fan reading on ENE ECs.
- - Multi-touch (3+) Trackpad Gestures
+ - 3+ Multi-touch Trackpad Gestures
 	- Hardware limitation, trackpad is PS2.
+ - Clamshell mode (when connected to A/C and external display)
  - & a [lot more](https://github.com/dortania/OpenCore-Legacy-Patcher/issues/1008) on macOS macOS 13+
 
 ### Fixing Sleep issues
@@ -51,5 +51,5 @@ sudo pmset disablesleep 1
 
 ### Other Weird Issues:
 
-* If you at least once booted from Windows then macOS, certain ports transfer from XHC to EHC after sleep.  
+* If you at least once booted from Windows then macOS, certain ports switch from XHC to EHC after sleep.  
 * WiFi icon will only show one bar, this is a known issue with this WiFi card.
