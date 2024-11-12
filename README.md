@@ -41,7 +41,7 @@ In the config.plist, section <code>PlatformInfo > Generic</code> is currently le
 ## macOS Monterey - Sequoia  
 
 It requires root-patching with [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) to restore Wi-Fi functionality since Monterey, and Graphics Acceleration since Ventura.
--  OCLP requires an internet connection on Sequoia, either via USB tethering or ethernet.
+-  On **macOS Sequoia**, OCLP will only install the Wi-Fi driver on first patch run to ensure you can connect to the internet. Root patching has to be ran again to install the rest of the required patches after internet connection is established to obtain the required packages.
 
 <div align="center">
 <img align="center" src=".docs/oclp.png" width="600">
