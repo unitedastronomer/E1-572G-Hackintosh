@@ -4,6 +4,9 @@
 [![macOS](https://img.shields.io/badge/macOS-Sequoia-7D1B35.svg?logo=apple)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/unitedastronomer/E1-572G-Hackintosh/blob/main/LICENSE.md)
 
+${\textsf{\color{red}I don't use this device anymore.}}$
+I won't be able to update this config anymore.
+
 While this was configured to boot up to Sequoia, the most _compatible_ macOS version to run on this device is Big Sur — as some support were stripped out starting Monterey.
 
 See what's [not working](.docs/ISSUES.md).
