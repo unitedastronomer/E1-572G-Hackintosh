@@ -4,8 +4,7 @@
 [![macOS](https://img.shields.io/badge/macOS-Sequoia-7D1B35.svg?logo=apple)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/unitedastronomer/E1-572G-Hackintosh/blob/main/LICENSE.md)
 
-${\textsf{\color{red}I don't use this laptop anymore.}}$
-I won't be able to update this config in the future.
+I don't use this laptop anymore so I won't be able to update this config in the future.
 
 While this was configured to boot up to Sequoia, the most _compatible_ macOS version to run on this device is Big Sur — as some support were stripped out starting Monterey.
 
@@ -43,7 +42,9 @@ In the config.plist, section <code>PlatformInfo > Generic</code> is currently le
 
 ## macOS Monterey - Sequoia  
 
-It requires root-patching with [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) to restore Wi-Fi functionality since Monterey, and Graphics Acceleration since Ventura.
+Wi-Fi (Atheros) on Monterey (technically Mojave), and Graphics Acceleration (HD 4400) on Ventura are no longer natively supported by macOS. It now requires you to apply root patches using [Opencore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher) to restore (partial) support.
+- Before installing macOS, save a copy of [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) in a USB Drive, and install the app after installing macOS. 
+  - The Wi-Fi won't work, and the lack of graphics acceleration will crash the Safari browser — making it impossible to download anything within macOS.
 - On **macOS Sequoia**, connect through ethernet or Android USB tethering before running OCLP as it needs to obtain some required packages online.
 - If you can't use ethernet or USB tethering, OCLP will only install the Wi-Fi driver on first patch run to ensure you can connect to the internet. Root patching has to be ran again to install the rest of the required patches after internet connection is established.
 
