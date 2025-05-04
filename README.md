@@ -4,11 +4,7 @@
 [![macOS](https://img.shields.io/badge/macOS-Sequoia-7D1B35.svg?logo=apple)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/unitedastronomer/E1-572G-Hackintosh/blob/main/LICENSE.md)
 
-I don't use this laptop anymore so I won't be able to update this config in the future.
-
-While this was configured to boot up to Sequoia, the most _compatible_ macOS version to run on this device is Big Sur — as some support were stripped out starting Monterey.
-
-See what's [not working](.docs/ISSUES.md).
+Even this config was made to boot up to Sequoia, the most _compatible_ macOS version to run is Big Sur. See what's [not working](.docs/ISSUES.md).
 
 ### 💻 System Specification
 
@@ -26,7 +22,7 @@ See what's [not working](.docs/ISSUES.md).
 
 ### BIOS 
 
-*  **Update BIOS to the** [**latest version**](https://www.acer.com/us-en/support/product-support/Aspire_E1-572G). This resolves the issue of the laptop failing to fully power down when shutting down.
+*  **Update BIOS to the** [**latest version**](https://www.acer.com/us-en/support/product-support/Aspire_E1-572G). This resolves the issue of the laptop failing to fully power down after shutting down within macOS.
 * Configure BIOS with these settings:
 	* **Secure Boot** &rarr; **Disabled**
       * You can only toggle this setting if a BIOS password is set. Temporarily add password to set this setting. To remove password, set a new password but leave it blank then save.
@@ -42,7 +38,7 @@ In the config.plist, section <code>PlatformInfo > Generic</code> is currently le
 
 ## macOS Monterey - Sequoia  
 
-Wi-Fi (Atheros) on Monterey (actually Mojave), and Graphics Acceleration (HD 4400) on Ventura are no longer natively supported by macOS. It now requires you to apply root patches using [Opencore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher) to restore (partial) support.
+Wi-Fi (Atheros) on Monterey, and Graphics Acceleration (HD 4400) on Ventura are no longer natively supported by macOS. It now requires you to apply root patches using [Opencore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher) to restore (partial) support.
 - Before installing macOS, save a copy of [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) in a USB Drive, then install the app after installing macOS.
 - On **macOS Sequoia**, connect through ethernet or Android USB tethering before running OCLP as it needs to obtain some required packages online.
 - If you can't use ethernet or USB tethering, OCLP will only install the Wi-Fi driver on first patch run to ensure you can connect to the internet. Root patching has to be ran again to install the rest of the required patches after internet connection is established.
