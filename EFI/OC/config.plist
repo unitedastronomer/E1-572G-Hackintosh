@@ -776,27 +776,9 @@
 				<key>ExecutablePath</key>
 				<string></string>
 				<key>MaxKernel</key>
-				<string>20.99.9</string>
-				<key>MinKernel</key>
-				<string></string>
-				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
-			</dict>
-			<dict>
-				<key>Arch</key>
-				<string>Any</string>
-				<key>BundlePath</key>
-				<string>USBMap_HideBluetooth.kext</string>
-				<key>Comment</key>
-				<string>Hide Atheros Bluetooth on macOS 12+</string>
-				<key>Enabled</key>
-				<true/>
-				<key>ExecutablePath</key>
-				<string></string>
-				<key>MaxKernel</key>
 				<string></string>
 				<key>MinKernel</key>
-				<string>21.0.0</string>
+				<string></string>
 				<key>PlistPath</key>
 				<string>Contents/Info.plist</string>
 			</dict>
@@ -816,7 +798,7 @@
 				<key>MinKernel</key>
 				<string></string>
 				<key>PlistPath</key>
-				<string>Contents/Info.plist</string>
+				<string>Contents/Info.plist</sring>
 			</dict>
 			<dict>
 				<key>Arch</key>
