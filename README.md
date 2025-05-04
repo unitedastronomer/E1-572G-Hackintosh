@@ -48,9 +48,6 @@ Wi-Fi (Atheros) on Monterey, and Graphics Acceleration (HD 4400) on Ventura are 
 <img align="center" src=".docs/oclp.png" width="600">
 </div>
 
-Atheros Bluetooth are not supported since Monterey, use a Bluetooth dongle with supported CSR/Broadcom chipset such as TP Link UB400, and Asus BT400
-- Enable **BlueToolFixup.kext** in config.plist if you will be using a Bluetooth dongle.
-
 ## macOS Big Sur and earlier
 > [!WARNING]  
 > This can't be applied for Monterey and newer.
