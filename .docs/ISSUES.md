@@ -1,6 +1,6 @@
 ### What's not working?
 - Bluetooth (Atheros; on Monterey and newer)
-  - However if you wish to use a Bluetooth dongle with Broadcom/CSR chip (e.g, ASUS BT400, and TP-Link UB400), or replace to an Intel card, download an old version of the EFI from [here](https://github.com/unitedastronomer/E1-572G-Hackintosh/tree/ab230dae8dda52c6db7a185e621f1a5ac0f3a60e) (not from the release section). The current config completely disables BT on Monterey and newer.
+  - However if you wish to use a Bluetooth dongle with Broadcom/CSR chip (e.g, ASUS BT400, and TP-Link UB400), or replace to an Intel card, download an old version of the EFI this older [commit](https://github.com/unitedastronomer/E1-572G-Hackintosh/tree/ab230dae8dda52c6db7a185e621f1a5ac0f3a60e) (not from the release section). The current config completely disables BT on Monterey and newer.
 - Airport features (Airdrop etc.)
 	- If you need these features, replace card with **BCM94360HMB** and stay on macOS 11.x — most airport features do not work on this card starting macOS 12.x.
 		- This laptop uses mPCIe slot for the Wi-Fi Card
