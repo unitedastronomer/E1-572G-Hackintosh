@@ -1,6 +1,6 @@
 ### What's not working?
 - Bluetooth (Atheros; on Monterey and newer)
-  - However if you wish to use a Bluetooth dongle with Broadcom/CSR chip (e.g, ASUS BT400, and TP-Link UB400), or replace to an Intel card, download an old version of the EFI (2024.10.13) in the release section. The current config completely disables BT on Monterey and newer.
+  - However if you wish to use a Bluetooth dongle with Broadcom/CSR chip (e.g, ASUS BT400, and TP-Link UB400), or replace to an Intel card. Figure it out on your own, and do not forget to add `-btlfxallowanyaddr` so it would not conflict with internal non-functional Atheros BT.
 - Airport features (Airdrop etc.)
 	- If you need these features, replace card with **BCM94360HMB** and stay on macOS 11.x — most airport features do not work on this card starting macOS 12.x.
 		- This laptop uses mPCIe slot for the Wi-Fi Card
