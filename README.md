@@ -4,7 +4,7 @@
 [![macOS](https://img.shields.io/badge/macOS-Sequoia-7D1B35.svg?logo=apple)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/unitedastronomer/E1-572G-Hackintosh/blob/main/LICENSE.md)
 
-Even this config was made to boot up to Sequoia, the most _compatible_ macOS version to run is Big Sur. See what's [not working](.docs/ISSUES.md).
+Even this config was made to boot up to Sequoia (not tested with Tahoe), the most _compatible_ macOS version to run is Big Sur. See what's [not working](.docs/ISSUES.md).
 
 ### 💻 System Specification
 
