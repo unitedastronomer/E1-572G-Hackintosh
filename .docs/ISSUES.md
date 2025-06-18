@@ -1,6 +1,6 @@
 ### What's not working?
 - Bluetooth
-  - Atheros BT are unsupported on Monterey and newer. However if you wish to use Bluetooth, figure it out on your own. If you wish to use BT theough dongle or another card, disable the kernel patch in the config.plist that disables entire BT stack entirely.
+  - Atheros BT are unsupported on Monterey and newer. However if you wish to use Bluetooth, figure it out on your own. If you wish to use BT dongle or another card, disable the kernel patch in the config.plist that disables entire BT stack entirely.
 - Airport features
 	- If you need these features, replace card with **BCM94360HMB** and stay on macOS 11.x — most airport features do not work on this card starting macOS 12.x.
 		- This laptop uses mPCIe slot for the Wi-Fi Card
