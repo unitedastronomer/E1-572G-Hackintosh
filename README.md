@@ -62,6 +62,16 @@ This OC configuration has lifted some security settings, which are necessary for
    * Disable _csr_check() in _vnode_check_signature
 * Set `SecureBootModel` to `Default`, and then **do an NVRAM Reset before booting into macOS**
 
+
+# Note
+* Sleep may randomly break if the machine is still doing a **heavy** task while it is transitioning into sleep mode on it's own. 
+     * If you are doing something important, temporary disable sleep via `pmset` command.
+```
+sudo pmset disablesleep 1
+```
+> Set it to `0` to re-enable sleep option.
+
+
 # Troubleshoot
 * Cannot connect to Wi-Fi
 	* To work around this, manually connect using the "Other" option in the Wi-Fi menu bar or manually add the network in the "Network" preference pane.
