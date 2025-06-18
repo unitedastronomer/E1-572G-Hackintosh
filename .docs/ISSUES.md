@@ -40,12 +40,6 @@ Disable these settings:
 * Do not use Migration Assistant if OCLP root patches are applied, revert patches first.
 * Can't add or adjust Memoji in settings?
 	* Scroll through the emojis, this will zoom out the icons allowing you to edit memojis.
-* Sleep may randomly break if the machine is still doing a **heavy** task while it is transitioning into sleep mode on it's own. 
-     * If you are doing something important, temporary disable sleep via `pmset` command.
-```
-sudo pmset disablesleep 1
-```
-> Set it to `0` to re-enable sleep option.
 * VGA port is actually a DisplayPort internally according to the schematics, you may need to adjust the device properties. 
 
 ### Other Weird Issues:
