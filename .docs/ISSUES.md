@@ -1,7 +1,7 @@
 ### What's not working?
-- Bluetooth (Atheros; on Monterey and newer)
-  - However if you wish to use a Bluetooth dongle with Broadcom/CSR chip (e.g, ASUS BT400, and TP-Link UB400), or replace to an Intel card. Figure it out on your own, and do not forget to add `-btlfxallowanyaddr` so it would not conflict with internal non-functional Atheros BT, and disable the kernel -> patch setting that entirely disables BT stack.
-- Airport features (Airdrop etc.)
+- Bluetooth
+  - Atheros BT are unsupported on Monterey and newer. However if you wish to use Bluetooth, figure it out on your own. If you wish to use BT theough dongle or another card, disable the kernel patch in the config.plist that disables entire BT stack entirely.
+- Airport features
 	- If you need these features, replace card with **BCM94360HMB** and stay on macOS 11.x — most airport features do not work on this card starting macOS 12.x.
 		- This laptop uses mPCIe slot for the Wi-Fi Card
 - Playing DRM content (on Safari 14+ and macOS 11+)
@@ -34,9 +34,9 @@ Disable these settings:
 - Power Nap
 - In Bluetooth Settings, "Advanced Options…" disable the 3rd entry about allowing Bluetooth devices to exit sleep
 
-### Additional Note
+### Note
 * The install is taking too long? Just be patient! Do not manually power off or reboot your machine as this will break the installation and require reinstalling. 
-* Do not use Migration Assistant within Setup Assistant (setup screen right after macOS installation) on macOS 13+. It would be too laggy to navigate.
+* Do not use Migration Assistant within Setup Assistant (setup screen right after macOS installation) on macOS 13+ (Ventura and newer). It would be too laggy to navigate.
 * Do not use Migration Assistant if OCLP root patches are applied, revert patches first.
 * Can't add or adjust Memoji in settings?
 	* Scroll through the emojis, this will zoom out the icons allowing you to edit memojis.
