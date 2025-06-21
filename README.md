@@ -4,10 +4,9 @@
 [![macOS](https://img.shields.io/badge/macOS-Sequoia-7D1B35.svg?logo=apple)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/unitedastronomer/E1-572G-Hackintosh/blob/main/LICENSE.md)
 
-Even this config was made to boot up to Sequoia (not tested with Tahoe, update OC, drivers, and kexts to boot Tahoe), the most _compatible_ macOS version to run is Big Sur. See what's [not working](.docs/ISSUES.md).
+This config was configured to boot macOS Big Sur - Sequoia. Update OC, drivers, and kexts to boot Tahoe. See what's [not working](.docs/ISSUES.md).
 
 ### 💻 System Specification
-
 
 | Category       | Component                                  |
 |----------------|--------------------------------------------|
@@ -21,6 +20,7 @@ Even this config was made to boot up to Sequoia (not tested with Tahoe, update O
 # Preparation
 
 ### BIOS 
+Before installing macOS, update BIOS within Windows 10/11.
 
 *  **Update BIOS to the** [**latest version**](https://www.acer.com/us-en/support/product-support/Aspire_E1-572G). This resolves the issue of the laptop failing to fully power down after shutting down within macOS.
 * Configure BIOS with these settings:
@@ -33,13 +33,12 @@ Even this config was made to boot up to Sequoia (not tested with Tahoe, update O
 In the config.plist, section <code>PlatformInfo > Generic</code> is currently left empty, [generate your own SMBIOS data](https://github.com/corpnewt/GenSMBIOS). Use a **MacbookPro11,1** SMBIOS.
 
 # Post-Install
-
 * **Do not update** AppleALC and AdvancedMaps.
 
 ## macOS Monterey - Sequoia  
 
-Wi-Fi (Atheros) on Monterey, and Graphics Acceleration (HD 4400) on Ventura are no longer natively supported by macOS. It now requires you to apply root patches using [Opencore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher) to restore (partial) support.
-- Before installing macOS, save a copy of [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) in a USB Drive, then install the app after installing macOS.
+(Atheros) Wi-Fi starting Monterey, and Graphics Acceleration starting Ventura are no longer natively supported. It now requires you to apply root patches using [Opencore Legacy Patcher](https://github.com/dortania/OpenCore-Legacy-Patcher) to restore functionality.
+-  Before installing macOS, save a copy of [OCLP](https://github.com/dortania/OpenCore-Legacy-Patcher) in a USB Drive, then install the app after installing macOS.
 - On **macOS Sequoia**, connect through ethernet or Android USB tethering before running OCLP as it needs to obtain some required packages online.
 - If you can't use ethernet or USB tethering, OCLP will only install the Wi-Fi driver on first patch run to ensure you can connect to the internet. Root patching has to be ran again to install the rest of the required patches after internet connection is established.
 
@@ -53,26 +52,24 @@ Wi-Fi (Atheros) on Monterey, and Graphics Acceleration (HD 4400) on Ventura are 
 > This can't be applied for Monterey and newer.
 
 This OC configuration has lifted some security settings, which are necessary for root patching.  **You can leave this config as-is** or re-enable them by:
-* Disable `AMFIPass.kext`
-* Delete `amfi=0x80` in boot-arg
-* Set `csr-active-config` to `00000000`
- * Disable these Kernel -> Patches:
+- Disable `AMFIPass.kext`
+- Delete `amfi=0x80` in boot-arg
+- Set `csr-active-config` to `00000000`
+- Disable these Kernel -> Patches:
    * Force FileVault on Broken Seal
    * Disable Library Validation Enforcement
    * Disable _csr_check() in _vnode_check_signature
 * Set `SecureBootModel` to `Default`, and then **do an NVRAM Reset before booting into macOS**
 
 
-# Note
-* Sleep may randomly break if the machine is still doing a **heavy** task while it is transitioning into sleep mode on it's own. 
+### Troubleshoot
+* Sleep/wake will break if the machine attempts to transition to sleep while it's still performing a heavy task (such as rendering a video). This does not occur during normal usage
      * If you are doing something important, temporary disable sleep via `pmset` command.
 ```
 sudo pmset disablesleep 1
 ```
 > Set it to `0` to re-enable sleep option.
 
-
-# Troubleshoot
 * Cannot connect to Wi-Fi
 	* To work around this, manually connect using the "Other" option in the Wi-Fi menu bar or manually add the network in the "Network" preference pane.
 * Multi-boot with Windows
