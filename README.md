@@ -4,7 +4,7 @@
 [![macOS](https://img.shields.io/badge/macOS-Sequoia-7D1B35.svg?logo=apple)](https://github.com/acidanthera/OpenCorePkg)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](https://github.com/unitedastronomer/E1-572G-Hackintosh/blob/main/LICENSE.md)
 
-This config was configured to boot macOS Big Sur - Sequoia. Update OC, drivers, and kexts to boot Tahoe. See what's [not working](.docs/ISSUES.md).
+This config was configured to boot macOS Big Sur - Sequoia. See what's [not working](.docs/ISSUES.md).
 
 ### 💻 System Specification
 
@@ -34,6 +34,10 @@ In the config.plist, section <code>PlatformInfo > Generic</code> is currently le
 
 # Post-Install
 * **Do not update** AppleALC and AdvancedMaps.
+
+## macOS Tahoe
+
+Not yet supported.
 
 ## macOS Monterey - Sequoia  
 
