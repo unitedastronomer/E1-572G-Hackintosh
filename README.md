@@ -33,7 +33,7 @@ Before installing macOS, update BIOS within Windows 10/11.
 In the config.plist, section <code>PlatformInfo > Generic</code> is currently left empty, [generate your own SMBIOS data](https://github.com/corpnewt/GenSMBIOS). Use a **MacbookPro11,1** SMBIOS.
 
 # Post-Install
-* **Do not update** AppleALC and AdvancedMaps.
+* **Do not update** AppleALC.
 
 ## macOS Tahoe
 
